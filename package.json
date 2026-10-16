@@ -20,8 +20,12 @@
   "main": "src/lib.js",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.brandcompete.com/projects/BCINCUB/repos/brandcompete-becquerel-3/"
+    "url": "https://github.com/brandcompete/bcq-ui.git"
   },
+  "bugs": {
+    "url": "https://github.com/brandcompete/bcq-ui/issues"
+  },
+  "homepage": "https://github.com/brandcompete/bcq-ui.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs",
