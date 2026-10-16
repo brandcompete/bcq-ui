@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "pageTitle": "Developing the Library",
+    "keywords": [
+      "npm",
+      "boilerplate",
+      "scaffold",
+      "development",
+      "cli"
+    ],
+    "links": [
+      "getting-started"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/development.md",
+      "title": "run-bcq-cli",
+      "language": "bash",
+      "margin": ["mb-4"]
+    }]
+  },
+  "documentation": null
+}

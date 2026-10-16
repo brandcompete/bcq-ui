@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "pageTitle": "Form Components for Vue3",
+    "keywords": [
+      "forms",
+      "checkbox",
+      "file",
+      "upload",
+      "radios",
+      "buttons",
+      "slider",
+      "range slider",
+      "switcher",
+      "dropdown",
+      "select",
+      "input",
+      "text",
+      "text field"
+    ],
+    "links": [
+      "forms"
+    ]
+  },
+  "config": {},
+  "documentation": null
+}

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "pageTitle": "Directives for Vue3",
+    "keywords": [
+      "cure directives",
+      "ripple",
+      "blur",
+      "aspect ratio",
+      "gradient",
+      "intersect",
+      "liquid glass",
+      "resize",
+      "scroll lock",
+      "tooltip"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {},
+  "documentation": null
+}

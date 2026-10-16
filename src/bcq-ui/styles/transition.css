@@ -1,0 +1,151 @@
+/* transition property */
+
+.transition-none
+{
+  transition-property: none;
+}
+
+.transition-all
+{
+  transition-property: all;
+}
+
+.transition-colors
+{
+  transition-property: background-color, border-color, color;
+}
+
+.transition-opacity
+{
+  transition-property: opacity;
+}
+
+.transition-transform
+{
+  transition-property: transform;
+}
+
+/* transition duration */
+
+.transition-duration-100
+{
+  transition-duration: 100ms;
+}
+
+.transition-duration-150
+{
+  transition-duration: 150ms;
+}
+
+.transition-duration-200
+{
+  transition-duration: 200ms;
+}
+
+.transition-duration-300
+{
+  transition-duration: 300ms;
+}
+
+.transition-duration-400
+{
+  transition-duration: 400ms;
+}
+
+.transition-duration-500
+{
+  transition-duration: 500ms;
+}
+
+.transition-duration-1000
+{
+  transition-duration: 1000ms;
+}
+
+.transition-duration-2000
+{
+  transition-duration: 2000ms;
+}
+
+.transition-duration-3000
+{
+  transition-duration: 3000ms;
+}
+
+/* transition timing functions */
+
+.transition-linear
+{
+  transition-timing-function: linear;
+}
+
+.transition-ease-in
+{
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.transition-ease-out
+{
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.transition-ease-in-out
+{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* transition delays */
+
+.transition-delay-100
+{
+  transition-delay: 100ms;
+}
+
+.transition-delay-150
+{
+  transition-delay: 150ms;
+}
+
+.transition-delay-200
+{
+  transition-delay: 200ms;
+}
+
+.transition-delay-300
+{
+  transition-delay: 300ms;
+}
+
+.transition-delay-400
+{
+  transition-delay: 400ms;
+}
+
+.transition-delay-500
+{
+  transition-delay: 500ms;
+}
+
+.transition-delay-1000
+{
+  transition-delay: 1000ms;
+}
+
+.slide-enter-active,
+.slide-leave-active
+{
+  transition: all .5s ease-in-out;
+  max-height: 50vh;
+}
+.slide-enter,
+.slide-leave-to
+{
+  opacity: 0;
+  max-height: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active
+{
+  transition: opacity .5s;
+}

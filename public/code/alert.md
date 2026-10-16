@@ -1,0 +1,13 @@
+<bc-alert
+  v-model:visible="Boolean"
+  :color="String"
+  :dismissible="Boolean"
+  :dismiss-icon="String"
+  :elevation="String"
+  :size="String"
+  :roundness="String"
+  :size="String"
+  :unselectable="Boolean"
+  :variant="String"
+  :icon="String"
+  :icon-provider="String">Content</bc-alert>

@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "pageTitle": "Notification for Vue3",
+    "keywords": [
+      "notification",
+      "alert",
+      "information",
+      "snackbar"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "color": [
+      "success"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "lorems": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit",
+      "Ut enim ad minima veniam, quis nostrum exercitationem",
+      "Quis autem vel eum iure reprehenderit qui in ea voluptate",
+      "Et harum quidem rerum facilis est et expedita distinctio",
+      "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil",
+      "Omnis voluptas assumenda est, omnis dolor repellendus"
+    ],
+    "autoCloseDelay": 5000,
+    "allowAutoClose": true,
+    "dismissible": true,
+    "showTitle": true,
+    "showIcon": true,
+    "codeFiles": [{
+      "uri": "/code/notification.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    } ,{
+      "uri": "/code/notification-configuration.md",
+      "title": "notification-configuration",
+      "language": "javascript",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/notification-show-notification.md",
+      "title": "notification-showing-a-message",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-notification": {
+      "props": {
+        "bottom": ["Boolean", false, true, "Render at the bottom or top of the screen"],
+        "elevation": ["String", false, "'xl'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "margin": ["Array", false, "['my-2']", "Notification margin(s) as specified in the <a href='/content/utility-css-classes' v-link>margin</a> utility CSS classes"],
+        "padding": ["Array", false, "['px-3', 'py-2']", "Notifications container padding(s) as specified in the <a href='/content/utility-css-classes' v-link>padding</a> utility CSS classes"],
+        "right": ["Boolean", false, true, "Render on the right or left of the screen"],
+        "width": ["String", false, "'320px'", "Component CSS <code>width</code>"],
+        "z-index": ["Number", false, 1000, "Component CSS <code>z-index</code>"]
+      },
+      "slots": {},
+      "events": {}
+    }
+  }
+}

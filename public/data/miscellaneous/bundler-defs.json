@@ -1,0 +1,867 @@
+{
+  "repo": "bcq-ui/src/bcq-ui/components/",
+  "bcqUiJsTemplate": "/code/bcq-ui.js",
+  "libJsTemplate": "/code/lib.js",
+  "required": [
+    "App",
+    "BrandColor",
+    "Container",
+    "Icon",
+    "Layout",
+    "ReactiveStyle",
+    "TableLayout"
+  ],
+  "hidden": [
+    "BreadcrumbsItem",
+    "CardText",
+    "CardTitle",
+    "CardActions",
+    "CollapsibleItem",
+    "GridCol",
+    "ListItem",
+    "ListItemContent",
+    "ListItemContentSubTitle",
+    "ListItemContentTitle",
+    "ListItemIcon",
+    "MeterGroupItem",
+    "Radio",
+    "TableLayoutCell",
+    "TableLayoutRow",
+    "TabsPanel",
+    "TextFieldLabel",
+    "ToolbarActions",
+    "ToolbarIcon",
+    "ToolbarTitle"
+  ],
+  "components": [
+    {
+      "name": "App",
+      "checked": true,
+      "dependencies": {
+        "components": [
+          "BrandColor",
+          "Container",
+          "ReactiveStyle"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "BrandColor",
+      "checked": true,
+      "dependencies": {
+        "components": [
+          "ReactiveStyle"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Container",
+      "checked": true,
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Icon",
+      "checked": true,
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Layout",
+      "checked": true,
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "ReactiveStyle",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "ReactiveStyle",
+      "checked": true,
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "TableLayout",
+      "checked": true,
+      "dependencies": {
+        "components": [
+          "Container",
+          "TableLayoutCell",
+          "TableLayoutRow"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Alert",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "AmbientImage",
+      "dependencies": {
+        "components": [
+          "Container",
+          "LazyImage"
+        ],
+        "directives": [
+          "AspectRatio"
+        ]
+      }
+    },
+    {
+      "name": "AsyncForm",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Avatar",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "LazyImage"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "AvatarGroup",
+      "dependencies": {
+        "components": [
+          "Avatar",
+          "Container",
+          "ReactiveStyle"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Badge",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Banner",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Breadcrumbs",
+      "dependencies": {
+        "components": [
+          "BreadcrumbsItem"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "BreadcrumbsItem",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Btn",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "BtnGroup",
+      "dependencies": {
+        "components": [
+          "Btn",
+          "Container",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Card",
+      "dependencies": {
+        "components": [
+          "CardActions",
+          "CardText",
+          "CardTitle",
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "CardActions",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "CardText",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "CardTitle",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Checkbox",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Chip",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Collapsible",
+      "dependencies": {
+        "components": [
+          "CollapsibleItem",
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "CollapsibleItem",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "ColorPicker",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "ContextMenu",
+      "dependencies": {
+        "components": [
+          "Card",
+          "Container",
+          "List",
+          "ReactiveStyle"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "DataTable",
+      "dependencies": {
+        "components": [
+          "Container",
+          "ReactiveStyle",
+          "TableLayout",
+          "TextField",
+          "Icon"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "DialogBox",
+      "dependencies": {
+        "components": [
+          "Card",
+          "Container",
+          "Divider",
+          "Icon",
+          "ReactiveStyle",
+          "TableLayout"
+        ],
+        "directives": [
+          "scroll-lock"
+        ]
+      }
+    },
+    {
+      "name": "Divider",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Dropdown",
+      "dependencies": {
+        "components": [
+          "Alert",
+          "Card",
+          "Container",
+          "Icon",
+          "ReactiveStyle",
+          "TextField",
+          "TextFieldLabel",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Editor",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Empty",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Divider",
+          "Heading",
+          "Icon"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Flag",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Grid",
+      "dependencies": {
+        "components": [
+          "GridCol"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "GridCol",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Heading",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Kbd",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Kpi",
+      "dependencies": {
+        "components": [
+          "Card",
+          "Container",
+          "Heading",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "LazyImage",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "List",
+      "dependencies": {
+        "components": [
+          "Container",
+          "ListItem",
+          "ListItemContent",
+          "ListItemContentSubTitle",
+          "ListItemContentTitle",
+          "ListItemIcon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "ListItem",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "ListItemContent",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "ListItemContentSubTitle",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "ListItemContentTitle",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "ListItemIcon",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "LoadingOverlay",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "LoremIpsum",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "MeterGroup",
+      "dependencies": {
+        "components": [
+          "Container",
+          "MeterGroupItem",
+          "TextFieldLabel"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "MeterGroupItem",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "MultilineEllipsis",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "NavigatorOnline",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },{
+      "name": "Notification",
+      "dependencies": {
+        "components": [
+          "Alert",
+          "Container",
+          "Heading",
+          "ReactiveStyle"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Pager",
+      "dependencies": {
+        "components": [
+          "Btn",
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Progressbar",
+      "dependencies": {
+        "components": [
+          "Icon",
+          "TableLayout",
+          "TextFieldLabel"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Radio",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "RadioGroup",
+      "dependencies": {
+        "components": [
+          "Icon",
+          "Radio",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "RangeSlider",
+      "dependencies": {
+        "components": [
+          "Container",
+          "ReactiveStyle",
+          "Slider",
+          "TableLayout",
+          "TextFieldLabel"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Rating",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "ReactiveStyle",
+          "TextFieldLabel"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "SkeletonLoader",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Slider",
+      "dependencies": {
+        "components": [
+          "Container",
+          "ReactiveStyle",
+          "TableLayout",
+          "TextFieldLabel"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Snackbar",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Sparklines",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "SplitBtn",
+      "dependencies": {
+        "components": [
+          "Btn",
+          "Card",
+          "Container",
+          "Divider",
+          "Icon",
+          "List",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "SpeedDial",
+      "dependencies": {
+        "components": [
+          "Btn",
+          "Container"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "SvgIcon",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Switcher",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "TableLayoutCell",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "TableLayoutRow",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Tabs",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "ReactiveStyle",
+          "TableLayout",
+          "TabsPanel"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "TabsPanel",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "TextField",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Icon",
+          "TableLayout",
+          "TextFieldLabel"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "TextFieldLabel",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Timeline",
+      "dependencies": {
+        "components": [
+          "Container",
+          "Grid",
+          "Icon"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Toolbar",
+      "dependencies": {
+        "components": [
+          "TableLayout",
+          "ToolbarActions",
+          "ToolbarIcon",
+          "ToolbarTitle"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "ToolbarActions",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "ToolbarIcon",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "ToolbarTitle",
+      "dependencies": {
+        "components": [],
+        "directives": []
+      }
+    },
+    {
+      "name": "Tooltip",
+      "dependencies": {
+        "components": [
+          "Container",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Treeview",
+      "dependencies": {
+        "components": [
+          "Checkbox",
+          "Container",
+          "Icon"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Upload",
+      "dependencies": {
+        "components": [
+          "AsyncForm",
+          "Btn",
+          "Card",
+          "Container",
+          "Icon",
+          "List",
+          "TextFieldLabel",
+          "TableLayout"
+        ],
+        "directives": []
+      }
+    },
+    {
+      "name": "Vid",
+      "dependencies": {
+        "components": [
+          "Container"
+        ],
+        "directives": []
+      }
+    }
+  ],
+  "directives": [
+    "AspectRatio",
+    "Blur",
+    "DefaultBtn",
+    "GradientText",
+    "Intersect",
+    "LiquidGlass",
+    "Resize",
+    "Ripple",
+    "ScrollLock",
+    "Tooltip"
+  ]
+}

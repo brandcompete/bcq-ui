@@ -1,0 +1,183 @@
+/* elevation — normalized scale */
+
+.shadow-none
+{
+  box-shadow: none
+}
+
+.shadow-1,
+.shadow-xs
+{
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .02),
+              0 0 2px rgba(0, 0, 0, .05),
+              0 1px 4px rgba(0, 0, 0, .08)
+}
+
+.shadow-2,
+.shadow-sm
+{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .03),
+              0 0 2px rgba(0, 0, 0, .06),
+              0 2px 6px rgba(0, 0, 0, .12)
+}
+
+.shadow-3,
+.shadow-md
+{
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .08),
+              0 3px 4px rgba(0, 0, 0, .1),
+              0 1px 4px -1px rgba(0, 0, 0, .1)
+}
+
+.shadow-4,
+.shadow-lg
+{
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .12),
+              0 4px 5px rgba(0, 0, 0, .14),
+              0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+
+.shadow-5,
+.shadow-xl
+{
+  box-shadow: 0 1px 7px rgba(0, 0, 0, .1),
+              0 4px 5px -2px rgba(0, 0, 0, .12),
+              0 10px 15px -5px rgba(0, 0, 0, .2)
+}
+
+.shadow-6,
+.shadow-2xl
+{
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .06),
+              0 7px 9px rgba(0, 0, 0, .12),
+              0 20px 25px -8px rgba(0, 0, 0, .18)
+}
+
+.shadow-7,
+.shadow-3xl
+{
+  box-shadow: 0 7px 30px rgba(0, 0, 0, .08),
+              0 22px 30px 2px rgba(0, 0, 0, .15),
+              0 8px 10px rgba(0, 0, 0, .15)
+}
+
+.shadow-8,
+.shadow-4xl
+{
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .12),
+              0 24px 38px 3px rgba(0, 0, 0, .14),
+              0 11px 15px rgba(0, 0, 0, .2)
+}
+
+.shadow-9,
+.shadow-5xl
+{
+  box-shadow: 0 11px 65px 10px rgba(0, 0, 0, .12),
+              0 26px 40px 3px rgba(0, 0, 0, .14),
+              0 12px 20px rgba(0, 0, 0, .2)
+}
+
+.shadow-10,
+.shadow-6xl
+{
+  box-shadow: 0 15px 81px 12px rgba(0, 0, 0, .12),
+              0 28px 42px 3px rgba(0, 0, 0, .14),
+              0 13px 25px rgba(0, 0, 0, .2)
+}
+
+.shadow-11,
+.shadow-7xl
+{
+  box-shadow: 0 19px 100px 14px rgba(0, 0, 0, .12),
+              0 30px 44px 3px rgba(0, 0, 0, .14),
+              0 14px 30px rgba(0, 0, 0, .2)
+}
+
+
+.bc-app-theme-dark .shadow-1,
+.bc-app-theme-dark .shadow-xs
+{
+  box-shadow: 0 3px 5px rgba(255, 255, 255, .015),
+              0 0 2px rgba(255, 255, 255, .02),
+              0 1px 4px rgba(255, 255, 255, .025)
+}
+
+.bc-app-theme-dark .shadow-2,
+.bc-app-theme-dark .shadow-sm
+{
+  box-shadow: 0 4px 10px rgba(255, 255, 255, .02),
+              0 0 2px rgba(255, 255, 255, .025),
+              0 2px 6px rgba(255, 255, 255, .03)
+}
+
+.bc-app-theme-dark .shadow-3,
+.bc-app-theme-dark .shadow-md
+{
+  box-shadow: 0 1px 8px rgba(255, 255, 255, .025),
+              0 3px 4px rgba(255, 255, 255, .035),
+              0 1px 4px -1px rgba(255, 255, 255, .04)
+}
+
+.bc-app-theme-dark .shadow-4,
+.bc-app-theme-dark .shadow-lg
+{
+  box-shadow: 0 1px 10px rgba(255, 255, 255, .03),
+              0 4px 5px rgba(255, 255, 255, .04),
+              0 2px 4px -1px rgba(255, 255, 255, .045)
+}
+
+.bc-app-theme-dark .shadow-5,
+.bc-app-theme-dark .shadow-xl
+{
+  box-shadow: 0 1px 7px rgba(255, 255, 255, .035),
+              0 4px 5px -2px rgba(255, 255, 255, .045),
+              0 10px 15px -5px rgba(255, 255, 255, .055)
+}
+
+.bc-app-theme-dark .shadow-6,
+.bc-app-theme-dark .shadow-2xl
+{
+  box-shadow: 0 3px 5px rgba(255, 255, 255, .04),
+              0 7px 9px rgba(255, 255, 255, .05),
+              0 20px 25px -8px rgba(255, 255, 255, .06)
+}
+
+.bc-app-theme-dark .shadow-7,
+.bc-app-theme-dark .shadow-3xl
+{
+  box-shadow: 0 7px 30px rgba(255, 255, 255, .045),
+              0 22px 30px 2px rgba(255, 255, 255, .06),
+              0 8px 10px rgba(255, 255, 255, .06)
+}
+
+.bc-app-theme-dark .shadow-8,
+.bc-app-theme-dark .shadow-4xl
+{
+  box-shadow: 0 9px 46px 8px rgba(255, 255, 255, .05),
+              0 24px 38px 3px rgba(255, 255, 255, .065),
+              0 11px 15px rgba(255, 255, 255, .065)
+}
+
+.bc-app-theme-dark .shadow-9,
+.bc-app-theme-dark .shadow-5xl
+{
+  box-shadow: 0 11px 65px 10px rgba(255, 255, 255, .055),
+              0 26px 40px 3px rgba(255, 255, 255, .07),
+              0 12px 20px rgba(255, 255, 255, .07)
+}
+
+.bc-app-theme-dark .shadow-10,
+.bc-app-theme-dark .shadow-6xl
+{
+  box-shadow: 0 15px 81px 12px rgba(255, 255, 255, .06),
+              0 28px 42px 3px rgba(255, 255, 255, .075),
+              0 13px 25px rgba(255, 255, 255, .075)
+}
+
+.bc-app-theme-dark .shadow-11,
+.bc-app-theme-dark .shadow-7xl
+{
+  box-shadow: 0 19px 100px 14px rgba(255, 255, 255, .065),
+              0 30px 44px 3px rgba(255, 255, 255, .08),
+              0 14px 30px rgba(255, 255, 255, .08)
+}

@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "pageTitle": "Tabs for Vue3",
+    "keywords": [
+      "tabstrip"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/tabs.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "color": [
+      "primary"
+    ],
+    "size": [
+      "sm"
+    ],
+    "fontWeight": [
+      "semibold"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "defaultTab": 1,
+    "compact": false,
+    "uppercase": true,
+    "tabs": [{
+      "label": "React",
+      "icon": "react",
+      "disabled": false
+    }, {
+      "label": "Vue",
+      "icon": "vuejs",
+      "disabled": false
+    }, {
+      "label": "Angular",
+      "icon": "angular",
+      "disabled": false
+    }, {
+      "label": "jQuery",
+      "icon": "jquery",
+      "disabled": true
+    }]
+  },
+  "documentation": {
+    "bc-tabs": {
+      "props": {
+        "<code>v-model:</code>default-tab": ["Number", false, 0, "Default selected tab"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "compact": ["Boolean", false, false, "Controls the prominence of the tab buttons"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "font-weight": ["String", false, "'normal'", "One of the font weight <a href='/content/typography' v-link>typography</a> CSS classes"],
+        "icon-provider": ["String", false, "'mdi'", "Icons provider prefix"],
+        "inert": ["Boolean", false, false, "Applies the HTML <code>inert</code> attribute"],
+        "selected-tab-marker-height": ["Number", false, 3, "Height of the selected tab marker"],
+        "size": ["String", false, "'sm'", "One of the text size typography CSS classes"],
+        "uppercase": ["Boolean", false, true, "Sets the tab button labels to uppercase"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"],
+        "update:default-tab": ["Number" ,"Triggered on model update"]
+      }
+    },
+    "bc-tabs-panel": {
+      "props": {
+        "disabled": ["Boolean", false, false, "Controls the disabled state of the tab"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icons' v-link>icon</a>"],
+        "label": ["String", false, "undefined", "Tab label"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}
+

@@ -1,0 +1,15 @@
+<bc-lazy-image
+  @load="Function"
+  @error="Function"
+  :aspect-ratio="String"
+  :background-size="String" 
+  :block="Boolean" 
+  :error-icon="String"
+  :height="String"
+  :icons-provider="String"
+  :icons-size="String"
+  :loading-icon="String" 
+  :options="Object" 
+  :src="String" 
+  :tag="String" 
+  :width="String" />

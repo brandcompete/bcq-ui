@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "pageTitle": "Upload for Vue3",
+    "keywords": [
+      "file upload",
+      "input file"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/upload.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mb-0"
+      ]
+    }],
+    "span": 6,
+    "color": [
+      "discovery"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "size": [
+      "sm"
+    ],
+    "labelsUppercase": false,
+    "labelsFontWeight": "normal",
+    "loading": false,
+    "showIconLeft": true,
+    "showIconRight": false,
+    "roundness": "full",
+    "multiple": true,
+    "clearable": true,
+    "elevation": "md",
+    "fileListMaxHeight": "296px",
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "uploads": [
+      {
+        "label": "Browse for Image File(s)...",
+        "hint": "Select image file(s) from your computer",
+        "icon": "image",
+        "mimeTypes": [
+          "image/jpg",
+          "image/png",
+          "image/gif",
+          "image/jpeg",
+          "image/bmp",
+          "image/svg+xml"
+        ],
+        "maxFileSize": 300000
+      },
+      {
+        "label": "Browse for PDF File(s)...",
+        "hint": "Select .pdf file(s) from your computer",
+        "icon": "file-pdf-box",
+        "mimeTypes": [
+          "application/pdf",
+          "application/x-pdf"
+        ],
+        "maxFileSize": 1e+6
+      }
+    ]
+  },
+  "documentation": {
+    "bc-upload": {
+      "props": {
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "clearable": ["Boolean", false, true, "Allow users to remove single files or fully reset the <code>FileList</code>"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "color-file-too-big": ["String", false, "'danger'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "file-list-image-thumbnail-size": ["String", false, "'48px'", "Size of the image thumbnail previews in the selected files list"],
+        "file-list-max-height": ["String", false, "undefined", "Optional <code>max-height</code> of the file list"],
+        "hint": ["String", false, "undefined", "Optional component hint, rendered at the bottom"],
+        "icon-clearable": ["String", false, "'close-circle'", "Clearable icon"],
+        "icon-file": ["String", false, "'file'", "Generic file icon for the file list if selected item is not of image type"],
+        "icon-file-too-big": ["String", false, "'alert'", "Generic alert icon for the file list if selected item is too big"],
+        "icon-left": ["String", false, "undefined", "Optional left icon"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-right": ["String", false, "undefined", "Optional right icon"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "label": ["String", false, "'Choose File...'", "Component label"],
+        "labels-font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "labels-uppercase": ["Boolean", false, false, "Sets all of the component labels to uppercase"],
+        "loading": ["Boolean", false, false, "Sets the component to <code>inert</code> and shows a loading indicator"],
+        "max-file-size": ["Number", false, "undefined", "Validates the selected file(s) by byte-size"],
+        "message-file-too-big": ["String", false, "'File too big. Choose a smaller file'", "Message if <code>max-file-size</code> was exceeded"],
+        "mime-types": ["Array", false, "[]", "Array of accepted mime-types"],
+        "multiple": ["Boolean", false, false, "Allows multiple file selection"],
+        "name": ["String", false, "undefined", "Optional HTML <code>name</code> attribute"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> options, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> <code>font-size</code> treatments"],
+        "sizes": ["Array", false, "[ 'Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB' ]", "Byte-size units"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any supported unit"]
+      },
+      "slots": {},
+      "events": {
+        "files": ["FileList", "Emitted on file(s) selection or file removal"],
+        "clear": ["Empty FileList", "Emitted on component reset"]
+      }
+    }
+  }
+}

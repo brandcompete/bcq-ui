@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "pageTitle": "Sitemap",
+    "keywords": [
+      "sitemap"
+    ],
+    "links": []
+  },
+  "config": {
+    "divider": true,
+    "disabled": false,
+    "inert": false,
+    "showIconLeft": true,
+    "showIconRight": true,
+    "showListItemTitle": true,
+    "showListItemSubTitle": true,
+    "itemTag": "router-link",
+    "itemTags": [
+      "router-link",
+      "a",
+      "div"
+    ],
+    "clickable": false,
+    "items": []
+  },
+  "documentation": null
+}

@@ -1,0 +1,227 @@
+/* displays */
+
+.hidden
+{
+  display: none !important;
+}
+
+.block
+{
+  display: block;
+}
+
+.inline
+{
+  display: inline;
+}
+
+.inline-block
+{
+  display: inline-block;
+}
+
+.inline-table
+{
+  display: inline-table !important;
+}
+
+.inline-list > li
+{
+  display: inline-block;
+}
+
+.flex
+{
+  display: flex;
+}
+
+.unset
+{
+  display: unset;
+}
+
+.inline-flex
+{
+  display: inline-flex;
+}
+
+.invisible
+{
+  visibility: hidden;
+}
+
+/* overflows */
+
+.overflow-auto
+{
+  overflow: auto;
+}
+
+.overflow-hidden
+{
+  overflow: hidden;
+}
+
+.overflow-visible
+{
+  overflow: visible;
+}
+
+.overflow-scroll
+{
+  overflow: scroll;
+}
+
+.overflow-x-auto
+{
+  overflow-x: auto;
+}
+
+.overflow-x-hidden
+{
+  overflow-x: hidden;
+}
+
+.overflow-x-visible
+{
+  overflow-x: visible;
+}
+
+.overflow-x-scroll
+{
+  overflow-x: scroll;
+}
+
+.overflow-y-auto
+{
+  overflow-y: auto;
+}
+
+.overflow-y-hidden
+{
+  overflow-y: hidden;
+}
+
+.overflow-y-visible
+{
+  overflow-y: visible;
+}
+
+.overflow-y-scroll
+{
+  overflow-y: scroll;
+}
+
+/* positions */
+
+.static
+{
+  position: static;
+}
+
+.fixed
+{
+  position: fixed;
+}
+
+.relative
+{
+  position: relative;
+}
+
+.absolute
+{
+  position: absolute;
+}
+
+.sticky
+{
+  position: sticky;
+}
+
+/* placements */
+
+.top-auto
+{
+  top: auto;
+}
+
+.top-0
+{
+  top: 0;
+}
+
+.top-50
+{
+  top: 50%;
+}
+
+.top-100
+{
+  top: 100%;
+}
+
+.right-auto
+{
+  right: auto;
+}
+
+.right-0
+{
+  right: 0;
+}
+
+.right-50
+{
+  right: 50%;
+}
+
+.right-100
+{
+  right: 100%;
+}
+
+.bottom-auto
+{
+  bottom: auto;
+}
+
+.bottom-0
+{
+  bottom: 0;
+}
+
+.bottom-50
+{
+  bottom: 50%;
+}
+
+.bottom-100
+{
+  bottom: 100%;
+}
+
+.left-auto
+{
+  left: auto;
+}
+
+.left-0
+{
+  left: 0;
+}
+
+.left-50
+{
+  left: 50%;
+}
+
+.left-100
+{
+  left: 100%;
+}
+
+.background-none
+{
+  background: none;
+}

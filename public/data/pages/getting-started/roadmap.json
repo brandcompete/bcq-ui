@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "pageTitle": "Roadmap",
+    "keywords": [
+      "roadmap",
+      "new components",
+      "updates"
+    ],
+    "links": [
+      "getting-started"
+    ]
+  },
+  "config": {
+    "timeline": [{
+      "label": {
+        "date": "bc-btn",
+        "tagline": "components",
+        "icon": "button-cursor"
+      },
+      "event": {
+        "text": "Finalize the different sizing and spacing"
+      },
+      "path": "/ui/btn"
+    }, {
+      "label": {
+        "date": "bc-data-table",
+        "tagline": "components, website",
+        "icon": "grid"
+      },
+      "event": {
+        "text": "Implement pagination and virtual scrolling"
+      },
+      "path": "/ui/data-table"
+    }, {
+      "label": {
+        "date": "bc-snackbar",
+        "tagline": "components",
+        "icon": "notification-clear-all"
+      },
+      "event": {
+        "text": "Expand to 100% on extra small screens"
+      },
+      "path": "/ui/snackbar"
+    }, {
+      "label": {
+        "date": "bc-notification",
+        "tagline": "components",
+        "icon": "message-badge-outline"
+      },
+      "event": {
+        "text": "Expand to 100% on extra small screens"
+      },
+      "path": "/ui/notification"
+    }, {
+      "label": {
+        "date": "bc-treeview",
+        "tagline": "components",
+        "icon": "file-tree"
+      },
+      "event": {
+        "text": "Fully implement the component"
+      },
+      "path": "/ui/treeview"
+    }, {
+      "label": {
+        "date": "bc-dropdown",
+        "tagline": "forms, website",
+        "icon": "chevron-down"
+      },
+      "event": {
+        "text": "Dynamic dropdown position, finalize the demo page"
+      },
+      "path": "/forms/dropdown"
+    }, {
+      "label": {
+        "date": "bc-rating",
+        "tagline": "components",
+        "icon": "star"
+      },
+      "event": {
+        "text": "Add option for half star rating"
+      },
+      "path": "/ui/rating"
+    }, {
+      "label": {
+        "date": "bc-switcher",
+        "tagline": "forms, website",
+        "icon": "toggle-switch"
+      },
+      "event": {
+        "text": "Finalize the demo page"
+      },
+      "path": "/forms/switcher"
+    }, {
+      "label": {
+        "date": "bc-text-field",
+        "tagline": "forms, website",
+        "icon": "form-textbox"
+      },
+      "event": {
+        "text": "Finalize the demo page, add documentation and code examples"
+      },
+      "path": "/forms/text-field"
+    }, {
+      "label": {
+        "date": "bc-icon demo page",
+        "tagline": "website",
+        "icon": "emoticon"
+      },
+      "event": {
+        "text": "Add lazy loading for the Material Design Icons list"
+      },
+      "path": "/ui/icon"
+    }, {
+      "label": {
+        "date": "bc-dialog-box demo page",
+        "tagline": "website",
+        "icon": "window-restore"
+      },
+      "event": {
+        "text": "Add documentation and code examples"
+      },
+      "path": "/ui/dialog-box"
+    }]
+  },
+  "documentation": null
+}

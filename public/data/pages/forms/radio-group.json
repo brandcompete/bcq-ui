@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "pageTitle": "Radio Group for Vue3",
+    "keywords": [
+      "radio button",
+      "radios",
+      "radio group"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/radio-group.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "model:value": "strandberg",
+    "vertical": true,
+    "labelUppercase": false,
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "labelFontWeight": [
+      "normal"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "xAlign": [
+      "left"
+    ],
+    "guitars": [
+      "epiphone",
+      "jackson",
+      "fender",
+      "gibson",
+      "strandberg"
+    ],
+    "size": [
+      "sm"
+    ]
+  },
+  "documentation": {
+    "bc-radio-group": {
+      "props": {
+        "<code>v-model:</code>value": ["Number | String", false, false, "Radio group value model"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "label-font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "label-uppercase": ["Boolean", false, false, "Sets labels to uppercase"],
+        "icon-checked": ["String", false, "'radiobox-marked'", "Checked radio <a href='/ui/icon' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-unchecked": ["String", false, "'radiobox-blank'", "Unchecked radio <a href='/ui/icon' v-link>icon</a>"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "name": ["String", false, true, "Required radio group <code>name</code> attribute"],
+        "size": ["String", false, "'sm'", "Component size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "vertical": ["Boolean", false, true, "Renders the radio buttons in a vertical or horizontal list"],
+        "x-align": ["String", false, "'left'", "Horizontal alignment, one of <code>left</code>, <code>center</code> or <code>right</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "update:value": ["Number | String", "Emitted on <code>v-model:value</code> change"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-radio": {
+      "props": {
+        "label": ["String", false, "undefined", "Component label"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "value": ["Number | String", false, "undefined", "Component value"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

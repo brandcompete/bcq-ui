@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "pageTitle": "Grid Layout for Vue3",
+    "keywords": [
+      "grid",
+      "flex",
+      "flexbox",
+      "css grid",
+      "css flex"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/grid.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "offset": 4,
+    "colColor": "grey",
+    "equalColumns": [{
+      "cols": 12,
+      "swatch": 500,
+      "text": 1000,
+      "color": "red"
+    }, {
+      "cols": 11,
+      "swatch": 500,
+      "text": 950,
+      "color": "pink"
+    }, {
+      "cols": 10,
+      "swatch": 500,
+      "text": 900,
+      "color": "purple"
+    }, {
+      "cols": 9,
+      "swatch": 500,
+      "text": 800,
+      "color": "deep-purple"
+    }, {
+      "cols": 8,
+      "swatch": 500,
+      "text": 700,
+      "color": "indigo"
+    }, {
+      "cols": 7,
+      "swatch": 500,
+      "text": 50,
+      "color": "blue"
+    }, {
+      "cols": 6,
+      "swatch": 500,
+      "text": 50,
+      "color": "light-blue"
+    }, {
+      "cols": 5,
+      "swatch": 500,
+      "text": 50,
+      "color": "cyan"
+    }, {
+      "cols": 4,
+      "swatch": 500,
+      "text": 50,
+      "color": "teal"
+    }, {
+      "cols": 3,
+      "swatch": 500,
+      "text": 50,
+      "color": "green"
+    }, {
+      "cols": 2,
+      "swatch": 500,
+      "text": 50,
+      "color": "light-green"
+    }, {
+      "cols": 1,
+      "swatch": 500,
+      "text": 50,
+      "color": "lime"
+    }],
+    "responsiveColumns": [{
+      "cols": 12,
+      "swatch": "solid",
+      "text": 50,
+      "color": "discovery",
+      "xs": 12,
+      "sm": 6,
+      "md": 4,
+      "lg": 3,
+      "xl": 1
+    }]
+  },
+  "documentation": {
+    "bc-grid": {
+      "props": {
+        "no-gutter": ["Boolean", false, true, "Column gutter"],
+        "wrap": ["Boolean", false, true, "Wrap columns"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-grid-col": {
+      "props": {
+        "fixed": ["Boolean", false, false, "Fixed width. Use with the <code>width</code> prop"],
+        "lg": ["Number", false, "undefined", "Column span in <code>min-width: 992px</code>. Value must be between <code>1</code> and <code>12</code>"],
+        "md": ["Number", false, "undefined", "Column span in <code>min-width: 768px</code>. Value must be between <code>1</code> and <code>12</code>"],
+        "offset": ["Number", false, 0, "Column offset. Value must be between <code>0</code> and <code>12</code>"],
+        "sm": ["Number", false, "undefined", "Column span in <code>min-width: 576px</code>. Value must be between <code>1</code> and <code>12</code>"],
+        "span": ["Number | String", false, "undefined", "Column span, value must be between <code>1</code> and <code>12</code>"],
+        "width": ["String", false, "undefined", "Column width, use with <code>fixed: true</code>"],
+        "xl": ["Number", false, "undefined", "Column span in <code>min-width: 1200px</code>. Value must be between <code>1</code> and <code>12</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

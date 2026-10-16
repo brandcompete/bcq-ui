@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "pageTitle": "Button for Vue3",
+    "keywords": [
+      "button",
+      "btn"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/btn.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mb-0"
+      ]
+    }],
+    "size": [
+      "sm"
+    ],
+    "icon": "vuejs",
+    "tag": "button",
+    "uppercase": false,
+    "fontWeight": "semibold",
+    "block": true,
+    "disabled": false,
+    "loading": false,
+    "inert": false,
+    "iconDropdownSelection": [
+      "icon left"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "propControls": {
+      "iconDropdown": [
+        "icon left",
+        "icon right",
+        "icon only",
+        "no icon"
+      ],
+      "disabledOptionsDropdown": [
+        "not disabled",
+        "disabled",
+        "inert"
+      ],
+      "checkboxes": [{
+        "label": "loading",
+        "model:checked": "loading"
+      }, {
+        "label": "uppercase",
+        "model:checked": "uppercase"
+      }, {
+        "label": "block",
+        "model:checked": "block"
+      }]
+    }
+  },
+  "documentation": {
+    "bc-btn": {
+      "props": {
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'sm'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "font-weight": ["String", false, "'medium'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "href": ["String", false, "undefined", "HTML <code>href</code> attribute if the <code>tag</code> prop is <code>'a'</code>"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icons' v-link>icon</a>. If <code>icon</code> is set, label is not shown. For buttons with icons, check the <code>icon-left</code> and <code>icon-right</code> props"],
+        "icon-left": ["String", false, "undefined", "Optional component <a href='/ui/icons' v-link>icon</a> that will render on the left side of the button label"],
+        "icon-loading": ["String", false, "'loading'", "Loading <a href='/ui/icons' v-link>icon</a> for the <code>loading</code> prop"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-right": ["String", false, "undefined", "Optional component <a href='/ui/icons' v-link>icon</a> that will render in the right side of the button label"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "loading": ["Boolean", false, false, "Disables the component without a visual clue and shows the loading icon, set in the <code>icon-loading</code> prop"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "tag": ["String", false, "'button'", "HTML tag or Vue component. If you set <code>'a'</code> or <code>'router-link'</code>, you need to provide <code>'href'</code> or <code>'to'</code> attributes"],
+        "to": ["String", false, "undefined", "If <code>tag='router-link'</code> you must provide the <code>to</code> URI"],
+        "type": ["String", false, "'button'", "One of <code>'button'</code>, <code>'submit'</code> or <code>'reset'</code>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "uppercase": ["Boolean", false, false, "Renders the button label uppercase"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any suitable unit"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "pageTitle": "Navigator Online for Vue3",
+    "keywords": [
+      "navigator",
+      "online",
+      "offline",
+      "browser"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/navigator-online.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-navigator-online": {
+      "props": {},
+      "slots": {},
+      "events": {
+        "change": ["Object", "Emitted on online/offline change"]
+      }
+    }
+  }
+}

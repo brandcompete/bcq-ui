@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "pageTitle": "Pager for Vue3",
+    "keywords": [
+      "pager",
+      "pagination"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/pager.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "prevNextButtons": true,
+    "firstLastButtons": true,
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "color": [
+      "discovery"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "size": [
+      "sm"
+    ],
+    "pagers": [{
+      "pages": 10,
+      "model:page": 0
+    }]
+  },
+  "documentation": {
+    "bc-pager": {
+      "props": {
+        "<code>v-model:</code>page": ["Number", true, "undefined", "Current selected page"],
+        "align": ["String", false, "'center'", "Horizontal alignment, one of <code>'left'</code>, <code>'center'</code> or <code>'right'</code>"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "first-last-buttons": ["Boolean", false, true, "Show first and last buttons"],
+        "font-weight": ["String", false, "'medium'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icons</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icons": ["Object", false, "{ prev: 'chevron-left', next: 'chevron-right', first: 'chevron-double-left', last: 'chevron-double-right' }"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "pages": ["Number", true, "undefined", "Number of pages"],
+        "prev-next-buttons": ["Boolean", false, true, "Show previous and next buttons"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {},
+      "events": {
+        "update:page": ["Number", "Current selected page"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

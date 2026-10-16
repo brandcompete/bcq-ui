@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "pageTitle": "Application Theme",
+    "keywords": [
+      "theme",
+      "dark",
+      "light"
+    ],
+    "links": [
+      "content"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/theme.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }]
+  },
+  "documentation": null
+}

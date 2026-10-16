@@ -1,0 +1,56 @@
+{
+  "name": "brandcompete-becquerel-3",
+  "appName": "Becquerel UI for Vue3",
+  "description": "The Vue3 UI library developed by us at brandcompete GmbH provides a comprehensive and growing set of tools for building modern, consistent user interfaces",
+  "vendor": "brandcompete GmbH",
+  "vendorUrl": "https://brandcompete.com/",
+  "themeColor": "#212121",
+  "hostname": "https://becquerel3.brandcompete.com/",
+  "website": "https://becquerel3.brandcompete.com/",
+  "_hostname": "https://bcq.wemakesites.net/",
+  "_website": "https://bcq.wemakesites.net/",
+  "changefreq": "weekly",
+  "priority": "1.0",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "main": "src/lib.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.brandcompete.com/projects/BCINCUB/repos/brandcompete-becquerel-3/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs",
+    "preview": "vite preview",
+    "build:lib": "vite build -c vite.lib.config.js",
+    "build:all": "vite build && vite build -c vite.lib.config.js",
+    "bcq:create": "node bcq-cli/create.cjs",
+    "bcq:llms": "node bcq-cli/llms.cjs",
+    "bcq:ssr": "node bcq-cli/ssr.cjs"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "axios": "^1.15.0",
+    "clipboard-copy": "^4.0.1",
+    "highlight.js": "^11.11.1",
+    "marked": "^17.0.1",
+    "mitt": "^3.0.1",
+    "pinia": "^3.0.4",
+    "quill": "^2.0.3",
+    "vue": "^3.5.26",
+    "vue-axios": "^3.5.2",
+    "vue-router": "^4.6.4",
+    "vue-virtual-scroller": "^2.0.0-beta.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "chalk": "^4.1.2",
+    "vite": "^7.3.0",
+    "vite-plugin-sitemap": "^0.8.2",
+    "vite-plugin-vue-devtools": "^8.0.5"
+  }
+}

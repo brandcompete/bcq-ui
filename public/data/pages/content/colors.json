@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "pageTitle": "Colors",
+    "keywords": [
+      "colors",
+      "variant",
+      "swatches",
+      "modifiers"
+    ],
+    "links": [
+      "uiColors",
+      "colorSwatches",
+      "content"
+    ]
+  },
+  "config": {
+    "colorSwatches": []
+  },
+  "documentation": null
+}

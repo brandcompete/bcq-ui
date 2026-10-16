@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "pageTitle": "Kbd for Vue3",
+    "keywords": [
+      "kbd",
+      "keyboard"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/kbd.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": []
+    }],
+    "size": [
+      "sm"
+    ],
+    "color": [
+      "primary"
+    ],
+    "variant": [
+      "outline"
+    ],
+    "alphabet": [
+      "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+      "N" ,"O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+    ],
+    "numbers": 12,
+    "symbols": [
+      "⌘", "⊞", "⇧", "⌃", "⌥", "↵"
+    ]
+  },
+  "documentation": {
+    "bc-kbd": {
+      "props": {
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "display": ["String", false, "'flex'", "Default CSS <code>display</code>"],
+        "elevation": ["String", false, "'none'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "value": ["String, Number", true, "undefined", "Keyboard key to display"],
+        "variant": ["String", false, "'outline'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

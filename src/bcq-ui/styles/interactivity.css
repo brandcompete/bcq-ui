@@ -1,0 +1,94 @@
+/* appearance */
+
+.appearance-none
+{
+  appearance: none;
+}
+
+/* cursors */
+
+.cursor-auto
+{
+  cursor: auto;
+}
+
+.cursor-pointer
+{
+  cursor: pointer;
+}
+
+.cursor-wait
+{
+  cursor: wait;
+}
+
+.cursor-move
+{
+  cursor: move;
+}
+
+.cursor-no-drop
+{
+  cursor: no-drop;
+}
+
+.cursor-none
+{
+  cursor: none;
+}
+
+.cursor-default
+{
+  cursor: default;
+}
+
+/* outline */
+
+.outline-none
+{
+  outline: none;
+}
+
+/* pointer events */
+.pointer-events-none
+{
+  pointer-events: none;
+}
+
+.pointer-events-auto
+{
+  pointer-events: auto;
+}
+
+.pointer-events-all
+{
+  pointer-events: all;
+}
+
+.select-none
+{
+  user-select: none;
+}
+
+.select-text
+{
+  user-select: text;
+}
+
+.select-all
+{
+  user-select: all;
+}
+
+.select-auto
+{
+  user-select: auto;
+}
+
+.disabled,
+[disabled]
+{
+  opacity: .5;
+  cursor: default;
+  pointer-events: none;
+}

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "pageTitle": "List for Vue3",
+    "keywords": [
+      "list",
+      "list component",
+      "navigation",
+      "icon"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "divider": true,
+    "showIconLeft": true,
+    "showIconRight": true,
+    "showListItemTitle": true,
+    "showListItemSubTitle": true,
+    "itemTag": "router-link",
+    "itemTags": [
+      "router-link",
+      "a",
+      "div"
+    ],
+    "clickable": false,
+    "items": [],
+    "codeFiles": [{
+      "uri": "/code/list.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ]
+  },
+  "documentation": {
+    "bc-list": {
+      "props": {
+        "clickable": ["Boolean", false, false, "Apply <code>cursor-pointer</code> class to the root element"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "divider": ["Boolean", false, false, "Render divider between list items"],
+        "elevation": ["String", false, "'none'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "hoverable": ["Boolean", false, false, "Apply CSS hover classes to the list items"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "max-height": ["String", false, false, "Apply CSS <code>max-height</code> and <code>overflow: hidden</code> to the root element"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-list-item": {
+      "props": {
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "href": ["String", false, "undefined", "HTML <code>href</code> attribute if the <code>tag</code> prop is <code>'a'</code>"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "tag": ["String", false, "'div'", "Root element HTML tag"],
+        "to": ["String", false, "undefined", "Vue <code>to</code> prop if the <code>tag</code> prop is <code>'router-link'</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-list-item-content": {
+      "props": {
+        "padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-list-item-content-sub-title": {
+      "props": {
+        "font-size": ["String", false, "'xs'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "truncate": ["Boolean", false, true, "Apply CSS ellipsis for long lines"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-list-item-content-title": {
+      "props": {
+        "font-size": ["String", false, "'xs'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "truncate": ["Boolean", false, true, "Apply CSS ellipsis for long lines"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-list-icon": {
+      "props": {
+        "padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "pageTitle": "Video for Vue3",
+    "keywords": [
+      "video",
+      "embed",
+      "reel",
+      "youtube"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/vid.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }],
+    "videos": [
+      "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftheophagyst%2Fvideos%2F1542188023133148%2F&show_text=false&width=560&t=0",
+      "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1938204823782034%2F&show_text=false&width=560&t=0",
+      "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftheophagyst%2Fvideos%2F1078419493716093%2F&show_text=false&width=560&t=0",
+      "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftheophagyst%2Fvideos%2F1767052567563768%2F&show_text=false&width=560&t=0",
+      "https://www.youtube.com/embed/1Gi5KtoWY8U?si=0b2rZhw4ba9rBncY",
+      "https://www.youtube.com/embed/46qjDJ0lLdE?si=q5Ai3_Iwofa6YDTK",
+      "https://www.youtube.com/embed/xSayYNy28TA?si=01HZ7XFhQq5U87CG",
+      "https://www.youtube.com/embed/KRVSt1w4zlc?si=fPp81SiafDg4RvDm"
+    ]
+  },
+  "documentation": {
+    "bc-vid": {
+      "props": {
+        "height": ["Number", false, 314, "Video width"],
+        "src": ["String", true, "undefined", "Video src"],
+        "width": ["Number", false, 560, "Video width"]
+      },
+      "slots": {},
+      "events": {
+        "load": ["Object", "Emitted on video <code>load</code>"]
+      }
+    }
+  }
+}

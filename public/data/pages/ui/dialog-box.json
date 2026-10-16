@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "pageTitle": "Dialog Box for Vue3",
+    "keywords": [
+      "dialog",
+      "popup",
+      "pop up",
+      "overlay"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "v-model:visible": false,
+    "title-bar": true,
+    "modal": true,
+    "persistent": true,
+    "title-divider": true,
+    "dismiss-button": true,
+    "title": "Becquerel UI for Vue3",
+    "content-height": null,
+    "content-overflow": null,
+    "icon": "radioactive",
+    "full-screen": false,
+    "show-icon": true,
+    "modal-inert": false,
+    "min-width": null,
+    "max-width": null,
+    "title-color": [
+      "discovery"
+    ],
+    "title-font-size": [
+      "sm"
+    ],
+    "propControls": {
+      "checkboxes": [{
+        "label": "dismiss-button",
+        "model:checked": "dismiss-button"
+      }, {
+        "label": "full-screen",
+        "model:checked": "full-screen"
+      }, {
+        "label": "icon",
+        "model:checked": "show-icon"
+      }, {
+        "label": "modal",
+        "model:checked": "modal"
+      }, {
+        "label": "persistent",
+        "model:checked": "persistent"
+      }, {
+        "label": "title-bar",
+        "model:checked": "title-bar"
+      }, {
+        "label": "title-divider",
+        "model:checked": "title-divider"
+      }]
+    }
+  },
+  "documentation": {
+    "bc-dialog-box": {
+      "props": {},
+      "slots": {},
+      "events": {}
+    }
+  }
+}

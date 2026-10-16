@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "pageTitle": "Context Menu for Vue3",
+    "keywords": [
+      "context menu"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/context-menu.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/context-menu-items.md",
+      "title": "context-menu-items",
+      "language": "javascript",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/context-menu-show.md",
+      "title": "context-menu-show",
+      "language": "javascript",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/context-menu-subscribe.md",
+      "title": "context-menu-subscribe",
+      "language": "javascript",
+      "margin": []
+    }],
+    "cols": 4,
+    "guitar": "/images/guitars/strandberg-boden-prog-7/image-0{index}.jpg",
+    "flags": [
+      "bg",
+      "de",
+      "cz",
+      "mt"
+    ],
+    "menus": {
+      "guitar": {
+        "leftIcons": true,
+        "rightIcons": true,
+        "items": [{
+          "title": "Guitar Info",
+          "subTitle": "Learn More",
+          "iconLeft": "information",
+          "iconRight": "guitar-electric"
+        }, {
+          "title": "Show Similar",
+          "subTitle": "Similar Models",
+          "iconLeft": "eye-circle",
+          "iconRight": "guitar-pick"
+        }, {
+          "title": "Remove",
+          "subTitle": "Remove from Suggestions",
+          "iconLeft": "delete-circle"
+        }, {
+          "title": "A Disabled Item",
+          "subTitle": "A Disabled Menu Item",
+          "iconRight": "music"
+        }, {
+          "title": "An Inert Item",
+          "subTitle": "An Inert Menu Item"
+        }]
+      },
+      "avatar": {
+        "leftIcons": false,
+        "rightIcons": false,
+        "items": [{
+          "title": "{textContent}"
+        }, {
+          "title": "Another Item",
+          "subTitle": "Optional Sub-title"
+        }, {
+          "title": "And Another One"
+        }, {
+          "title": "And Another One (Disabled)"
+        }, {
+          "title": "And Another One (Inert)"
+        }]
+      },
+      "flag": {
+        "leftIcons": true,
+        "rightIcons": false,
+        "items": [{
+          "title": "{textContent}",
+          "iconLeft": "flag"
+        }, {
+          "title": "Flag Item",
+          "subTitle": "Optional Sub-title",
+          "iconLeft": "flag"
+        }, {
+          "title": "And Another One",
+          "iconLeft": "flag"
+        }, {
+          "title": "And Another One (Disabled)"
+        }, {
+          "title": "And Another One (Inert)"
+        }]
+      }
+    }
+  },
+  "documentation": {
+    "bc-context-menu": {
+      "props": {
+        "elevation": ["String", false, "'xl'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "font-size-sub-title": ["String", false, "'xs'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "font-weight-sub-title": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "font-size-title": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "font-weight-title": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "z-index": ["Number", false, 2000, "Component CSS <code>z-index</code>"]
+      },
+      "slots": {},
+      "events": {
+        "bc-context-menu:show": ["Object" ,"Check the code samples to learn how to show context menu"]
+      }
+    }
+  }
+}

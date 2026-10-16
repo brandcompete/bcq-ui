@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "pageTitle": "Default Button for Vue3",
+    "keywords": [
+      "default button",
+      "selected button",
+      "focused button"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/default-btn.md",
+      "title": "directive",
+      "language": "xml"
+    }],
+    "btnLabel": "Hit \"Enter\" or \"Space\" "
+  },
+  "documentation": null
+}

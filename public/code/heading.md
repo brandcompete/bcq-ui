@@ -1,0 +1,11 @@
+<bc-heading 
+  :tag="String"
+  :font-size="String"
+  :font-weight="String"
+  :divider="Boolean"
+  :padding="Array"
+  :margin="Array"
+  :truncate="Boolean"
+  :to="String"
+  :href="String"
+  :divider-margin="Array">Content</bc-heading>

@@ -1,0 +1,17 @@
+<bc-speed-dial
+  @item-click="Function"
+  :color="String"
+  :elevation="String"
+  :icon="String"
+  :icon-provider="String"
+  :items="Array"
+  :label="String"
+  :position="String"
+  :rotate-icon-on-expand="Boolean"
+  :roundness="String"
+  :size="String"
+  :variant="String"
+  :vertical="Boolean"
+  :x-align="String"
+  :y-align="String"
+  :z-index="Number" />

@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "pageTitle": "SVG Icon for Vue3",
+    "keywords": [
+      "svg",
+      "icon"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/svg-icon.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/svg-icon-sprite.md",
+      "title": "svg-icon-sprite",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "icons": [
+      "chat",
+      "chatbot",
+      "chevron-down",
+      "chevron-up",
+      "copy",
+      "download",
+      "loading",
+      "send-message"
+    ],
+    "span": 3
+  },
+  "documentation": {
+    "bc-svg-icon": {
+      "props": {
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "color": ["String", false, "'#000000'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "name": ["String", true, "undefined", "Required icon name, essentially the symbol <code>id</code> in your SVG sprite"],
+        "size": ["String", true, "'24px'", "Icon <code>height</code> and <code>width</code>"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

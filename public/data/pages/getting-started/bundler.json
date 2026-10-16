@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "pageTitle": "Custom Bundler",
+    "keywords": [
+      "bundler"
+    ],
+    "links": [
+      "getting-started"
+    ]
+  },
+  "config": {
+    "bundlerDefs": "/data/miscellaneous/bundler-defs.json"
+  },
+  "documentation": null
+}

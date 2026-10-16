@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "pageTitle": "Skeleton Loader for Vue3",
+    "keywords": [
+      "skeleton loader",
+      "loading"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/skeleton-loader.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "skeletonLoaders": {
+      "right": [
+        "w-5",
+        "w-full",
+        "w-7",
+        "w-6"
+      ],
+      "bottom": [
+        "w-2",
+        "w-2",
+        "w-2"
+      ]
+    },
+    "animation": [
+      "pulse"
+    ],
+    "animations": [
+      "bounce",
+      "fade",
+      "none",
+      "pulse",
+      "ping",
+      "pulse-x",
+      "pulse-y",
+      "wave"
+    ],
+    "color": [
+      "secondary"
+    ],
+    "variant": [
+      "solid"
+    ]
+  },
+  "documentation": {
+    "bc-skeleton-loader": {
+      "props": {
+        "animation": ["String", false, "'pulse'", "One of the CSS <a href='/content/css-animations' v-link>animations</a> or <code>'none'</code>"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "color": ["String", false, "'secondary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "height": ["String", false, "'16px'", "CSS <code>height</code> in any suitable unit. Width can be set directly in a <code>style</code> attribute or via the <a href='/content/utility-css-classes' v-link>width</a> utility CSS classes"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

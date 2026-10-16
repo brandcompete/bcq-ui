@@ -1,0 +1,54 @@
+{
+  "name": "Becquerel UI for Vue3",
+  "short_name": "Becquerel UI",
+  "description": "The Vue3 UI library by brandcompete GmbH. We have a constantly growing collection of ready-to-use ui components, form controls and layout elements, useful directives, and a wide range of helpful typography and utility CSS classes. This website was built entirely with the library itself and serves as a complete reference, so start exploring now.",
+  "start_url": ".",
+  "vendor": "brandcompete GmbH",
+  "vendorUrl": "https://www.brandcompete.com/",
+  "display": "standalone",
+  "lang": "en-US",
+  "orientation": "any",
+  "icons": [{
+    "src": "/images/icons/512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/32.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/24.png",
+    "sizes": "24x24",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/16.png",
+    "sizes": "16x16",
+    "type": "image/png"
+  }, {
+    "src": "/images/icons/safari-pinned-tab.svg",
+    "sizes": "256x256",
+    "type": "image/svg+xml"
+  }, {
+    "src": "/images/icons/favicon.ico",
+    "sizes": "32x32",
+    "type": "image/x-icon"
+  }],
+  "theme_color": "#212121",
+  "background_color": "#fff"
+}

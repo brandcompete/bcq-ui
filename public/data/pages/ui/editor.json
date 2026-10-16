@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "pageTitle": "Editor for Vue3",
+    "keywords": [
+      "rich editor",
+      "wysiwyg editor",
+      "quill"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/editor.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": []
+    }],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "editors": [{
+      "title": "Default Theme and Tools",
+      "theme": "snow",
+      "value": "",
+      "placeholder": "Compose an epic..."
+    }, {
+      "title": "Bubble Theme and Custom Tools",
+      "theme": "bubble",
+      "value": "This is some default contents. To edit it, select all or a portion of it...",
+      "placeholder": "Compose an epic..."
+    }]
+  },
+  "documentation": {
+    "bc-editor": {
+      "props": {
+        "<code>v-model:</code>value": ["String", false, false, "Editor contents"]
+      },
+      "slots": {},
+      "events": {
+        "update:value": ["String", "Emitted on Quill's <code>text-change</code> <a href='https://quilljs.com/docs/api#events' target='_blank' rel='noopener'>event</a>"]
+      }
+    }
+  }
+}

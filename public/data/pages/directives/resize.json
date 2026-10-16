@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "pageTitle": "Resize for Vue3",
+    "keywords": [
+      "window resize"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "viewport": null,
+    "codeFiles": [{
+      "uri": "/code/resize.md",
+      "title": "directive",
+      "language": "xml"
+    }]
+  },
+  "documentation": null
+}

@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "pageTitle": "Typography",
+    "keywords": [
+      "weights",
+      "font-style",
+      "text-align",
+      "text-decoration",
+      "text-overflow",
+      "text-transform",
+      "line-height",
+      "white-space",
+      "list-style-type",
+      "vertical-align",
+      "content",
+      "size"
+    ],
+    "links": [
+      "weights",
+      "font-style",
+      "text-align",
+      "text-decoration",
+      "text-overflow",
+      "text-transform",
+      "line-height",
+      "white-space",
+      "list-style-type",
+      "vertical-align",
+      "content",
+      "size"
+    ]
+  },
+  "config": {
+    "scalesAndWeights": {
+      "scales": {
+        "prefix": "text"
+      },
+      "weights": {
+        "prefix": "font"
+      }
+    },
+    "classes": {
+      "font-style": {
+        "items": ["italic"]
+      },
+      "font-variant": {
+        "items": ["small-caps"]
+      },
+      "text-align": {
+        "items": [
+          "text-center",
+          "text-justify",
+          "text-left",
+          "text-right"
+        ]
+      },
+      "text-decoration": {
+        "items": [
+          "underline",
+          "line-through",
+          "no-underline",
+          "overline"
+        ]
+      },
+      "text-overflow": {
+        "items": [
+          "text-overflow-clip",
+          "text-overflow-ellipsis"
+        ]
+      },
+      "text-transform": {
+        "items": [
+          "lowercase",
+          "uppercase",
+          "capitalize"
+        ]
+      },
+      "line-height": {
+        "items": [
+          "line-height-1",
+          "line-height-2",
+          "line-height-3",
+          "line-height-4"
+        ]
+      },
+      "white-space": {
+        "items": [
+          "white-space-normal",
+          "white-space-nowrap"
+        ]
+      },
+      "list-style-type": {
+        "items": [
+          "list-none",
+          "list-disc",
+          "list-decimal"
+        ]
+      },
+      "vertical-align": {
+        "items": [
+          "align-baseline",
+          "align-top",
+          "align-middle",
+          "align-bottom",
+          "align-text-top",
+          "align-text-bottom",
+          "align-sub",
+          "align-super",
+          "vertical-align-baseline",
+          "vertical-align-top",
+          "vertical-align-middle",
+          "vertical-align-bottom",
+          "vertical-align-text-top",
+          "vertical-align-text-bottom",
+          "vertical-align-sub",
+          "vertical-align-super"
+        ]
+      }
+    }
+  },
+  "documentation": null
+}

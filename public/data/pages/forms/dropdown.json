@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "pageTitle": "Dropdown for Vue3",
+    "keywords": [
+      "dropdown",
+      "menu",
+      "selectbox"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/dropdown.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/dropdown-items.md",
+      "title": "dropdown-items",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }],
+    "label": "Dropdown Label",
+    "showLabel": true,
+    "hint": "Dropdown Hint",
+    "showHint": false,
+    "error": false,
+    "searchable": false,
+    "fuzzySearch": false,
+    "expanded": false,
+    "icon": "vuejs",
+    "showIcon": true,
+    "labelsUppercase": false,
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "size": [
+      "sm"
+    ],
+    "dropdowns": [{
+      "multiple": false,
+      "itemsCount": 1000,
+      "v-model:value": [],
+      "visibleItems": 5
+    }, {
+      "multiple": true,
+      "itemsCount": 2000,
+      "v-model:value": [1, 3, 5, 50, 1500],
+      "visibleItems": 5
+    }, {
+      "multiple": true,
+      "itemsCount": 3000,
+      "v-model:value": [2, 4, 6, 60, 2000],
+      "visibleItems": 5
+    }, {
+      "multiple": true,
+      "itemsCount": 4000,
+      "v-model:value": [3, 5, 7, 70, 3500],
+      "visibleItems": 5
+    }]
+  },
+  "documentation": {
+    "bc-dropdown": {
+      "props": {
+        "<code>v-model:</code>value": ["Array", false, "[]", "If a dropdown array item looks like <code>{ label: 'Item Label', value: 'item-value' }</code>, the model will be <code>['item-value']</code>. The model is always an array, regardless of the <code>multiple</code> prop setting. Make sure you also check the <code>items</code>, <code>labelKey</code> and <code>labelValue</code> props"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "error": ["Boolean", false, false, "Apply the <code>error-css-class</code> prop"],
+        "error-css-class": ["String", false, "'bc-dropdown-error'", "Error CSS class"],
+        "expanded": ["Boolean", false, false, "Render as expanded, without header and not collapsible"],
+        "fuzzy-search": ["Boolean", false, false, "Fuzzy or exact search if <code>searchable</code> is enabled"],
+        "header-items": ["Number", false, 10, "Max number of the displayed selected items in header. Useful when working with large arrays"],
+        "hint": ["String", false, "undefined", "Optional component hint, rendered at the bottom right"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icon' v-link>icon</a>"],
+        "icon-collapse": ["String", false, "'chevron-up'", "Collapse <a href='/ui/icon' v-link>icon</a>, rendered on the right"],
+        "icon-expand": ["String", false, "'chevron-down'", "Expand <a href='/ui/icon' v-link>icon</a>, rendered on the right"],
+        "icon-multiple-checked": ["String", false, "'checkbox-marked-outline'", "Checked item <a href='/ui/icon' v-link>icon</a> if <code>multiple</code> is enabled"],
+        "icon-multiple-unchecked": ["String", false, "'checkbox-blank-outline'", "Unchecked item <a href='/ui/icon' v-link>icon</a> if <code>multiple</code> is enabled"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-searchable": ["String", false, "'magnify'", "Searchable <a href='/ui/icon' v-link>icon</a> if <code>searchable</code> is enabled"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "items": ["Array", false, [], "Items array, <code>[{ label: String | Number, value: String | Number }]</code>. Check also the <code>labelKey</code> and <code>valueKey</code> props and the <code>v-model:value</code>"],
+        "items-z-index": ["Number", false, 900, "Items dropdown CSS <code>z-index</code>"],
+        "label": ["String", false, "undefined", "Optional component label, rendered at the top left"],
+        "label-ley": ["String", false, "'label'", "Label key of an <code>items</code> array item"],
+        "labels-uppercase": ["Boolean", false, false, "Sets <code>label</code> and <code>hint</code> to uppercase"],
+        "multiple": ["Boolean", false, false, "Allow multiple selection"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "searchable": ["Boolean", false, false, "Allow items filtering, check also <code>fuzzy-search</code> for more options"],
+        "searchable-color": ["String", false, "'caution'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "searchable-label": ["String", false, "'Filter Items...'", "Search text field label"],
+        "searchable-no-results-text": ["String", false, "'Nothing Found...'", "Default message if <code>searchable</code> is enabled and the search yielded no results"],
+        "searchable-variant": ["String", false, "'soft'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "size": ["String", false, "'sm'", "Component size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "title": ["String", false, "undefined", "Optional dropdown header hint"],
+        "value-key": ["String", false, "'value'", "Value key of an <code>items</code> array item"],
+        "visible-items": ["Number", false, 5, "Number of the items visible in the dropdown"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any suitable unit"]
+      },
+      "slots": {
+        "top": ["Top slot"],
+        "bottom": ["Bottom slot"]
+      },
+      "events": {
+        "update:value": ["Array", "Emitted on <code>v-model:value</code> update"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "pageTitle": "Button Group for Vue3",
+    "keywords": [
+      "button group",
+      "btn"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "size": [
+      "sm"
+    ],
+    "color": [
+      "primary"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "iconsAndLabels": [
+      "icon and label",
+      "icon only",
+      "label only"
+    ],
+    "iconsAndLabelsSelection": [
+      "icon and label"
+    ],
+    "fontWeight": [
+      "medium"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "groups": [{
+      "exclusive": false,
+      "selection": [
+        "bold",
+        "italic"
+      ],
+      "buttons": [{
+        "name": "bold",
+        "label": "Bold",
+        "hint": "Bold",
+        "icon": "format-bold",
+        "disabled": false,
+        "inert": false
+      }, {
+        "name": "italic",
+        "label": "Italic",
+        "hint": "Italic",
+        "icon": "format-italic",
+        "disabled": false,
+        "inert": false
+      }, {
+        "name": "underline",
+        "label": "Underline",
+        "hint": "Underline",
+        "icon": "format-underline",
+        "disabled": false,
+        "inert": false
+      }, {
+        "name": "strikethrough",
+        "label": "Strike",
+        "hint": "Strike",
+        "icon": "format-strikethrough-variant",
+        "disabled": false,
+        "inert": false
+      }]
+    }, {
+      "exclusive": true,
+      "selection": [
+        "align-center"
+      ],
+      "buttons": [{
+        "name": "align-left",
+        "label": "Left",
+        "hint": "Align Left",
+        "icon": "format-align-left",
+        "disabled": false,
+        "inert": false
+      }, {
+        "name": "align-center",
+        "label": "Center",
+        "hint": "Align Center",
+        "icon": "format-align-center",
+        "disabled": false,
+        "inert": false
+      }, {
+        "name": "align-right",
+        "label": "Right",
+        "hint": "Align Right",
+        "icon": "format-align-right",
+        "disabled": false,
+        "inert": false
+      }, {
+        "name": "align-justify",
+        "label": "Justify",
+        "hint": "Justify",
+        "icon": "format-align-justify",
+        "disabled": false,
+        "inert": false
+      }]
+    }],
+    "codeFiles": [{
+      "uri": "/code/btn-group.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/btn-group-buttons.md",
+      "title": "btn-group-buttons",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-btn-group": {
+      "props": {
+        "<code>v-model:</code>selection": ["Array", false, "[]", "Selection(s) by button <code>name</code> name. Check the <code>buttons</code> and <code>exclusive</code> props"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "buttons": ["Array", false, "[]", "<code>[{ name: String (required), label: String, hint: String, icon: String, disabled: Boolean, inert: Boolean }</code>"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'sm'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "exclusive": ["Boolean", false, false, "Single or multiple button selection"],
+        "font-weight": ["String", false, "'medium'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "uppercase": ["Boolean", false, true, "Sets button labels to uppercase"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any suitable unit"]
+      },
+      "slots": {},
+      "events": {
+        "update:selection": ["Array", "Triggered upon button (de)selection"],
+        "default": ["Default", "Default JavaScript events"]
+      }
+    }
+  }
+}

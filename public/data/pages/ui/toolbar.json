@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "pageTitle": "Toolbar for Vue3",
+    "keywords": [
+      "toolbar component",
+      "navigation"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "toolbarIcon": true,
+    "toolbarTitle": true,
+    "toolbarActions": true,
+    "size": [
+      "md"
+    ],
+    "color": [
+      "secondary"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "icon": "menu",
+    "title": "Toolbar Title",
+    "actions": [
+      "content-cut",
+      "content-copy",
+      "content-paste",
+      "refresh",
+      "delete"
+    ],
+    "iconClasses": [],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "codeFiles": [{
+      "uri": "/code/toolbar.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mb-0"
+      ]
+    }]
+  },
+  "documentation": {
+    "bc-toolbar": {
+      "props": {
+        "color": ["String", false, "'secondary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "height": ["String", false, "undefined", "CSS <code>height</code> in any suitable unit"],
+        "padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'md'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-toolbar-actions": {
+      "props": {
+        "x-align": ["String", false, "'right'", "Horizontal alignment, one of <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-toolbar-icon": {
+      "props": {
+        "width": ["String", false, "'40px'", "CSS <code>height</code> in any suitable unit"],
+        "x-align": ["String", false, "'center'", "Horizontal alignment, one of <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-toolbar-title": {
+      "props": {
+        "font-weight": ["String", false, "'semibold'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "width": ["String", false, "'w-full'", "One of the CSS <code>width</code> classes, available in the <a href='/content/utility-css-classes' v-link>utility styles</a>"],
+        "x-align": ["String", false, "'left'", "Horizontal alignment, one of <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

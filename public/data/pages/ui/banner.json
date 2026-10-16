@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "pageTitle": "Banner for Vue3",
+    "keywords": [
+      "banner",
+      "alert",
+      "info"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/banner.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": []
+    }],
+    "banners": 1,
+    "visible": true,
+    "dismissible": true,
+    "color": [
+      "discovery"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "size": [
+      "sm"
+    ]
+  },
+  "documentation": {
+    "bc-banner": {
+      "props": {
+        "<code>v-model:</code>visible": ["Boolean", false, "undefined", "Visibility state"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "dismissible": ["Boolean", false, true, "Allow dismiss on user click"],
+        "dismissIcon": ["String", false, "'close'", "Optional component <a href='/ui/icons' v-link>icon</a>"],
+        "elevation": ["String", false, "'none'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "padding": ["Array", false, "['p-2']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "roundness": ["String", false, "'npne'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "x-align": ["String", false, "'center'", "One of the alignment <a href='/content/utility-css-classes' v-link>utility</a> CSS classes"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "update:visible": ["Boolean", "Emitted on <code>visible</code> prop value change"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

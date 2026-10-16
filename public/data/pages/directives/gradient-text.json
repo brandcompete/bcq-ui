@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "pageTitle": "Gradient Text for Vue3",
+    "keywords": [
+      "color",
+      "css gradient",
+      "text gradient",
+      "text-gradient",
+      "gradient text"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/gradient-text.md",
+      "title": "directive",
+      "language": "xml"
+    }],
+    "items": {
+      "Vue: The Progressive JavaScript Framework": {
+        "tilt": 45,
+        "colors": [
+          "#42d392",
+          "#5f8bef"
+        ]
+      },
+      "React: The library for web and native user interfaces": {
+        "tilt": 45,
+        "colors": [
+          "#58c4dc",
+          "#23272e"
+        ]
+      },
+      "Angular: The framework for building scalable web apps with confidence\n": {
+        "tilt": 45,
+        "colors": [
+          "#851afd",
+          "#e8255a"
+        ]
+      }
+    }
+  },
+  "documentation": null
+}

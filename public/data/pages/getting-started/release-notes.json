@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "pageTitle": "Release Notes",
+    "keywords": [
+      "release notes",
+      "changelog"
+    ],
+    "links": [
+      "getting-started"
+    ]
+  },
+  "config": {
+    "changelogSlug": "CHANGELOG.md"
+  },
+  "documentation": null
+}

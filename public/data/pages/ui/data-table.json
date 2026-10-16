@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "pageTitle": "Data Table for Vue3",
+    "keywords": [
+      "data table",
+      "data grid",
+      "tabular data"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "selectedGrid": [],
+    "codeFiles": [{
+      "uri": "/code/data-table-headers-and-items.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/data-table-headers-items-visible-columns.md",
+      "title": "data-table-headers-items-visible-columns",
+      "language": "javascript",
+      "margin": []
+    }],
+    "grids": [
+      "/data/data-table/data-table-01.json",
+      "/data/data-table/data-table-02.json"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "clickableRows": false,
+    "headersFontSize": [
+      "sm"
+    ],
+    "headersUppercase": true,
+    "height": "316px",
+    "iconProvider": "mdi",
+    "hoverable": false,
+    "noMatchingRecordsFoundLabel": "No matching records found...",
+    "padding": [
+      "p-1"
+    ],
+    "searchable": false,
+    "searchableIcon": "filter",
+    "searchableLabel": "Filter Rows...",
+    "searchInputAlign": [
+      "left"
+    ],
+    "searchInputAlignments": [
+      "left",
+      "right"
+    ],
+    "searchInputClearable": true,
+    "searchInputGridSpan": 4,
+    "sortable": false,
+    "toggleColumns": false,
+    "zebraRows": false
+  },
+  "documentation": {
+    "bc-data-table": {
+      "props": {
+        "<code>v-model</code>:visible-columns": ["Array", false, "[]", "Array of default visible columns if data sets are large"],
+        "clickable-rows": ["Boolean", false, "undefined", "Sets the rows cursor to <code>pointer</code>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "headers": ["Array", false, "[]", "Headers array (check the code samples above)"],
+        "headers-font-size": ["String", false, "'sm'", "Headers font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "headers-font-weight": ["String", false, "'semibold'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "headers-uppercase": ["Boolean", false, true, "Sets the headers to uppercase"],
+        "height": ["String", false, "undefined", "Component CSS <code>height</code> in any suitable unit"],
+        "hoverable": ["Boolean", false, false, "Rows change style on hover"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icons</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "items": ["Array", false, "[]", "Row items, (check the code samples above)"],
+        "items-font-size": ["String", false, "'sm'", "Items font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "no-matching-records-found-label": ["String", false, "'No matching records found...'", "Label to display if <code>searchable</code> is enabled and search/filtering yielded no results"],
+        "padding": ["Array", false, "['p-1']", "Cell <code>padding</code>, as specified in the <a href='/content/utility-css-classes' v-link>padding</a> utility CSS classes"],
+        "searchable": ["Boolean", false, false, "Enable row search/filtering"],
+        "searchable-icon": ["String", false, "'filter'", "Search/filter input icon (if <code>searchable</code> is enabled)"],
+        "searchable-label": ["String", false, "'Filter Rows...'", "Search/filter input label (if <code>searchable</code> is enabled)"],
+        "search-input-align": ["String", false, "'left'", "Search/filter input alignment (if <code>searchable</code> is enabled), one of <code>'left'</code> or <code>'right'</code>"],
+        "search-input-clearable": ["Boolean", false, true, "Clearable search/filter input (if <code>searchable</code> is enabled)"],
+        "search-input-grid-span": ["Number", false, 4, "Search/filter input grid span if <code>searchable</code> is enabled (possible value: <code>1-12</code>)"],
+        "sortable": ["Boolean", false, false, "Enable row sorting"],
+        "toggle-columns": ["Boolean", false, false, "Used in conjunction with <code>v-model:visible-columns</code>"],
+        "visible-columns-context-menu-height": ["String", false, "'236px'", "CSS <code>height</code> of the visible columns context menu (accessible on headers right-click)"],
+        "visible-columns-context-menu-width": ["String", false, "'300px'", "CSS <code>width</code> of the visible columns context menu (accessible on headers right-click)"],
+        "visible-columns-context-menu-z-index": ["Number", false, 1000, "CSS <code>z-index</code> of the visible columns context menu (accessible on headers right-click)"],
+        "unselectable-rows": ["Boolean", false, "undefined", "Apply the <code>select-none</code> <a href='/content/utility-css-classes' v-link>utility CSS class</a> to the rows"],
+        "x-align": ["String", false, "'left'", "Global horizontal alignment, one of <code>'left'</code>, <code>'center'</code> or <code>'right'</code>"],
+        "y-align": ["String", false, "'center'", "Global vertical alignment, one of <code>'start'</code>, <code>'center'</code> or <code>'end'</code>"],
+        "zebra-rows": ["Boolean", false, false, "Apply zebra styling to rows"]
+      },
+      "slots": {
+        "header": ["Header slot"],
+        "footer": ["Footer slot"],
+        "custom slots": ["Check demos and code samples for custom slots"]
+      },
+      "events": {
+        "update:visibleColumns": ["Array", "Emitted on updating the <code>v-model:visible-columns</code>"],
+        "row-click": ["Object" ,"Emitted on row <code>click</code>"],
+        "row-dblclick": ["Object" ,"Emitted on row <code>dblclick</code>"]
+      }
+    }
+  }
+}

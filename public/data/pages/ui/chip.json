@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "pageTitle": "Chip for Vue3",
+    "keywords": [
+      "chips",
+      "action"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/chip.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "fontSize": [
+      "sm"
+    ],
+    "variant": [
+      "soft"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "block": false,
+    "fontWeight": "normal",
+    "elevation": "sm",
+    "uppercase": false,
+    "icon": "account-circle",
+    "dismissible": true,
+    "showIcon": true,
+    "chips": [{
+      "label": "Joe Satriani",
+      "color": "caution",
+      "model:visible": true
+    }, {
+      "label": "Tony Macalpine",
+      "color": "secondary",
+      "model:visible": true
+    }, {
+      "label": "Steve Vai",
+      "color": "danger",
+      "model:visible": true
+    }, {
+      "label": "Tosin Abasi",
+      "color": "info",
+      "model:visible": true
+    }, {
+      "label": "Yngwie Malmsteen",
+      "color": "discovery",
+      "model:visible": true
+    }, {
+      "label": "Ritchie Blackmore",
+      "color": "success",
+      "model:visible": true
+    }]
+  },
+  "documentation": {
+    "bc-chip": {
+      "props": {
+        "<code>v-model:</code>visible": ["Boolean", false, true, "Component visibility model"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "clickable": ["Boolean", false, false, "Sets the cursor to <code>pointer</code>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "dismiss-icon": ["String", false, "'close-circle'", "Dismiss icon"],
+        "dismissible": ["Boolean", false, true, "Allows component dismissal via the <code>dismiss-icon</code>"],
+        "elevation": ["String", false, "'sm'", "Component elevation. One of the <a href='/content/elevation' v-link>shadow</a> postfixes"],
+        "font-size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "font-weight": ["String", false, "'normal'", "Component font weight. One of the <a href='/content/typography' v-link>typography</a> font-weight treatments"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icon' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "tag": ["String", false, "'div'", "HTML tag or Vue component. If you set <code>'a'</code> or <code>'router-link'</code>, you need to provide <code>'href'</code> or <code>'to'</code> attributes"],
+        "uppercase": ["Boolean", false, true, "Sets the content of the component to uppercase"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"],
+        "update:visible": ["Boolean", "Emitted on model change"]
+      }
+    }
+  }
+}

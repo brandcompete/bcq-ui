@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "pageTitle": "Collapsible for Vue3",
+    "keywords": [
+      "collapsible",
+      "toggle",
+      "expand",
+      "summary",
+      "details"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/collapsible.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "items": [],
+    "multiple": true,
+    "icon": true
+  },
+  "documentation": {
+    "bc-collapsible": {
+      "props": {
+        "animation-speed": ["Number", false, 200, "Expand/collapse animation speed. One of the <code>transition-duration</code> <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "content-max-height": ["String", false, "undefined", "<code>bc-collapsible-item</code> sub-component <code>max-height</code> in any suitable CSS unit"],
+        "content-size": ["String", false, "'sm'", "<code>bc-collapsible-item</code> CSS <code>font-size</code>. One of the <a href='/content/typography' v-link>typography</a> <code>font-size</code> treatments"],
+        "content-padding": ["Array", false, "['p-1']", "<code>bc-collapsible-item</code> CSS padding. One of the <a href='/content/utility-css-classes' v-link>utility</a> paddings"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "header-font-weight": ["String", false, "'semibold'", "<code>bc-collapsible-item</code> font size. One of the <a href='/content/typography' v-link>typography</a> <code>font-weight</code> treatments"],
+        "header-size": ["String", false, "'sm'", "Header <code>font-size</code>. One of the <a href='/content/typography' v-link>typography</a> <code>font-size</code> treatments"],
+        "icon-collapse": ["String", false, "'chevron-up'", "Collapse <a href='/ui/icons' v-link>icon</a>"],
+        "icon-expand": ["String", false, "'chevron-down'", "Expand <a href='/ui/icons' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "multiple": ["Boolean", false, true, "Single or multiple expanded items"],
+        "roundness": ["String", false, "'md'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot for rendering <code>bc-collapsible-item</code> sub-components"],
+        "top": ["Top slot (item slot)"],
+        "right": ["Right slot (header)"],
+        "bottom": ["Bottom slot (item slot)"],
+        "left": ["Left slot (header)"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-collapsible-item": {
+      "props": {
+        "<code>v-model:</code>expanded": ["Boolean", false, false, "Expanded/collapsed state"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "icon": ["String", false, "undefined", "Optional component header <a href='/ui/icons' v-link>icon</a>"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "label": ["String", false, "undefined", "Optional component header label"],
+        "sub-label": ["String", false, "undefined", "Optional component header sub-label"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"],
+        "top": ["Top slot (item slot)"],
+        "bottom": ["Bottom slot (item slot)"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"],
+        "update:expanded": ["Boolean" ,"Triggered on <code>v-model:expanded</code> update"],
+        "bc-collapsible:expand-all": ["null", "Expand all items"],
+        "bc-collapsible:collapse-all": ["null", "Collapse all items"]
+      }
+    }
+  }
+}

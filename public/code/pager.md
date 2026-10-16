@@ -1,0 +1,17 @@
+<bc-pager
+  @update:page="Function"
+  v-model:page="Number"
+  :align="String"
+  :color="String"
+  :disabled="Boolean"
+  :elevation="String"
+  :first-last-buttons="Boolean"
+  :font-weight="String"
+  :icon-provider="String"
+  :icons="Object" 
+  :inert="Boolean"
+  :pages="Number"
+  :prev-next-buttons="Boolean"
+  :roundness="Boolean"
+  size="String"
+  :variant="String" />

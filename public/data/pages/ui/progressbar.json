@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "pageTitle": "Progressbar for Vue3",
+    "keywords": [
+      "progress",
+      "progress bar",
+      "loading"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/progressbar.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "progressColor": [
+      "discovery"
+    ],
+    "size": [
+      "sm"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "v-model:value": 50,
+    "block": true,
+    "indeterminate": false,
+    "percentageToFixed": 0,
+    "comparator": 100,
+    "label": true,
+    "hint": true,
+    "reversed": false,
+    "disabled": false,
+    "labelsUppercase": false,
+    "inert": false,
+    "elevation": "none",
+    "icons": true,
+    "iconLeft": "minus-circle-outline",
+    "iconRight": "plus-circle-outline",
+    "height": "8px",
+    "roundness": "full",
+    "iconCursor": "pointer",
+    "progressStep": 10
+  },
+  "documentation": {
+    "bc-progressbar": {
+      "props": {
+        "<code>v-model:</code>value": ["Number", false, 0, "Component value model"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "comparator": ["Number", false, 100, "The <code>comparator</code>, along with <code>v-model:value</code> against which the progress will be calculated"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'none'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "height": ["String", false, "'8px'", "CSS <code>height</code> of the component in any suitable unit"],
+        "hint": ["String", false, "undefined", "Optional component hint, rendered at the bottom right"],
+        "icon-cursor": ["String", false, "'default'", "Icon CSS <code>cursor</code>"],
+        "icon-left": ["String", false, "undefined", "Optional left icon"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-right": ["String", false, "undefined", "Optional right icon"],
+        "indeterminate": ["Boolean", false, false, "Sets progress to indeterminate"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "label": ["String", false, "undefined", "Optional component label, rendered at the top left"],
+        "labels-uppercase": ["Boolean", false, false, "Sets <code>label</code> and <code>hint</code> to uppercase"],
+        "percentage-to-fixed": ["Number", false, 0, "Formats the percentage number using fixed-point notation"],
+        "progress-color": ["String", false, "'secondary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "reversed": ["Boolean", false, false, "Render the progressbar reversed (right to left)"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "tag": ["String", false, "'div'", "Topmost HTML tag or Vue component"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code>"]
+      },
+      "slots": {},
+      "events": {
+        "update:value": ["Number", "Progress value"],
+        "icon-left-click": ["HTMLElement" , "Left icon click"],
+        "icon-right-click": ["HTMLElement", "Right icon click"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

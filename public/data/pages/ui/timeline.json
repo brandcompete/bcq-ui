@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "pageTitle": "Timeline for Vue3",
+    "keywords": [
+      "timeline"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "timeline": [{
+      "label": {
+        "date": "APRIL 2026",
+        "tagline": "Lorem",
+        "dateSize": "lg",
+        "icon": "navigation-variant-outline",
+        "iconSize": "xl"
+      },
+      "event": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    }, {
+      "label": {
+        "date": "MARCH 2026",
+        "dateSize": "sm",
+        "icon": "vuejs",
+        "iconSize": "sm"
+      },
+      "event": {
+        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      }
+    }, {
+      "label": {
+        "date": "2025",
+        "tagline": "Ipsum",
+        "dateSize": "sm",
+        "icon": "cat",
+        "iconSize": "lg"
+      },
+      "event": {
+        "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    }, {
+      "label": {
+        "date": "December",
+        "dateSize": "sm"
+      },
+      "event": {
+        "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+      }
+    }, {
+      "label": {
+        "date": "November",
+        "tagline": "Dolor",
+        "dateSize": "sm"
+      },
+      "event": {
+        "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      }
+    }, {
+      "label": {
+        "date": "June",
+        "dateSize": "lg",
+        "icon": "bullseye-arrow"
+      },
+      "event": {
+        "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      }
+    }],
+    "codeFiles": [{
+      "uri": "/code/timeline.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/timeline-items.md",
+      "title": "timeline-items",
+      "language": "javascript",
+      "margin": ["mb-4"]
+    }],
+    "color": [
+      "success"
+    ],
+    "variant": [
+      "soft"
+    ]
+  },
+  "documentation": {
+    "bc-timeline": {
+      "props": {
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "bar-width": ["Number", false, 4, "Timeline bar width"],
+        "items": ["Array", false, "[]", "Timeline items array: <code>[{ label: {  date: String, dateSize: String, tagline: String, taglineSize: String,  icon: String,  iconSize: String }, event: {  text: String }]</code>"],
+        "marker-clickable": ["Boolean", false, false, "Applies <code>cursor: pointer</code> to the markers"],
+        "marker-elevation": ["String", false, "'sm'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "marker-roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "padding-vertical": ["Array", false, "['pt-4', 'pb-4']", "First and last item paddings, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "unselectable": ["Boolean", false, true, "Applies <code>user-select: none</code> to the root element"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {},
+      "events": {
+        "marker-click": ["Object" ,"Emitted on marker click"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

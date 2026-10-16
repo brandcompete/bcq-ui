@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "pageTitle": "Color Picker for Vue3",
+    "keywords": [
+      "color picker",
+      "color palette",
+      "color input"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/color-picker.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "label": true,
+    "showIcon": true,
+    "icon": "palette",
+    "iconSize": [
+      "md"
+    ],
+    "labelFontSize": [
+      "sm"
+    ],
+    "labelFontWeight": [
+      "normal"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "colors": [
+      "#f44336",
+      "#e91e63",
+      "#9c27b0",
+      "#673ab7",
+      "#3f51b5",
+      "#2196f3",
+      "#03a9f4",
+      "#00bcd4",
+      "#009688",
+      "#4caf50",
+      "#8bc34a",
+      "#cddc39",
+      "#ffeb3b",
+      "#ffc107",
+      "#ff9800",
+      "#ff5722",
+      "#795548",
+      "#607d8b",
+      "#9e9e9e",
+      "#000000",
+      "#666666",
+      "#333333",
+      "#444444",
+      "#ffffff"
+    ]
+  },
+  "documentation": {
+    "bc-color-picker": {
+      "props": {
+        "<code>v-model:</<code>value": ["String", false, false, "Color picker model, hex color value, prefixed with <code>#</code>"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "elevation": ["String", false, "'sm'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icons' v-link>icon</a>"],
+        "icon-color": ["String", false, "'secondary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-size": ["String", false, "'md'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "label": ["Boolean", false, true, "Optional component label, showing the <code>v-model:value</code>"],
+        "label-font-size": ["String", false, "'sm'", "Check the <a href='/content/typography' v-link>typography</a> CSS classes"],
+        "label-font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "label-padding": ["Array", false, "['p-2']", "Check the <a href='/content/utility-css-classes' v-link>padding</a> utility CSS classes"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'32px'", "Color preview <code>width</code> and <code>height</code>"]
+      },
+      "slots": {},
+      "events": {}
+    }
+  }
+}

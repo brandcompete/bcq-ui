@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "pageTitle": "Avatar Group for Vue3",
+    "keywords": [
+      "avatar",
+      "avatar group",
+      "image",
+      "tile"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/avatar-group.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "tile": false,
+    "gap": -12,
+    "gapsMin": -24,
+    "gapsMax": 12,
+    "limit": 3,
+    "color": [
+      "secondary"
+    ],
+    "variant": [
+      "outline"
+    ],
+    "groups": [{
+      "type": "text",
+      "items": [{
+        "label": "AB"
+      }, {
+        "label": "CD"
+      }, {
+        "label": "EF"
+      }, {
+        "label": "GH"
+      }, {
+        "label": "IJ"
+      }, {
+        "label": "KL"
+      }, {
+        "label": "MN"
+      }]
+    }, {
+      "type": "text",
+      "items": [{
+        "icon": "vuejs"
+      }, {
+        "icon": "angularjs"
+      }, {
+        "icon": "react"
+      }, {
+        "icon": "language-javascript"
+      }, {
+        "icon": "language-css3"
+      }, {
+        "icon": "language-html5"
+      }, {
+        "icon": "github"
+      }]
+    }, {
+      "type": "text",
+      "items": [{
+        "icon": "vuejs"
+      }, {
+        "icon": "angularjs"
+      }, {
+        "icon": "react"
+      }, {
+        "icon": "language-javascript"
+      }, {
+        "icon": "language-css3"
+      }, {
+        "icon": "language-html5"
+      }, {
+        "icon": "github"
+      }]
+    }, {
+      "type": "images",
+      "items": [{
+        "src": "/images/guitars/strandberg-boden-prog-7/image-01.jpg"
+      }, {
+        "src": "/images/guitars/aurellia-egotalker-iv/image-01.jpg"
+      }, {
+        "src": "/images/guitars/aurellia-egotalker-iii/image-01.jpg"
+      }, {
+        "src": "/images/guitars/aurellia-egotalker-ii/image-01.jpg"
+      }, {
+        "src": "/images/guitars/bc-rich-stealth/image-01.jpg"
+      }, {
+        "src": "/images/guitars/epiphone-les-paul-mkh/image-01.jpg"
+      }, {
+        "src": "/images/guitars/jackson-chris-broderick-pro-7/image-01.jpg"
+      }]
+    }]
+  },
+  "documentation": {
+    "bc-avatar-group": {
+      "props": {
+        "gap": ["Number", false, -12, "Nested avatars overlap offset in pixels (<code>px</code> unit is added automatically). Both negative and positive values are supported"],
+        "limit": ["Number", false, 0, "Visible items in the stack. If <code>limit</code> is more than <code>0</code>, the \"+\" avatar is rendered on the right"],
+        "limit-color": ["String", false, "'primary'", "\"+\" avatar color, one of the <a href='/content/colors' v-link>UI colors</a>"],
+        "limit-elevation": ["String", false, "'md'", "\"+\" avatar elevation, One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "limit-font-weight": ["String", false, "'normal'", "\"+\" avatar font-weight, one of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "limit-font-size": ["String", false, "'sm'", "\"+\" avatar font-size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "limit-label": ["Function", false, "'+{hiddenAvatars}'", "\"+\" avatar label"],
+        "limit-size": ["String", false, "'48px'", "\"+\" avatar <code>width</code> and <code>height</code>"],
+        "limit-tile": ["Boolean", false, false, "Renders the \"+\" avatar as square or as circle"],
+        "limit-variant": ["String", false, "'outline'", "\"+\" avatar color variant, one of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}
+

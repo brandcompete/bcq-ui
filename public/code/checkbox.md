@@ -1,0 +1,18 @@
+<bc-checkbox
+  @update:checked="Function"
+  @update:indeterminate="Function"
+  :v-model:checked="Boolean"
+  :block="Boolean"
+  :icon-checked="String"
+  :icon-unchecked="String"
+  :icon-indeterminate="String"
+  :icon-provider="String"
+  :label-font-weight="String"
+  :disabled="Boolean"
+  :name="String"
+  :size="String"
+  :label="String"
+  :inert="Boolean"
+  :id="String"
+  :label-uppercase="Boolean"
+  :indeterminate="Boolean" />

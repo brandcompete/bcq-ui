@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "pageTitle": "Sparklines for Vue3",
+    "keywords": [
+      "sparklines",
+      "svg",
+      "chart",
+      "graph"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/sparklines.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "height": "128px",
+    "width": "100%",
+    "strokeWidth": 0.4,
+    "items": [
+      {
+        "iterations": 50,
+        "color": "#42d392"
+      }, {
+        "iterations": 60,
+        "color": "#5f8bef"
+      }, {
+        "iterations": 70,
+        "color": "#58c4dc"
+      }, {
+        "iterations": 80,
+        "color": "#ff5722"
+      }, {
+        "iterations": 90,
+        "color": "#851afd"
+      }, {
+        "iterations": 100,
+        "color": "#e8255a"
+      }
+    ]
+  },
+  "documentation": {
+    "bc-sparklines": {
+      "props": {
+        "color": ["String", false, "'#ababab'", "Line color, any supported CSS <a href='/content/colors' v-link>color</a> values (hex, named, rgb(0), hsl(a), etc.)"],
+        "height": ["String", false, "'128px'", "Component height in any suitable CSS unit"],
+        "series": ["Array", false, "[]", "Series array, e.g: <code>[53.45, 98.07, 36.16, 28.10, 58.11]</code>"],
+        "stroke-width": ["Number", false, 1, "Line width"],
+        "width": ["String", false, "'100%'", "Component width in any suitable CSS unit"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

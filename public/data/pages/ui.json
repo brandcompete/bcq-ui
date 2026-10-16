@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "pageTitle": "UI Components for Vue3",
+    "keywords": [
+      "components",
+      "vue components",
+      "layout",
+      "dialog",
+      "timeline",
+      "alert",
+      "button",
+      "btn",
+      "chip",
+      "collapsible",
+      "layout",
+      "color picker",
+      "flag",
+      "grid",
+      "flex",
+      "icon",
+      "notification",
+      "rating",
+      "tabs",
+      "tree",
+      "treeview"
+    ],
+    "links": [
+      "ui"
+    ]
+  },
+  "config": {},
+  "documentation": null
+}

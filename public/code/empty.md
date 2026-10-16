@@ -1,0 +1,13 @@
+<bc-empty
+  :icon="String"
+  :font-weight="String"
+  :grayscale="Boolean"
+  :divider="Boolean"
+  :icon="String"
+  :icon-provider="String"
+  :icon-size="String"
+  :opacity="Number"
+  :sub-title="String"
+  :sub-title-font-size="String"
+  :title="String"
+  :title-font-size="String">Text</bc-empty>

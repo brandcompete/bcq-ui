@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "pageTitle": "Container for Vue3",
+    "keywords": [
+      "container",
+      "div"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/container.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-container": {
+      "props": {
+        "display": ["String", false, "'block'", "One of the utility display CSS classes"],
+        "tag": ["String", false, "'div'", "HTML tag or Vue component. If you set <code>'a'</code> or <code>'router-link'</code>, you need to provide <code>'href'</code> or <code>'to'</code> attributes"],
+        "truncate": ["String", false, false, "Apply the <code>.ellipsis</code> utility CSS <a href='/content/utility-css-classes' v-link>class</a>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

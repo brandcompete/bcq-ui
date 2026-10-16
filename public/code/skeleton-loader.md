@@ -1,0 +1,9 @@
+<bc-skeleton-loader
+  :animation="String"
+  :block="Boolean"
+  :color="String"
+  :elevation="String"
+  :height="String"
+  :roundness="String"
+  :variant="String"
+/>

@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "pageTitle": "Tooltip for Vue3",
+    "keywords": [
+      "tooltip",
+      "hint"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/tooltip-directive.md",
+      "title": "directive",
+      "language": "xml"
+    }],
+    "tooltips": [
+      "Right",
+      "Left",
+      "Top",
+      "Bottom"
+    ]
+  },
+  "documentation": null
+}

@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "pageTitle": "Lazy Image for Vue3",
+    "keywords": [
+      "lazy image loader",
+      "image preloader",
+      "intersection observer",
+      "intersection api"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/lazy-image.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mb-4"
+      ]
+    }],
+    "span": 4,
+    "aspectRatio": "4/3",
+    "images": [
+      "/images/guitars/strandberg-boden-prog-7/image-01.jpg",
+      "/images/guitars/strandberg-boden-prog-7/image-02.jpg",
+      "/images/guitars/strandberg-boden-prog-7/image-03.jpg",
+      "/images/guitars/strandberg-boden-prog-7/image-04.jpg",
+      "/images/guitars/strandberg-boden-prog-7/image-05.jpg",
+      "/images/guitars/strandberg-boden-prog-7/image-06.jpg",
+      "/images/guitars/strandberg-boden-prog-7/image-07.jpg",
+      "/images/guitars/strandberg-boden-prog-7/broken.jpg",
+
+      "/images/guitars/aurellia-egotalker-iv/image-01.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-02.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-03.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-04.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-05.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-06.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-07.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-08.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-09.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-10.jpg",
+      "/images/guitars/aurellia-egotalker-iv/broken.jpg",
+
+      "/images/guitars/aurellia-egotalker-iii/image-01.jpg",
+      "/images/guitars/aurellia-egotalker-iii/image-02.jpg",
+      "/images/guitars/aurellia-egotalker-iii/image-03.jpg",
+      "/images/guitars/aurellia-egotalker-iii/image-04.jpg",
+      "/images/guitars/aurellia-egotalker-iii/image-05.jpg",
+      "/images/guitars/aurellia-egotalker-iii/broken.jpg",
+
+      "/images/guitars/aurellia-egotalker-ii/image-01.jpg",
+      "/images/guitars/aurellia-egotalker-ii/image-02.jpg",
+      "/images/guitars/aurellia-egotalker-ii/image-03.jpg",
+      "/images/guitars/aurellia-egotalker-ii/image-04.jpg",
+      "/images/guitars/aurellia-egotalker-ii/image-05.jpg",
+      "/images/guitars/aurellia-egotalker-ii/image-06.jpg",
+      "/images/guitars/aurellia-egotalker-ii/image-07.jpg",
+      "/images/guitars/aurellia-egotalker-ii/broken.jpg",
+
+      "/images/guitars/bc-rich-stealth/image-01.jpg",
+      "/images/guitars/bc-rich-stealth/image-02.jpg",
+      "/images/guitars/bc-rich-stealth/image-03.jpg",
+      "/images/guitars/bc-rich-stealth/image-04.jpg",
+      "/images/guitars/bc-rich-stealth/image-05.jpg",
+      "/images/guitars/bc-rich-stealth/image-06.jpg",
+      "/images/guitars/bc-rich-stealth/image-07.jpg",
+      "/images/guitars/bc-rich-stealth/image-08.jpg",
+      "/images/guitars/bc-rich-stealth/image-09.jpg",
+      "/images/guitars/bc-rich-stealth/image-10.jpg",
+      "/images/guitars/bc-rich-stealth/broken.jpg",
+
+      "/images/guitars/epiphone-les-paul-mkh/image-01.jpg",
+      "/images/guitars/epiphone-les-paul-mkh/image-02.jpg",
+      "/images/guitars/epiphone-les-paul-mkh/image-03.jpg",
+      "/images/guitars/epiphone-les-paul-mkh/image-04.jpg",
+      "/images/guitars/epiphone-les-paul-mkh/broken.jpg",
+
+      "/images/guitars/jackson-chris-broderick-pro-7/image-01.jpg",
+      "/images/guitars/jackson-chris-broderick-pro-7/image-02.jpg",
+      "/images/guitars/jackson-chris-broderick-pro-7/image-03.jpg",
+      "/images/guitars/jackson-chris-broderick-pro-7/image-04.jpg",
+      "/images/guitars/jackson-chris-broderick-pro-7/broken.jpg",
+
+      "/images/guitars/etherial-egotalker/image-01.jpg",
+      "/images/guitars/etherial-egotalker/image-02.jpg",
+      "/images/guitars/etherial-egotalker/image-03.jpg",
+      "/images/guitars/etherial-egotalker/image-04.jpg",
+      "/images/guitars/etherial-egotalker/image-05.jpg",
+      "/images/guitars/etherial-egotalker/image-06.jpg",
+      "/images/guitars/etherial-egotalker/image-07.jpg",
+      "/images/guitars/etherial-egotalker/image-08.jpg",
+      "/images/guitars/etherial-egotalker/image-09.jpg",
+      "/images/guitars/etherial-egotalker/image-10.jpg",
+      "/images/guitars/etherial-egotalker/broken.jpg",
+
+      "/images/guitars/esp-sv-acid-martin/image-01.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-02.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-03.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-04.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-05.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-06.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-07.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-08.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-09.jpg",
+      "/images/guitars/esp-sv-acid-martin/image-10.jpg",
+      "/images/guitars/esp-sv-acid-martin/broken.jpg",
+
+      "/images/guitars/esp-mh-100-acid-martin/image-01.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-02.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-03.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-04.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-05.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-06.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-07.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-08.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-09.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/image-10.jpg",
+      "/images/guitars/esp-mh-100-acid-martin/broken.jpg",
+
+      "/images/guitars/ibanez-s520wk/image-01.jpg",
+      "/images/guitars/ibanez-s520wk/image-02.jpg",
+      "/images/guitars/ibanez-s520wk/image-03.jpg",
+      "/images/guitars/ibanez-s520wk/image-04.jpg",
+      "/images/guitars/ibanez-s520wk/broken.jpg",
+
+      "/images/guitars/jackson-raiders/image-01.jpg",
+      "/images/guitars/jackson-raiders/image-02.jpg",
+      "/images/guitars/jackson-raiders/image-03.jpg",
+      "/images/guitars/jackson-raiders/image-04.jpg",
+      "/images/guitars/jackson-raiders/broken.jpg",
+
+      "/images/guitars/jackson-scratches/image-01.jpg",
+      "/images/guitars/jackson-scratches/image-02.jpg",
+      "/images/guitars/jackson-scratches/image-03.jpg",
+      "/images/guitars/jackson-scratches/broken.jpg"
+    ]
+  },
+  "documentation": {
+    "bc-lazy-image": {
+      "props": {
+        "aspect-ratio": ["String", false, "'4/3'", "Image CSS <code>aspect-ratio</code>"],
+        "background-size": ["String", false, "'cover'", "Background size, any possible value, supported in CSS"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "error-icon": ["String", false, "'image-broken-variant'", "Icon in case of image loading error"],
+        "height": ["String", false, "undefined", "Image height, if set <code>aspect-ratio</code> will be ignored"],
+        "href": ["String", false, "undefined", "URL/URI if <code>tag</code> is <code>'a'</code>"],
+        "icons-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icons-size": ["String", false, "'3xl'", "Icons font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "loading-icon": ["String", false, "'loading'", "Loading spinner icon"],
+        "options": ["Object", false, "{ root: null, rootMargin: '0px', scrollMargin: '0px', threshold: 1 }", "<a rel='noopener' href='https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API' rel='noopener' target='_blank'>IntersectionObserver</a> options"],
+        "src": ["String", true, "undefined", "Required image <code>src</code>"],
+        "tag": ["String", false, "'figure'", "HTML tag or Vue component in which the component will render. If you set <code>'a'</code> or <code>'router-link'</code>, you need to provide <code>'href'</code> or <code>'to'</code> attributes"],
+        "to": ["String", false, "undefined", "Route if <code>tag</code> is <code>'router-link'</code>"],
+        "width": ["String", false, "undefined", "Image width, if set <code>aspect-ratio</code> will be ignored"]
+      },
+      "slots": {},
+      "events": {
+        "load": ["{ src: String, el: HTMLElement, component: Proxy(Object) }" ,"Emitted on image <code>load</code>"],
+        "error": ["{ src: String, el: HTMLElement, component: Proxy(Object) }" ,"Emitted on image <code>error</code>"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

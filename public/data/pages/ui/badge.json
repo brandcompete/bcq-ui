@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "pageTitle": "Badge for Vue3",
+    "keywords": [
+      "badge",
+      "notification"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "visible": true,
+    "showIcon": false,
+    "icon": "bell",
+    "valuesRange": [0, 999],
+    "randomValuesInterval": 5000,
+    "color": [
+      "danger"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "placement": [
+      "top-right"
+    ],
+    "badgeComponents": {
+      "bc-icon": [
+        "vuejs",
+        "react",
+        "angular",
+        "language-html5",
+        "language-css3",
+        "language-javascript"
+      ],
+      "bc-btn": [
+        "vue",
+        "react",
+        "angular",
+        "html5",
+        "css3",
+        "JavaScript"
+      ],
+      "bc-avatar": [
+        "/images/guitars/strandberg-boden-prog-7/image-01.jpg",
+        "/images/guitars/aurellia-egotalker-iv/image-01.jpg",
+        "/images/guitars/aurellia-egotalker-iii/image-01.jpg",
+        "/images/guitars/aurellia-egotalker-ii/image-01.jpg",
+        "/images/guitars/bc-rich-stealth/image-01.jpg",
+        "/images/guitars/epiphone-les-paul-mkh/image-01.jpg"
+      ],
+      "bc-chip": [
+        "vue",
+        "react",
+        "angular",
+        "html5",
+        "css3",
+        "JavaScript"
+      ]
+    },
+    "codeFiles": [{
+      "uri": "/code/badge.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mb-0"
+      ]
+    }]
+  },
+  "documentation": {
+    "bc-badge": {
+      "props": {
+        "<code>v-model:</code>visible": ["Boolean", false, true, "Toggle badge visibility"],
+        "color": ["String", false, "'danger'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "icon": ["String", false, "undefined", "Optionally, show <a href='/ui/icon' v-link>icon</a>, instead of <code>value</code>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "offset": ["Number", false, 2, "Badge offset, relative to the target element, <code>0</code> to <code>8</code>"],
+        "placement": ["String", false, "'top-right'", "Badge placement, relative to the target element, one of <code>'top-right'</code>, <code>'bottom-right'</code>, <code>'bottom-left'</code> and <code>'top-left'</code>"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "value": ["Number | String", true, "undefined", "Badge value/text"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "update:visible": ["Boolean", "Emitted on <code>visibility</code> update"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

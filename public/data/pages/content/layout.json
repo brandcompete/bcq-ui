@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "pageTitle": "Layout Component for Vue3",
+    "keywords": [
+      "layout",
+      "application",
+      "header",
+      "footer",
+      "main",
+      "sidebar",
+      "aside",
+      "nav"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "padding": ["p-1"],
+    "slots": {
+      "header": "deep-purple",
+      "sidebar-left": "blue",
+      "main": "yellow",
+      "sidebar-right": "green",
+      "footer": "deep-orange"
+    },
+    "codeFiles": [{
+      "uri": "/code/layout.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mt-4",
+        "mb-0"
+      ]
+    }]
+  },
+  "documentation": {
+    "bc-layout": {
+      "props": {
+        "floating-sidebars": ["Boolean", false, false, "Set sidebars to floating, i.e. cover the content area and making it not clickable via modal overlay. This feature can be used, for example on smaller screens"],
+        "floating-sidebars-blocker-blur": ["Boolean", false, true, "Blurred modal overlay modal when <code>floating-sidebars</code> is true"],
+        "footer-height": ["Number", false, 42, "Height of the footer slot in pixels"],
+        "header": ["Object", false, "{ elevation: 'none', zIndex: 800 }", "Header slot configuration"],
+        "header-height": ["Number", false, 42, "Height of the header slot in pixels"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "main": ["Object", false, "{ maxWidth: '960px', minWidth: '200px' }", "Main slot configuration"],
+        "footer": ["Object", false, "{ elevation: 'none', zIndex: 800 }", "Footer slot configuration"],
+        "sidebars-collapsed-width": ["Number", false, 42, "Width of a collapsed sidebar in pixels"],
+        "sidebar-left": ["Object", false, "{ width: 260, elevation: 'none', iconOpen: 'menu-close', iconClose: 'menu-open', expanded: true, zIndex: 900, overflow: 'auto' }", "Left sidebar slot configuration"],
+        "sidebar-right": ["Object", false, "{ width: 260, elevation: 'none', iconOpen: 'menu-open', iconClose: 'menu-close', expanded: true, zIndex: 900, overflow: 'auto' }", "Right sidebar slot configuration"]
+      },
+      "slots": {
+        "footer": ["Footer content"],
+        "header": ["Header content"],
+        "main": ["Main content"],
+        "sidebar-left": ["Left sidebar content"],
+        "sidebar-left-controls": ["Additional controls for the left sidebar"],
+        "sidebar-right": ["Right sidebar content"],
+        "sidebar-right-controls": ["Additional controls for the right sidebar"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

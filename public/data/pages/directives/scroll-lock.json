@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "pageTitle": "Scroll Lock for Vue3",
+    "keywords": [
+      "scroll lock",
+      "overflow hidden",
+      "hide scrollbars"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/scroll-lock.md",
+      "title": "directive",
+      "language": "xml"
+    }]
+  },
+  "documentation": null
+}

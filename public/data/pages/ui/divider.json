@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "pageTitle": "Divider for Vue3",
+    "keywords": [
+      "divider",
+      "separator",
+      "horizontal rule"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "dividers": 1,
+    "codeFiles": [{
+      "uri": "/code/divider.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }]
+  },
+  "documentation": null
+}

@@ -1,0 +1,17 @@
+<bc-color-picker
+  @update:value="Function"
+  v-model:value="String"
+  :block="Boolean"
+  :disabled="Boolean"
+  :elevation="String"
+  :icon="String"
+  :icon-color="String"
+  :icon-provider="String"
+  :icon-size="String"
+  :inert="Boolean"
+  :label="Boolean"
+  :label-padding="Array"
+  :label-font-size="String"
+  :label-font-weight="String"
+  :roundness="String"
+  :size="String" />

@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "pageTitle": "Heading for Vue3",
+    "keywords": [
+      "heading",
+      "header",
+      "title"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "size": [
+      "sm"
+    ],
+    "fontWeight": [
+      "semibold"
+    ],
+    "divider": true,
+    "codeFiles": [{
+      "uri": "/code/heading.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-heading": {
+      "props": {
+        "tag": ["String", false, "'div'", "HTML tag or Vue component. If you set <code>'a'</code> or <code>'router-link'</code>, you need to provide <code>'href'</code> or <code>'to'</code> attributes"],
+        "font-size": ["String", false, "'sm'", "One of the text size <a href='/content/typography' v-link>typography</a> CSS classes"],
+        "font-weight": ["String", false, "'semibold'", "One of the font weight <a href='/content/typography' v-link>typography</a> CSS classes"],
+        "divider": ["Boolean", false, true, "Render a divider below the text"],
+        "divider-margin": ["Boolean", false, "[]", "Array of <a href='/content/utility-css-classes' v-link>utility</a> CSS margin classes"],
+        "padding": ["Array", false, "[]", "Array of <a href='/content/utility-css-classes' v-link>utility</a> CSS padding classes"],
+        "margin": ["Array", false, "[]", "Array of <a href='/content/utility-css-classes' v-link>utility</a> CSS margin classes"],
+        "truncate": ["Boolean", false, true, "Apply CSS ellipsis"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

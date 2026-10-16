@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "pageTitle": "Becquerel UI for Vue3",
+    "keywords": [
+      "vuejs",
+      "vue components",
+      "javascript",
+      "css3",
+      "html5",
+      "library"
+    ],
+    "links": [
+      "getting-started",
+      "content",
+      "ui",
+      "forms",
+      "directives"
+    ]
+  },
+  "config": null,
+  "documentation": null
+}

@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "pageTitle": "Speed Dial for Vue3",
+    "keywords": [
+      "speed dial",
+      "fab",
+      "speed dial",
+      "floating action button"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "zIndex": 800,
+    "elevation": "md",
+    "roundness": "full",
+    "vertical": false,
+    "rotateIconOnExpand": true,
+    "color": [
+      "discovery"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "xAlign": [
+      "left"
+    ],
+    "yAlign": [
+      "top"
+    ],
+    "size": [
+      "sm"
+    ],
+    "position": [
+      "static"
+    ],
+    "dials": [{
+      "items": [{
+        "action": "vue",
+        "label": "Vue",
+        "icon": "vuejs",
+        "color": "success",
+        "variant": "solid",
+        "size": "sm",
+        "iconProvider": "mdi",
+        "elevation": "sm",
+        "roundness": "full"
+      }, {
+        "action": "react",
+        "label": "React",
+        "icon": "react",
+        "color": "danger",
+        "variant": "solid",
+        "size": "sm",
+        "iconProvider": "mdi",
+        "elevation": "sm",
+        "roundness": "full"
+      }, {
+        "action": "angular",
+        "label": "Angular",
+        "icon": "angular",
+        "color": "info",
+        "variant": "solid",
+        "size": "sm",
+        "iconProvider": "mdi",
+        "elevation": "sm",
+        "roundness": "full"
+      }, {
+        "action": "css3",
+        "label": "CSS3",
+        "icon": "language-css3",
+        "color": "discovery",
+        "variant": "solid",
+        "size": "sm",
+        "iconProvider": "mdi",
+        "elevation": "sm",
+        "roundness": "full"
+      }, {
+        "action": "js",
+        "label": "JavaScript",
+        "icon": "language-javascript",
+        "color": "caution",
+        "variant": "solid",
+        "size": "sm",
+        "iconProvider": "mdi",
+        "elevation": "sm",
+        "roundness": "full"
+      }]
+    }],
+    "codeFiles": [{
+      "uri": "/code/speed-dial.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/speed-dial-items.md",
+      "title": "speed-dial-items",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-speed-dial": {
+      "props": {
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "icon": ["String", true, "'plus'", "Item <a href='/ui/icon' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "items": ["String", false, "[]", "Items array (check the example above)"],
+        "items-padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "label": ["String", false, "undefined", "Optional trigger icon hint"],
+        "position": ["String", false, "'static'", "One of <code>'static'</code>, <code>'relative'</code>, <code>'absolute'</code>, <code>'fixed'</code> or <code>'sticky'</code>"],
+        "rotate-icon-on-expand": ["Boolean", true, true, "Rotate the trigger icon to 45 degrees when actions are expanded"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "variant": ["String", false, "'solid'", "Color variant, check <a href='/content/colors' v-link>UI colors</a>"],
+        "vertical": ["Boolean", false, false, "Render the actions list vertically"],
+        "x-align": ["String", false, "'left'", "Horizontal alignment, one of <code>'left'</code>, <code>'center'</code> or <code>'right'</code>"],
+        "y-align": ["String", false, "'top'", "Vertical alignment, one of <code>'top'</code>, <code>'middle'</code> or <code>'bottom'</code>"],
+        "z-index": ["Number", false, 1000, "Component CSS <code>z-index</code>"]
+      },
+      "slots": {},
+      "events": {
+        "item-click": ["Object", "Еmitted on item click, returns an <code>item</code> object"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

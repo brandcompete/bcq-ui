@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "pageTitle": "Slider for Vue3",
+    "keywords": [
+      "input range",
+      "input slider"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "minMaxLabels": true,
+    "label": "Slider Label",
+    "hint": "Slider Hint",
+    "showLabel": false,
+    "showHint": false,
+    "labelsUppercase": false,
+    "rounded": true,
+    "codeFiles": [{
+      "uri": "/code/slider.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "color": [
+      "primary"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "fontSize": [
+      "sm"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "sliders": [{
+      "model:value": 0,
+      "step": 1,
+      "min": 1,
+      "max": 100,
+      "name": "slider-1"
+    }, {
+      "model:value": 0,
+      "step": 5,
+      "min": -100,
+      "max": 100,
+      "name": "slider-2"
+    }, {
+      "model:value": 0,
+      "step": 10,
+      "min": -50,
+      "max": 50,
+      "name": "slider-3"
+    }, {
+      "model:value": 100,
+      "step": 20,
+      "min": 0,
+      "max": 100,
+      "name": "slider-4"
+    }]
+  },
+  "documentation": {
+    "bc-slider": {
+      "props": {
+        "<code>v-model</code>:value": ["Number | String", false, 0, "Input <code>value</code> attribute"],
+        "block": ["Boolean", false, true, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "color": ["String", false, "'primary'", "Thumbs and selected range color. One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "font-size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "height": ["Number", false, 8, "Height of the component in pixels. Unit is appended automatically"],
+        "hint": ["String", false, "undefined", "Optional component hint, rendered at the bottom right"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "label": ["String", false, "undefined", "Optional component label, rendered at the top left"],
+        "labels-uppercase": ["Boolean", false, false, "Sets <code>label</code> and <code>hint</code> to uppercase"],
+        "max": ["Number | String", false, 100, "Max possible value. Negative value is allowed"],
+        "min": ["Number | String", false, 0, "Min possible value. Negative value is allowed"],
+        "min-max-labels": ["Boolean", false, true, "Toggle the <code>min</code> and <code>max</code> value labels"],
+        "name": ["String", false, "undefined", "Optional input <code>name</code> attribute"],
+        "rounded": ["Boolean", false, true, "Render the slider and the slider thumb rounded or square"],
+        "show-selected-range": ["Boolean", false, true, "Render a colored baw between the thumbs"],
+        "step": ["Number | String", false, 1, "Input <code>step</code> attribute"],
+        "tooltip": ["Boolean", false, true, "Show tooltip with the selected value"],
+        "variant": ["String", false, "'solid'", "Thumbs and selected range color variant. One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "width": ["String", false, "undefined", "Optional CSS <code>width</code> in any unit"]
+      },
+      "slots": {},
+      "events": {
+        "update:value": ["Number", "Emitted on slider input"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

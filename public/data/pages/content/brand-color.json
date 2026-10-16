@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "pageTitle": "Brand Color for Vue3",
+    "keywords": [
+      "branding",
+      "swatches",
+      "color scheme"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/brand-color.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }],
+    "colors": {
+      "brandcompete": "#a81214",
+      "vue": "#42d392",
+      "react": "#58c4dc",
+      "angular": "#c340e0",
+      "svelte": "#ff3e00"
+    }
+  },
+  "documentation": {
+    "bc-brand-color": {
+      "props": {
+        "hex": ["String", true, "undefined", "The CSS hex color value that will be used to generate the brand palette"],
+        "name": ["String", true, "undefined", "The CSS class name that will be used for the generated class selectors"],
+        "swatches": ["Object", false, "{ 50: 95, 100: 90, 200: 80, 300: 70, 400: 65, 600: 40, 700: 30, 800: 20, 900: 10, 950: 7.5, 1000: 6 }", "Lightness presets. Check the <a href='/content/colors' v-link>colors</a> page for more info and insight"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {}
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "pageTitle": "Breadcrumbs for Vue3",
+    "keywords": [
+      "breadcrumbs",
+      "navigation"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/breadcrumbs.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mb-0"
+      ]
+    }]
+  },
+  "documentation": {
+    "bc-breadcrumbs": {
+      "props": {
+        "x-align": ["String", false, "'left'", "One of the alignment <a href='/content/utility-css-classes' v-link>utility</a> CSS classes"],
+        "use-router": ["Boolean", false, true, "Render breadcrumbs as <code>'router-link'</code> or <code>'a'</code> tags"],
+        "underline": ["Boolean", false, true, "Underline links by default"],
+        "font-size": ["String", false, "'sm'", "One of the text size <a href='/content/typography' v-link>typography</a> CSS classes"],
+        "last-item-disabled": ["Boolean", true, true, "Disable the last breadcrumb item (current route)"],
+        "target": ["String", false, "'_self'", "One of the HTML <code>target</code> attribute values"],
+        "divider": ["Boolean", false, "'&amp;raquo'", "Optional breadcrumb items separator"]
+      },
+      "slots": {
+        "default": ["The default Vue slot to render the <code>&lt;bc-breadcrumb-item /&gt;</code> items"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-breadcrumbs-item": {
+      "props": {
+        "to": ["String", true, "undefined", "Used as <code>'to'</code> or <code>'href'</code> depending on the <code>use-router</code> prop of the parent <code>&lt;bc-breadcrumb /&gt;</code> element"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

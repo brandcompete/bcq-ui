@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "pageTitle": "Split Button for Vue3",
+    "keywords": [
+      "split button",
+      "split btn"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "value": "vuejs",
+    "splitBtns": 3,
+    "updateLabelOnValueUpdate": true,
+    "iconHeader": false,
+    "block": false,
+    "uppercase": false,
+    "color": [
+      "discovery"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "size": [
+      "sm"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "splitBtnItems": [{
+      "title": "Vue",
+      "subTitle": "Vue Subtitle",
+      "disabled": false,
+      "inert": false,
+      "value": "vuejs",
+      "iconLeft": "vuejs",
+      "iconRight": "chevron-double-right"
+    }, {
+      "title": "React",
+      "subTitle": "React Subtitle",
+      "disabled": false,
+      "inert": false,
+      "value": "react",
+      "iconLeft": "react",
+      "iconRight": "chevron-double-right"
+    }, {
+      "title": "Angular",
+      "subTitle": "Angular Subtitle",
+      "disabled": false,
+      "inert": false,
+      "value": "angular",
+      "iconLeft": "angular",
+      "iconRight": "chevron-double-right"
+    }, {
+      "title": "jQuery (disabled)",
+      "subTitle": "jQuery Subtitle",
+      "disabled": true,
+      "inert": false,
+      "value": "jquery",
+      "iconLeft": "jquery",
+      "iconRight": "chevron-double-right"
+    }, {
+      "title": "JavaScript (inert)",
+      "subTitle": "JavaScript Subtitle",
+      "disabled": false,
+      "inert": true,
+      "value": "javascript",
+      "iconLeft": "language-javascript",
+      "iconRight": "chevron-double-right"
+    }],
+    "codeFiles": [{
+      "uri": "/code/split-btn.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/split-btn-items.md",
+      "title": "split-btn-items",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-split-btn": {
+      "props": {
+        "<code>v-model:</code>value": ["String", false, true, "Default selection"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "dropdown-z-index": ["Number", false, 900, "CSS <code>z-index</code> of the dropdown"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "font-weight": ["String", false, "'medium'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "icon-collapse": ["String", false, "'chevron-up'", "Collapse <a href='/ui/icon' v-link>icon</a>, rendered on the right"],
+        "icon-expand": ["String", false, "'chevron-down'", "Expand <a href='/ui/icon' v-link>icon</a>, rendered on the right"],
+        "icon-header": ["Boolean", false, false, "Show header <a href='/ui/icon' v-link>icon</a>, taken from the <code>leftIcon</code> key of the <code>items</code> array item"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "items": ["Array", false, [], "Items array: <code>[{ title: String, subTitle: String, disabled: Boolean, inert: Boolean, value: String, iconLeft: String, iconRight: String }]</code>"],
+        "items-dropdown-width": ["String", false, "undefined", "Optional CSS <code>width</code> of the items dropdown"],
+        "items-z-index": ["Number", false, 900, "Items dropdown CSS <code>z-index</code>"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Button font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "update-label-on-value-update": ["Boolean", false, true, "Update the button label and icon upon dropdown item selection"],
+        "uppercase": ["Boolean", false, false, "Sets the button label to uppercase"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "width": ["String", false, "undefined", "Optional CSS <code>width</code> of the component"]
+      },
+      "slots": {},
+      "events": {
+        "update:value": ["String", "The current <code>v-model:value</code>"],
+        "bc-split-btn:hide": ["Null", "Emitted on menu hide"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

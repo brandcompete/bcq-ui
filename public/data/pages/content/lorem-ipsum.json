@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "pageTitle": "Lorem Ipsum for Vue3",
+    "keywords": [
+      "lorem",
+      "ipsum",
+      "placeholder",
+      "dummy text"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "fontSize": [
+      "sm"
+    ],
+    "repeats": [
+      3
+    ],
+    "paragraphsLength": 10,
+    "codeFiles": [{
+      "uri": "/code/lorem-ipsum.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-lorem-ipsum": {
+      "props": {
+        "font-size": ["String", false, "'sm'", "One of the text size <a href='/content/typography' v-link>typography</a> CSS classes"],
+        "items-margin": ["Array", false, "['mb-2']", "One of the supported margin <a href='/content/utility-css-classes' v-link>utility</a> CSS classes"],
+        "repeats": ["Number", false, 1, "The number of items that will be generated"],
+        "tag": ["String", false, "'p'", "The HTML tags in which items will render"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

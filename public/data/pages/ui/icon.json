@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "pageTitle": "Icon for Vue3",
+    "keywords": [
+      "icon font"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/icon.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }],
+    "iconProviders": [{
+      "title": "Material Design Icons",
+      "url": "https://pictogrammers.com/library/mdi/"
+    }]
+  },
+  "documentation": {
+    "bc-icon": {
+      "props": {
+        "name": ["String", "'home'", false, "Icon name"],
+        "provider": ["String", "'mdi'", false, "Icon provider - one of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "size": ["Number | String", 1.5, false, "CSS <code>font-size</code> in <code>em</code> units (unit is appended automatically)"],
+        "tag": ["String", false, "'div'", "HTML tag or Vue component. If you set <code>'a'</code> or <code>'router-link'</code>, you need to provide <code>'href'</code> or <code>'to'</code> attributes"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

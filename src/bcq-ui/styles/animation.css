@@ -1,0 +1,150 @@
+@keyframes spin
+{
+  to
+  {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin
+{
+  to
+  {
+    transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+
+@keyframes ping
+{
+  75%, 100%
+  {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse
+{
+  50%
+  {
+    opacity: .5;
+  }
+}
+
+@keyframes bounce
+{
+  0%, 100%
+  {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50%
+  {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes fade
+{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-x {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.75);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulse-y {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.75);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-none
+{
+  animation: none;
+}
+
+.animate-spin
+{
+  animation: spin 1s linear infinite;
+}
+
+.animate-fade
+{
+  animation: fade 1s linear infinite;
+}
+
+.animate-ping
+{
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-pulse
+{
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulse-x
+{
+  animation: pulse-x 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulse-y
+{
+  animation: pulse-y 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce
+{
+  animation: bounce 1s infinite;
+}
+
+.animate-wave
+{
+  position: relative;
+}
+
+.animate-wave::before
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .25), transparent);
+  animation: wave 1.5s linear .5s infinite;
+  pointer-events: none;
+}

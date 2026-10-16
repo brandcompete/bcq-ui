@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "pageTitle": "Checkbox for Vue3",
+    "keywords": [
+      "checkbox component"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/checkbox.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "size": [
+      "sm"
+    ],
+    "labelFontWeight": [
+      "normal"
+    ],
+    "label": true,
+    "labelText": "Checkbox Label",
+    "checked": true,
+    "inert": false,
+    "indeterminate": false,
+    "block": false,
+    "labelUppercase": false
+  },
+  "documentation": {
+    "bc-checkbox": {
+      "props": {
+        "<code>v-model:</code>checked": ["Boolean", false, false, "Checked state"],
+        "<code>v-model:</code>indeterminate": ["Boolean", false, false, "Indeterminate state"],
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "icon-checked": ["String", false, "'checkbox-marked-outline'", "Checked <a href='/ui/icon' v-link>icon</a>"],
+        "icon-intermediate": ["String", false, "'checkbox-intermediate'", "Checked <a href='/ui/icon' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-unchecked": ["String", false, "'checkbox-blank-outline'", "Unchecked <a href='/ui/icon' v-link>icon</a>"],
+        "id": ["String", false, "undefined", "Optional input <code>id</code> attribute"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "label": ["String", false, "undefined", "Component label"],
+        "label-font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "label-uppercase": ["Boolean", false, false, "Set the label to uppercase"],
+        "name": ["String", false, "undefined", "Optional input <code>name</code> attribute"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"]
+      },
+      "slots": {},
+      "events": {}
+    }
+  }
+}

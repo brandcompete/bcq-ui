@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "pageTitle": "Tooltip for Vue3",
+    "keywords": [
+      "tooltip",
+      "hint"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/tooltip.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/tooltip-events.md",
+      "title": "tooltip-show-hide",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }],
+    "color": [
+      "secondary"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "placement": [
+      "top"
+    ],
+    "dismissible": false,
+    "guitars": [
+      "/images/guitars/strandberg-boden-prog-7/image-01.jpg",
+      "/images/guitars/aurellia-egotalker-iv/image-01.jpg",
+      "/images/guitars/aurellia-egotalker-iii/image-01.jpg",
+      "/images/guitars/aurellia-egotalker-ii/image-01.jpg",
+      "/images/guitars/bc-rich-stealth/image-01.jpg",
+      "/images/guitars/epiphone-les-paul-mkh/image-01.jpg",
+      "/images/guitars/jackson-chris-broderick-pro-7/image-01.jpg",
+      "/images/guitars/etherial-egotalker/image-01.jpg"
+    ]
+  },
+  "documentation": {
+    "bc-tooltip": {
+      "props": {
+        "dismissible": ["Boolean", false, false, "Manually close the tooltip by clicking a close button"],
+        "dismiss-icon": ["String", false, "'close-circle'", "Dismiss icon for <code>dismissible</code>"],
+        "color": ["String", false, "'secondary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "elevation": ["String", false, "'xl'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "placement": ["String", false, "'top'", "Tooltip placement, relative to the target element, one of <code>'top'</code>, <code>'right'</code>, <code>'bottom'</code> and <code>'left'</code>"],
+        "pointer": ["Boolean", false, true, "Tooltip pointer"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any suitable unit"],
+        "z-index": ["Number", false, 1000, "Component CSS <code>z-index</code>"]
+      },
+      "slots": {},
+      "events": {
+        "bc-tooltip:show": ["null", "Show the tooltip by passing a config object. Check the example code for more info"],
+        "bc-tooltip:hide": ["null", "Hide the tooltip"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

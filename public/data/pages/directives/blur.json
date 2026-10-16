@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "pageTitle": "Blur for Vue3",
+    "keywords": [
+      "blur",
+      "hide",
+      "opacity"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/blur.md",
+      "title": "directive",
+      "language": "xml"
+    }],
+    "lorems": 6,
+    "guitar": "/images/guitars/strandberg-boden-prog-7/image-0{index}.jpg",
+    "blurred": true,
+    "blur": {
+      "opacity": 0.5,
+      "blur": 5,
+      "blurred": true
+    }
+  },
+  "documentation": null
+}

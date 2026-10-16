@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "pageTitle": "Empty for Vue3",
+    "keywords": [
+      "empty state"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "title": "Empty State Title",
+    "subTitle": "Empty State Subtitle",
+    "icon": "account",
+    "divider": true,
+    "codeFiles": [{
+      "uri": "/code/empty.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-empty": {
+      "props": {
+        "divider": ["Boolean", false, true, "Show a divider between the <code>title</code> and the <code>sub-title</code>"],
+        "font-weight": ["String", false, "'normal'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "grayscale": ["Boolean", false, true, "Render with grayscale filter applied"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icons' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-size": ["String", false, "'2xl'", "Optional icon font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "opacity": ["Number", false, 50, "Optional component <a href='/content/utility-css-classes' v-link>opacity</a> CSS classes"],
+        "sub-title": ["String", false, "undefined", "Sub-title"],
+        "sub-title-font-size": ["String", false, "'md'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "title": ["String", false, "undefined", "Title"],
+        "title-font-size": ["String", false, "'xl'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

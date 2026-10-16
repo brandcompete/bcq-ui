@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "pageTitle": "Switcher for Vue3",
+    "keywords": [
+      "checkbox",
+      "switcher component"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "checked": true,
+    "block": false,
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "labelFontWeight": [
+      "normal"
+    ],
+    "label": true,
+    "labelText": "Switcher Label",
+    "labelFontSize": [
+      "sm"
+    ],
+    "labelUppercase": false
+  },
+  "documentation": {
+    "bc-switcher": {
+      "props": {},
+      "slots": {},
+      "events": {}
+    }
+  }
+}

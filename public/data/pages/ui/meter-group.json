@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "pageTitle": "Meter Group for Vue3",
+    "keywords": [
+      "meter group",
+      "measurement",
+      "data",
+      "scalar"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/meter-group.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "meterLabelSize": ["sm"],
+    "labelsUppercase": false,
+    "labelAndHint": true,
+    "clickable": true,
+    "height": "6px",
+    "elevation": "none",
+    "roundness": "full",
+    "meterGroups": [{
+      "label": "Developer Opinion",
+      "hint": "% that want to keep using it",
+      "items": [{
+        "color": ["#42d392"],
+        "value": "60.2%",
+        "label": "Vue"
+      }, {
+        "color": ["#58c4dc"],
+        "value": "33.4%",
+        "label": "React"
+      }, {
+        "color": ["#e8255a"],
+        "value": "53.4%",
+        "label": "Angular"
+      }]
+    }, {
+      "label": "Developer Demand",
+      "hint": "% that want to learn it",
+      "items": [{
+        "color": ["#42d392"],
+        "value": "16.3%",
+        "label": "Vue"
+      }, {
+        "color": ["#58c4dc"],
+        "value": "62.2%",
+        "label": "React"
+      }, {
+        "color": ["#e8255a"],
+        "value": "13.9%",
+        "label": "Angular"
+      }]
+    }, {
+      "label": "Storage",
+      "hint": "1TB",
+      "items": [{
+        "value": "25%",
+        "color": ["#34d399", "#fbbf24"],
+        "label": "Apps",
+        "icon": "apps"
+      }, {
+        "value": "15%",
+        "color": ["#fbbf24", "#60a5fa"],
+        "label": "Messages",
+        "icon": "message"
+      }, {
+        "value": "20%",
+        "color": ["#60a5fa", "#c084fc"],
+        "label": "Media",
+        "icon": "multimedia"
+      }, {
+        "value": "20%",
+        "color": ["#c084fc", "#c084fc"],
+        "label": "System",
+        "icon": "cog"
+      }]
+    }, {
+      "label": "Storage",
+      "hint": "100GB",
+      "items": [{
+        "value": "60%",
+        "color": ["#4285f4", "#fbbc04"],
+        "label": "Drive",
+        "icon": "google-drive"
+      }, {
+        "value": "15%",
+        "color": ["#fbbc04", "#ea4336"],
+        "label": "Photos",
+        "icon": "camera"
+      }, {
+        "value": "5%",
+        "color": ["#ea4336", "#ababab"],
+        "label": "Email",
+        "icon": "gmail"
+      }, {
+        "value": "2%",
+        "color": ["#ababab"],
+        "label": "Other",
+        "icon": "file-cloud"
+      }]
+    }]
+  },
+  "documentation": {
+    "bc-meter-group": {
+      "props": {
+        "clickable": ["Boolean", false, false, "Sets the <code>&lt;bc-meter-group-item /&gt;</code> sub-components to clickable via the <code>.cursor-pointer</code> <a href='/content/utility-css-classes' v-link>utility class</a>"],
+        "elevation": ["String", false, "'none'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "height": ["String", false, "'6px'", "Items height in any suitable CSS unit"],
+        "hint": ["String", false, "undefined", "Optional component hint, rendered at the bottom right"],
+        "label": ["String", false, "undefined", "Optional component label, rendered at the top left"],
+        "labels-uppercase": ["Boolean", false, false, "Sets <code>label</code> and <code>hint</code> to uppercase"],
+        "meter-label-size": ["String", false, "'sm'", "Item labels size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "roundness": ["String", false, "'full'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"]
+      },
+      "slots": {
+        "label": ["Custom label that can be formatted via the <code>slotProps.data</code> object"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-meter-group-item": {
+      "props": {
+        "<code>v-model:</code>value": ["String", false, true, "Item value in percentage, e.g: <code>'50%'</code>"],
+        "color": ["String", false, "'#ababab'", "Any supported CSS <code>color</code> value (hex, named, hsl(a), rgb(a), etc.)"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icon' v-link>icon</a>"],
+        "label": ["String", false, "undefined", "Optional component label"]
+      },
+      "slots": {},
+      "events": {
+        "item-click": ["Object", "Emitted on item click"],
+        "update:value": ["String", "Emitted on <code>v-model:value</code> update"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

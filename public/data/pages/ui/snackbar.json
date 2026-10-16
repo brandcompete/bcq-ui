@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "pageTitle": "Snackbar for Vue3",
+    "keywords": [
+      "snackbar",
+      "message",
+      "notification"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "showSnackbarBtn": {
+      "color": "discovery",
+      "label": "Show Snackbar",
+      "iconLeft": "notification-clear-all"
+    },
+    "color": [
+      "discovery"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "autoClose": true,
+    "autoCloseDelay": 5000,
+    "codeFiles": [{
+      "uri": "/code/snackbar.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/snackbar-message-object.md",
+      "title": "snackbar-message-configuration",
+      "language": "javascript",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/snackbar-send-message.md",
+      "title": "sending-a-message-to-snackbar",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-snackbar": {
+      "props": {
+        "bottom": ["Boolean", false, true, "Render at the bottom or top of the page"],
+        "dismiss-icon": ["String", false, "'close-circle-outline'", "Dismiss icon"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "offset": ["Number", false, 3, "Snackbar top or bottom offset. Value should be between <code>0</code> and <code>8</code>"],
+        "padding": ["Array", false, "['p-2']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "width": ["String", false, "'260px'", "Component CSS <code>width</code>"],
+        "z-index": ["Number", false, 1000, "Component CSS <code>z-index</code>"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

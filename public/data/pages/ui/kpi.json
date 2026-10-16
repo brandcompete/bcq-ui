@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "pageTitle": "KPI for Vue3",
+    "keywords": [
+      "kpi",
+      "statistics",
+      "stats"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/kpi.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "variant": [
+      "soft"
+    ],
+    "locale": [
+      "en-US"
+    ],
+    "labelIcon": true,
+    "labelDivider": false,
+    "kpis": [{
+      "label": "Revenue",
+      "value": 24500,
+      "color": "none",
+      "prefix": "$",
+      "decimals": 2,
+      "trend": 12.4,
+      "comparisonLabel": "vs. last month",
+      "iconTrendUpColor": "green",
+      "labelIcon": "chart-gantt"
+    }, {
+      "label": "Revenue",
+      "value": 24500,
+      "color": "primary",
+      "prefix": "$",
+      "decimals": 0,
+      "trend": -8.4,
+      "comparisonLabel": "vs. last month",
+      "iconTrendDownColor": "red",
+      "labelIcon": "chart-donut-variant"
+    }, {
+      "label": "Conversion Rate",
+      "value": 3.82,
+      "color": "secondary",
+      "postfix": "%",
+      "decimals": 2,
+      "trend": 0,
+      "comparisonLabel": "vs. last week",
+      "iconTrendFlatColor": "orange",
+      "labelIcon": "chart-box-outline"
+    }, {
+      "label": "Active Users",
+      "color": "danger",
+      "value": 18234,
+      "decimals": 0,
+      "trend": 0,
+      "comparisonLabel": "vs. yesterday",
+      "labelIcon": "account-multiple"
+    }, {
+      "label": "Avg Response Time",
+      "value": 640,
+      "decimals": 0,
+      "color": "info",
+      "postfix": "ms",
+      "trend": -18,
+      "comparisonLabel": "vs. last deploy",
+      "labelIcon": "clock-minus"
+    }, {
+      "label": "Avg Response Time",
+      "value": 312,
+      "color": "discovery",
+      "postfix": "ms",
+      "decimals": 0,
+      "trend": 480,
+      "comparisonLabel": "vs. last deploy",
+      "labelIcon": "clock-plus"
+    }, {
+      "label": "Avg Response Time",
+      "value": 312,
+      "color": "success",
+      "postfix": "ms",
+      "decimals": 0,
+      "trend": -18,
+      "comparisonLabel": "vs. last deploy",
+      "labelIcon": "clock-fast"
+    }, {
+      "label": "Avg Response Time",
+      "value": 312,
+      "color": "caution",
+      "postfix": "ms",
+      "decimals": 0,
+      "trend": 0,
+      "comparisonLabel": "vs. last deploy",
+      "labelIcon": "bed-clock"
+    }]
+  },
+  "documentation": {
+    "bc-kpi": {
+      "props": {
+        "border-width": ["Number", false, 2, "One of the border width <a href='/content/utility-css-classes' v-link>utility</a> CSS classes"],
+        "color": ["String", false, "undefined", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "comparison-label": ["String", false, "undefined", "Comparison label for the <code>trend</code> prop, e.g: <code>'vs. last week'</code>"],
+        "decimals": ["Number", false, 2, "<code>value</code> prop trailing decimals"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "href": ["String", false, "undefined", "URL/URI if <code>tag</code> is <code>'a'</code>"],
+        "icon-trend-down": ["String", false, "'arrow-down-thick'", "Trend down <a href='/ui/icon' v-link>icon</a>"],
+        "icon-trend-down-color": ["String", false, "undefined", "Trend down icon color. One of the lightness modifier <a href='/content/colors' v-link>colors</a>, e.g. <code>'red'</code>"],
+        "icon-trend-flat": ["String", false, "'minus-box'", "Trend flat <a href='/ui/icon' v-link>icon</a>"],
+        "icon-trend-flat-color": ["String", false, "undefined", "Trend flat icon color. One of the lightness modifier <a href='/content/colors' v-link>colors</a>, e.g. <code>'orange'</code>"],
+        "icon-trend-up": ["String", false, "'arrow-up-thick'", "Trend up <a href='/ui/icon' v-link>icon</a>"],
+        "icon-trend-up-color": ["String", false, "undefined", "Trend up icon color. One of the lightness modifier <a href='/content/colors' v-link>colors</a>, e.g. <code>'green'</code>"],
+        "icons-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "label": ["String", true, "undefined", "KPI label, e.g: <code>'Revenue'</code>"],
+        "label-divider": ["Boolean", false, false, "Render <a href='/ui/divider'>divider</a> below the label"],
+        "label-divider-margin": ["Array", false, "[]", "<a href='/ui/divider'>Divider</a> margin. An array of CSS <code>margin</code> classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "label-font-size": ["String", false, "'md'", "Label font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "label-font-weight": ["String", false, "'normal'", "Label font size. One of the <a href='/content/typography' v-link>typography</a> font-weight treatments"],
+        "label-icon": ["String", false, "undefined", "Optional <code>label</code> <a href='/ui/icon' v-link>icon</a>"],
+        "label-truncate": ["Boolean", false, true, "Apply CSS <code>ellipsis</code> to the <code>label</code>"],
+        "locale": ["String", false, "'en-US'", "Default locale"],
+        "padding": ["Array", false, "['p-1']", "An array of CSS <code>padding</code> classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "postfix": ["String", false, "undefined", "Value postfix, e.g. <code>'%'</code>"],
+        "prefix": ["String", false, "undefined", "Value prefix, e.g. <code>'$'</code>"],
+        "roundness": ["String", false, "'sm'", "One of the roundness utility CSS classes"],
+        "tag": ["String", false, "'div'", "HTML tag or Vue component. If you set <code>'a'</code> or <code>'router-link'</code>, you need to provide <code>'href'</code> or <code>'to'</code> attributes"],
+        "to": ["String", false, "undefined", "Route if <code>tag</code> is <code>'router-link'</code>"],
+        "trend": ["Number", false, "undefined", "KPI trend"],
+        "trend-font-size": ["String", false, "'xs'", "<code>trend</code> font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "value": ["Number | String", false, "undefined", "KPI value"],
+        "value-font-weight": ["String", false, "'semibold'", "<code>value</code> font weight. One of the <a href='/content/typography' v-link>typography</a> font-weight treatments"],
+        "value-font-size": ["String", false, "'xs'", "<code>value</code> font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "value-margin": ["Array", false, "['my-1']", "<code>value</code> margin. An array of CSS <code>margin</code> classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"],
+        "x-align": ["String", false, "'left'", "Horizontal alignment, one of <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code>"]
+      },
+      "slots": {},
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

@@ -1,0 +1,334 @@
+/* @todo: make sm and md smaller */
+/* font sizes */
+
+.text-3xs
+{
+  font-size: 8px;
+}
+
+.text-2xs
+{
+  font-size: 10px;
+}
+
+.text-xs
+{
+  font-size: 11px;
+}
+
+.text-sm
+{
+  font-size: 14px;
+}
+
+.text-md,
+.text-base
+{
+  font-size: 16px;
+}
+
+.text-lg
+{
+  font-size: 18px;
+}
+
+.text-xl
+{
+  font-size: 20px;
+}
+
+.text-2xl
+{
+  font-size: 32px;
+}
+
+.text-3xl
+{
+  font-size: 36px;
+}
+
+.text-4xl
+{
+  font-size: 48px;
+}
+
+.text-5xl
+{
+  font-size: 60px;
+}
+
+.text-6xl
+{
+  font-size: 72px;
+}
+
+.text-7xl
+{
+  font-size: 80px;
+}
+
+.text-8xl
+{
+  font-size: 96px;
+}
+
+.text-inherit
+{
+  font-size: inherit !important;
+}
+
+/* font weights */
+
+.font-light
+{
+  font-weight: 300;
+}
+
+.font-normal
+{
+  font-weight: 400;
+}
+
+.font-medium
+{
+  font-weight: 500;
+}
+
+.font-semibold
+{
+  font-weight: 600;
+}
+
+.font-bold
+{
+  font-weight: 700;
+}
+
+/* font style */
+
+.font-italic
+{
+  font-style: italic;
+}
+
+/* font-variant */
+.small-caps
+{
+  font-variant: small-caps;
+}
+
+/* text align */
+
+.text-center,
+.align-center
+{
+  text-align: center;
+}
+
+.text-justify,
+.align-justify
+{
+  text-align: justify;
+}
+
+.text-left,
+.align-left
+{
+  text-align: left;
+}
+
+.text-right,
+.align-right
+{
+  text-align: right;
+}
+
+/* text decorations */
+
+.underline
+{
+  text-decoration: underline;
+}
+
+.hover\:underline:hover
+{
+  text-decoration: underline;
+}
+
+.line-through
+{
+  text-decoration: line-through;
+}
+
+.overline
+{
+  text-decoration: overline;
+}
+
+.no-underline
+{
+  text-decoration: none;
+}
+
+/* text overflows */
+
+.text-overflow-clip
+{
+  text-overflow: clip;
+}
+
+.text-overflow-ellipsis
+{
+  text-overflow: ellipsis;
+}
+
+.ellipsis,
+.truncate
+{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* text transforms */
+
+.lowercase
+{
+  text-transform: lowercase;
+}
+
+.uppercase
+{
+  text-transform: uppercase;
+}
+
+.capitalize
+{
+  text-transform: capitalize;
+}
+
+/* line heights */
+
+.line-height-1
+{
+  line-height: 1;
+}
+
+.line-height-2
+{
+  line-height: 1.25;
+}
+
+.line-height-3
+{
+  line-height: 1.5;
+}
+
+.line-height-4
+{
+  line-height: 2;
+}
+
+/* white spaces */
+
+.white-space-normal
+{
+  white-space: normal;
+}
+
+.white-space-nowrap
+{
+  white-space: nowrap;
+}
+
+.white-space-break-spaces
+{
+  white-space: break-spaces;
+}
+
+.word-break-all
+{
+  word-break: break-all;
+}
+
+/* list style types */
+
+.list-none
+{
+  list-style: none;
+}
+
+.list-disc
+{
+  list-style: disc;
+}
+
+.list-decimal
+{
+  list-style: decimal;
+}
+
+.list-style-position-inside
+{
+  list-style-position: inside;
+}
+
+.list-style-position-outside
+{
+  list-style-position: outside;
+}
+
+/* vertical aligns */
+
+.align-baseline,
+.vertical-align-baseline,
+.table-layout-cell.vertical-align-baseline
+{
+  vertical-align: baseline;
+}
+
+.align-top,
+.vertical-align-top,
+.table-layout-cell.vertical-align-top
+{
+  vertical-align: top;
+}
+
+.align-middle,
+.vertical-align-middle,
+.table-layout-cell.vertical-align-middle
+{
+  vertical-align: middle;
+}
+
+.align-bottom,
+.vertical-align-bottom,
+.table-layout-cell.vertical-align-bottom
+{
+  vertical-align: bottom;
+}
+
+.align-text-top,
+.vertical-align-text-top
+{
+  vertical-align: text-top;
+}
+
+.align-text-bottom,
+.vertical-align-text-bottom
+{
+  vertical-align: text-bottom;
+}
+
+.align-sub,
+.vertical-align-sub
+{
+  vertical-align: sub;
+}
+
+.align-sup,
+.align-super,
+.vertical-align-super
+{
+  vertical-align: super;
+}

@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "pageTitle": "Alert for Vue3",
+    "keywords": [
+      "alert",
+      "info",
+      "success",
+      "error",
+      "discovery",
+      "message",
+      "caution"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "size": [
+      "sm"
+    ],
+    "color": [
+      "discovery"
+    ],
+    "variant": [
+      "solid"
+    ],
+    "model:visible": true,
+    "showIcon": true,
+    "icon": "alert",
+    "dismissible": true,
+    "codeFiles": [{
+      "uri": "/code/alert.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-alert": {
+      "props": {
+        "<code>v-model:</code>visible": ["Boolean", false, true, "Component visibility"],
+        "color": ["String", false, "'primary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "dismissible": ["Boolean", false, true, "Allow dismiss on user click"],
+        "dismissIcon": ["String", false, "'close-circle-outline'", "Optional component <a href='/ui/icons' v-link>icon</a>"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "icon": ["String", false, "undefined", "Optional component <a href='/ui/icons' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "padding": ["Array", false, "['p-1']", "An array of CSS padding classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "size": ["String", false, "'sm'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "unselectable": ["Boolean", false, true, "Apply <code>.select-none</code> CSS class to the root element"],
+        "variant": ["String", false, "'solid'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

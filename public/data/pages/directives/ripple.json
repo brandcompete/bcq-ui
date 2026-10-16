@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "pageTitle": "Ripple for Vue3",
+    "keywords": [
+      "ink ripple"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/ripple.md",
+      "title": "directive",
+      "language": "xml"
+    }]
+  },
+  "documentation": null
+}

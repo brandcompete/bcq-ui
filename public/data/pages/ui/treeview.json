@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "pageTitle": "Treeview for Vue3",
+    "keywords": [
+      "treeview",
+      "file tree"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "size": [
+      "sm"
+    ],
+    "checkboxes": false,
+    "showFileIcon": true,
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "treeview": {
+      "item": {
+        "name": "My Drive"
+      },
+      "expanded": true,
+      "disabled": false,
+      "checked": false,
+      "children": [{
+        "item": {
+          "name": "Becquerel UI 3"
+        },
+        "expanded": true,
+        "checked": false,
+        "disabled": false,
+        "children": [{
+          "item": {
+            "name": "bcq-components.pdf",
+            "icon": "file-pdf-box"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "bcq-utility-css-classes.pdf",
+            "icon": "file-pdf-box"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "bcq-typography.pdf",
+            "icon": "file-pdf-box"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "README.md"
+          },
+          "checked": false,
+          "disabled": false
+        }]
+      }, {
+        "item": {
+          "name": "Library"
+        },
+        "expanded": false,
+        "checked": false,
+        "disabled": false,
+        "children": [{
+          "item": {
+            "name": "becquerel-ui.js"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "beckquerel-ui.css"
+          },
+          "checked": false,
+          "disabled": false
+        }]
+      }, {
+        "item": {
+          "name": "System"
+        },
+        "expanded": false,
+        "checked": false,
+        "disabled": false,
+        "children": [{
+          "item": {
+            "name": "Volumes"
+          },
+          "expanded": false,
+          "disabled": false,
+          "children": [{
+            "item": {
+              "name": "becquerel-ui.js"
+            },
+            "checked": false,
+            "disabled": false
+          }, {
+            "item": {
+              "name": "beckquerel-ui.css"
+            },
+            "checked": false,
+            "disabled": false
+          }]
+        }, {
+          "item": {
+            "name": "becquerel-ui.js"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "beckquerel-ui.css"
+          },
+          "checked": false,
+          "disabled": false
+        }]
+      }, {
+        "item": {
+          "name": "Users"
+        },
+        "expanded": false,
+        "checked": false,
+        "disabled": false,
+        "children": [{
+          "item": {
+            "name": "becquerel-ui.js"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "beckquerel-ui.css"
+          },
+          "checked": false,
+          "disabled": false
+        }]
+      }, {
+        "item": {
+          "name": "Disabled Item"
+        },
+        "expanded": false,
+        "disabled": true,
+        "checked": false,
+        "children": [{
+          "item": {
+            "name": "becquerel-ui.js"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "beckquerel-ui.css"
+          },
+          "checked": false,
+          "disabled": false
+        }]
+      }, {
+        "item": {
+          "name": "Another Disabled Item"
+        },
+        "expanded": false,
+        "disabled": true,
+        "checked": false,
+        "children": [{
+          "item": {
+            "name": "becquerel-ui.js"
+          },
+          "checked": false,
+          "disabled": false
+        }, {
+          "item": {
+            "name": "beckquerel-ui.css"
+          },
+          "checked": false,
+          "disabled": false
+        }]
+      }]
+    },
+    "codeFiles": [{
+      "uri": "/code/treeview.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/treeview-config.md",
+      "title": "treeview-items-config",
+      "language": "javascript",
+      "margin": ["mb-0"]
+    }]
+  },
+  "documentation": {
+    "bc-treeview": {
+      "props": {},
+      "slots": {},
+      "events": {}
+    }
+  }
+}

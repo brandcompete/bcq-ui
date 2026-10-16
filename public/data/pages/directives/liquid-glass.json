@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "pageTitle": "Liquid Glass for Vue3",
+    "keywords": [
+      "liquid glass",
+      "macos",
+      "apple"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "floatBackground": true,
+    "distortion": [
+      "large"
+    ],
+    "distortions": [
+      "large",
+      "medium",
+      "small"
+    ],
+    "codeFiles": [{
+      "uri": "/code/liquid-glass.md",
+      "title": "directive",
+      "language": "xml"
+    }],
+    "selectedBackground": [
+      "/images/misc/stormy-weather-at-freshwater-bay.jpg"
+    ],
+    "backgrounds": [
+      "/images/misc/stormy-weather-at-freshwater-bay.jpg",
+      "/images/misc/image-01.jpeg",
+      "/images/misc/image-03.jpeg",
+      "/images/misc/image-05.jpeg"
+    ]
+  },
+  "documentation": null
+}

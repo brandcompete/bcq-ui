@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "pageTitle": "Loading Overlay for Vue3",
+    "keywords": [
+      "loading overlay",
+      "spinner",
+      "preloader",
+      "progress"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "visibilityTimeout": 5,
+    "codeFiles": [{
+      "uri": "/code/loading-overlay.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": [
+        "mb-0"
+      ]
+    }]
+  },
+  "documentation": {
+    "bc-loading-overlay": {
+      "props": {
+        "<code>v-model:</code>visible": ["Boolean", false, false, "Component visibility"],
+        "icon": ["String", false, "'loading'", "Spinner <a href='/ui/icons' v-link>icon</a>"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "size": ["String", false, "'3xl'", "Icon font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "z-index": ["Number", false, 1100, "Component CSS <code>z-index</code>"]
+      },
+      "slots": {},
+      "events": {
+        "update:visible": ["Boolean" ,"Emitted on <code>v-model:visible</code> update"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

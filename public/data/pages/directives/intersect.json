@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "pageTitle": "Intersect for Vue3",
+    "keywords": [
+      "intersection api",
+      "viewport",
+      "scroll",
+      "visibility"
+    ],
+    "links": [
+      "directives"
+    ]
+  },
+  "config": {
+    "images": [],
+    "codeFiles": [{
+      "uri": "/code/intersect.md",
+      "title": "using-the-directive",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/intersect-config.md",
+      "title": "intersect-config",
+      "language": "javascript",
+      "margin": ["mb-4"]
+    }, {
+      "uri": "/code/intersect-callback.md",
+      "title": "intersect-callback",
+      "language": "javascript",
+      "margin": ["mb-4"]
+    }]
+  },
+  "documentation": null
+}

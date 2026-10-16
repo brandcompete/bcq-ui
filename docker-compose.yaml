@@ -1,0 +1,12 @@
+services:
+  bc-becquerel3-frontend:
+    image: brandcompete/bc-becquerel3-frontend-image
+    container_name: bc-becquerel3-frontend
+    build:
+      context: .
+      args:
+        BASIC_AUTH_USER: ${BASIC_AUTH_USER}
+        BASIC_AUTH_PASSWORD: ${BASIC_AUTH_PASSWORD}
+    ports:
+      - "9085:9085"
+    restart: unless-stopped

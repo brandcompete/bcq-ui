@@ -1,0 +1,346 @@
+:root
+{
+  /* generic white and black bg-{color}, text-{color} and border-{color} */
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+
+  --font-family-generic: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* sidebars easing */
+  --sidebars-easing: .2s cubic-bezier(.4, 0, .2, 1);
+
+  /* backdrop blur */
+  --backdrop-blur: blur(4px);
+
+  /* light/dark theme colors */
+  --bg-theme-light: rgb(255, 255, 255);
+  --text-theme-light: rgb(0, 0, 0);
+
+  --bg-theme-dark: rgb(33, 33, 33);
+  --text-theme-dark: rgb(255, 255, 255);
+
+  --semi-transparent-light: rgba(255, 255, 255, .5);
+  --semi-transparent-dark: rgba(0, 0, 0, .5);
+
+  /* border-colors */
+  --border-color-light: rgb(222, 224, 230);
+  --border-color-dark: rgb(48, 50, 55);
+
+  /* <bc-card /> */
+  --card-background-light: rgb(249, 249,	249);
+  --card-background-dark: rgb(24, 24, 24);
+
+  /* <bc-text-field /> */
+  --text-field-color-light: rgb(0, 0, 0);
+  --text-field-color-dark: rgb(255, 255, 255);
+  --text-field-color-error: rgb(224, 46, 42);
+
+  /* <bc-collapsible /> */
+  --collapsible-header-background-light: rgb(250, 250,	250);
+  --collapsible-header-background-dark: rgb(24, 24, 24);
+  --collapsible-header-border-light: rgb(222, 224, 230);
+  --collapsible-header-border-dark: rgb(48, 50, 55);
+  --collapsible-header-background-expanded-light: rgb(229, 229,	229);
+  --collapsible-header-background-expanded-dark: rgb(0, 0, 0);
+
+  /* left sidebar */
+  --bg-sidebar-left-light: rgb(250, 250, 250);
+  --text-sidebar-left-light: rgba(0, 0, 0);
+  --border-sidebar-left-light: rgba(13, 13, 13, .1);
+
+  --bg-sidebar-left-dark: rgb(24, 24, 24);
+  --text-sidebar-left-dark: rgb(255, 255, 255);
+  --border-sidebar-left-dark: rgba(255, 255, 255, .1);
+
+  /* right sidebar */
+  --bg-sidebar-right-light: rgb(250, 250, 250);
+  --text-sidebar-right-light: rgb(0, 0, 0);
+  --border-sidebar-right-light: rgba(13, 13, 13, .1);
+
+  --bg-sidebar-right-dark: rgb(24, 24, 24);
+  --text-sidebar-right-dark: rgb(255, 255, 255);
+  --border-sidebar-right-dark: rgba(255, 255, 255, .1);
+
+  /* main */
+  --bg-main-light: var(--bg-theme-light);
+  --text-main-light: var(--text-theme-light);
+
+  --bg-main-dark: var(--bg-theme-dark);
+  --text-main-dark: var(--text-theme-dark);
+
+  /* header */
+  --bg-header-light: var(--bg-theme-light);
+  --text-header-light: var(--text-theme-light);
+  --border-header-light: rgba(13, 13, 13, .1);
+
+  --bg-header-dark: var(--bg-theme-dark);
+  --text-header-dark: var(--text-theme-dark);
+  --border-header-dark: rgba(255, 255, 255, .1);
+
+  /* footer */
+  --bg-footer-light: var(--bg-theme-light);
+  --text-footer-light: var(--text-theme-light);
+  --border-footer-light: rgba(13, 13, 13, .1);
+
+  --bg-footer-dark: var(--bg-theme-dark);
+  --text-footer-dark: var(--text-theme-dark);
+  --border-footer-dark: rgba(255, 255, 255, .1);
+
+  /* solid colors */
+  --bg-primary-solid: rgb(24, 24, 24);
+  --text-primary-solid: rgb(255, 255, 255);
+  --bg-primary-solid-dark: rgb(255, 255, 255);
+  --text-primary-solid-dark: rgb(13, 13, 13);
+
+  --bg-secondary-solid: rgb(94, 94, 94);
+  --text-secondary-solid: rgb(255, 255, 255);
+  --bg-secondary-solid-dark: rgb(65, 65, 65);
+  --text-secondary-solid-dark: rgb(255, 255, 255);
+
+  --tabs-bg-primary-solid-light: rgb(24, 24, 24);
+  --tabs-bg-primary-solid-dark: rgb(255, 255, 255);
+  --tabs-bg-secondary-solid-light: rgb(65, 65, 65);
+  --tabs-bg-secondary-solid-dark: rgb(255, 255, 255);
+
+  --bg-danger-solid: rgb(224, 46, 42);
+  --text-danger-solid: rgb(255, 255, 255);
+  --bg-danger-solid-dark: rgb(224, 46, 42);
+  --text-danger-solid-dark: rgb(255, 255, 255);
+
+  --tabs-bg-primary-solid-light: rgb(24, 24, 24);
+  --tabs-bg-primary-solid-dark: rgb(255, 255, 255);
+  --tabs-bg-secondary-solid-light: rgb(65, 65, 65);
+  --tabs-bg-secondary-solid-dark: rgb(255, 255, 255);
+  --tabs-bg-danger-solid-light: rgb(224, 46, 42);
+  --tabs-bg-danger-solid-dark: rgb(224, 46, 42);
+
+  --bg-info-solid: rgb(2, 133, 255);
+  --text-info-solid: rgb(255, 255, 255);
+  --bg-info-solid-dark: rgb(76, 133, 255);
+  --text-info-solid-dark: rgb(255, 255, 255);
+
+  --tabs-bg-primary-solid-light: rgb(24, 24, 24);
+  --tabs-bg-primary-solid-dark: rgb(255, 255, 255);
+  --tabs-bg-secondary-solid-light: rgb(65, 65, 65);
+  --tabs-bg-secondary-solid-dark: rgb(255, 255, 255);
+  --tabs-bg-danger-solid-light: rgb(224, 46, 42);
+  --tabs-bg-danger-solid-dark: rgb(224, 46, 42);
+  --tabs-bg-info-solid-light: rgb(2, 133, 255);
+  --tabs-bg-info-solid-dark: rgb(76, 133, 255);
+
+  --bg-discovery-solid: rgb(146, 80, 247);
+  --text-discovery-solid: rgb(255, 255, 255);
+  --bg-discovery-solid-dark: rgb(146, 79, 247);
+  --text-discovery-solid-dark: rgb(255, 255, 255);
+
+  --bg-success-solid: rgb(0, 162, 64);
+  --text-success-solid: rgb(255, 255, 255);
+  --bg-success-solid-dark: rgb(40, 134, 53);
+  --text-success-solid-dark: rgb(255, 255, 255);
+
+  --bg-caution-solid: rgb(186, 142, 0);
+  --text-caution-solid: rgb(255, 255, 255);
+  --bg-caution-solid-dark: rgb(186, 142, 1);
+  --text-caution-solid-dark: rgb(255, 255, 255);
+
+  /* soft colors */
+  --bg-primary-soft: rgb(239, 239, 239);
+  --text-primary-soft: rgb(13, 13, 13);
+  --bg-primary-soft-dark: rgb(60, 60, 60);
+  --text-primary-soft-dark: rgb(255, 255, 255);
+
+  --bg-secondary-soft: rgb(239, 239, 239);
+  --text-secondary-soft: rgb(13, 13, 13);
+  --bg-secondary-soft-dark: rgb(60, 60, 60);
+  --text-secondary-soft-dark: rgb(255, 255, 255);
+
+  --bg-danger-soft: rgb(254, 227, 227);
+  --text-danger-soft: rgb(186, 38, 35);
+  --bg-danger-soft-dark: rgb(67, 38, 38);
+  --text-danger-soft-dark: rgb(250, 66, 62);
+
+  --bg-info-soft: rgb(227, 240, 255);
+  --text-info-soft: rgb(0, 79, 153);
+  --bg-info-soft-dark: rgb(33, 46, 62);
+  --text-info-soft-dark: rgb(51, 156, 255);
+
+  --bg-discovery-soft: rgb(239, 231, 254);
+  --text-discovery-soft: rgb(107, 58, 180);
+  --bg-discovery-soft-dark: rgb(49, 41, 65);
+  --text-discovery-soft-dark: rgb(190, 149, 250);
+
+  --bg-success-soft: rgb(223, 245, 231);
+  --text-success-soft: rgb(0, 134, 53);
+  --bg-success-soft-dark: rgb(32, 55, 40);
+  --text-success-soft-dark: rgb(4, 184, 76);
+
+  --bg-caution-soft: rgb(255, 246, 222);
+  --text-caution-soft: rgb(110, 84, 0);
+  --bg-caution-soft-dark: rgb(66, 58, 34);
+  --text-caution-soft-dark: rgb(255, 195, 0);
+
+  /* outline colors */
+  --bg-primary-outline: rgb(255, 255, 255);
+  --text-primary-outline: rgb(13, 13, 13);
+  --outline-primary-outline: rgb(13, 13, 13);
+  --bg-primary-outline-dark: rgb(33, 33, 33);
+  --text-primary-outline-dark: rgb(255, 255, 255);
+  --outline-primary-outline-dark: rgb(89, 89, 89);
+
+  --bg-secondary-outline: rgb(255, 255, 255);
+  --text-secondary-outline: rgb(93, 93, 93);
+  --outline-secondary-outline: rgb(93, 93, 93);
+  --bg-secondary-outline-dark: rgb(33, 33, 33);
+  --text-secondary-outline-dark: rgb(175, 175, 175);
+  --outline-secondary-outline-dark: rgb(89, 89, 89);
+
+  --bg-danger-outline: rgb(255, 255, 255);
+  --text-danger-outline: rgb(224, 46, 42);
+  --outline-danger-outline: rgb(224, 46, 42);
+  --bg-danger-outline-dark: rgb(33, 33, 33);
+  --text-danger-outline-dark: rgb(224, 46, 42);
+  --outline-danger-outline-dark: rgb(224, 46, 42);
+
+  --bg-info-outline: rgb(255, 255, 255);
+  --text-info-outline: rgb(1, 105, 204);
+  --outline-info-outline: rgb(1, 105, 204);
+  --bg-info-outline-dark: rgb(33, 33, 33);
+  --text-info-outline-dark: rgb(102, 181, 255);
+  --outline-info-outline-dark: rgb(102, 181, 255);
+
+  --bg-discovery-outline: rgb(255, 255, 255);
+  --text-discovery-outline: rgb(107, 58, 180);
+  --outline-discovery-outline: rgb(107, 58, 180);
+  --bg-discovery-outline-dark: rgb(33, 33, 33);
+  --text-discovery-outline-dark: rgb(146, 79, 247);
+  --outline-discovery-outline-dark: rgb(146, 79, 247);
+
+  --bg-success-outline: rgb(255, 255, 255);
+  --text-success-outline: rgb(0, 162, 64);
+  --outline-success-outline: rgb(0, 162, 64);
+  --bg-success-outline-dark: rgb(33, 33, 33);
+  --text-success-outline-dark: rgb(0, 162, 64);
+  --outline-success-outline-dark: rgb(0, 162, 64);
+
+  --bg-caution-outline: rgb(255, 255, 255);
+  --text-caution-outline: rgb(145, 111, 0);
+  --outline-caution-outline: rgb(145, 111, 0);
+  --bg-caution-outline-dark: rgb(33, 33, 33);
+  --text-caution-outline-dark: rgb(145, 111, 0);
+  --outline-caution-outline-dark: rgb(145, 111, 0);
+
+  /* ghost colors */
+  --bg-primary-ghost: rgb(255, 255, 255);
+  --text-primary-ghost: rgb(13, 13, 13);
+  --bg-primary-ghost-dark: rgb(33, 33, 33);
+  --text-primary-ghost-dark: rgb(255, 255, 255);
+
+  --bg-secondary-ghost: rgb(255, 255, 255);
+  --text-secondary-ghost: rgb(93, 93, 93);
+  --bg-secondary-ghost-dark: rgb(33, 33, 33);
+  --text-secondary-ghost-dark: rgb(175, 175, 175);
+
+  --bg-danger-ghost: rgb(255, 255, 255);
+  --text-danger-ghost: rgb(224, 46, 42);
+  --bg-danger-ghost-dark: rgb(33, 33, 33);
+  --text-danger-ghost-dark: rgb(224, 46, 42);
+
+  --bg-info-ghost: rgb(255, 255, 255);
+  --text-info-ghost: rgb(1, 105, 204);
+  --bg-info-ghost-dark: rgb(33, 33, 33);
+  --text-info-ghost-dark: rgb(102, 181, 255);
+
+  --bg-discovery-ghost: rgb(255, 255, 255);
+  --text-discovery-ghost: rgb(107, 58, 180);
+  --bg-discovery-ghost-dark: rgb(33, 33, 33);
+  --text-discovery-ghost-dark: rgb(128, 70, 217);
+
+  --bg-success-ghost: rgb(255, 255, 255);
+  --text-success-ghost: rgb(0, 162, 64);
+  --bg-success-ghost-dark: rgb(33, 33, 33);
+  --text-success-ghost-dark: rgb(0, 162, 64);
+
+  --bg-caution-ghost: rgb(255, 255, 255);
+  --text-caution-ghost: rgb(145, 111, 0);
+  --bg-caution-ghost-dark: rgb(33, 33, 33);
+  --text-caution-ghost-dark: rgb(145, 111, 0);
+
+  /* speed-dial */
+  --bc-speed-dial-transition: all .250s cubic-bezier(0.18, 1.89, 0.32, 1.28);
+
+  /* tabs */
+  --bg-tab-button: rgb(250, 250, 250);
+  --bg-tab-button-dark: rgb(24, 24, 24);
+  --bg-tab-button-selected-dark: rgb(0, 0, 0);
+
+  --tabs-bg-primary-solid-light: rgb(24, 24, 24);
+  --tabs-bg-primary-solid-dark: rgb(255, 255, 255);
+  --tabs-bg-secondary-solid-light: rgb(65, 65, 65);
+  --tabs-bg-secondary-solid-dark: rgb(255, 255, 255);
+  --tabs-bg-danger-solid-light: rgb(224, 46, 42);
+  --tabs-bg-danger-solid-dark: rgb(224, 46, 42);
+  --tabs-bg-info-solid-light: rgb(2, 133, 255);
+  --tabs-bg-info-solid-dark: rgb(76, 133, 255);
+  --tabs-bg-discovery-solid-light: rgb(146, 80, 247);
+  --tabs-bg-discovery-solid-dark: rgb(146, 79, 247);
+  --tabs-bg-success-solid-light: rgb(0, 162, 64);
+  --tabs-bg-success-solid-dark: rgb(40, 134, 53);
+  --tabs-bg-caution-solid-light: rgb(186, 142, 0);
+  --tabs-bg-caution-solid-dark: rgb(186, 142, 1);
+
+  /* <bc-progressbar /> */
+  --progressbar-track-light: rgb(229, 229, 229);
+  --progressbar-track-dark: rgb(0, 0,	0);
+
+  /* <bc-meter-track /> */
+  --meter-track-light: rgb(229, 229, 229);
+  --meter-track-dark: rgb(0, 0,	0);
+
+  /* <bc-slider /> */
+  --slider-light: rgb(135, 135,	135);
+  --slider-dark: rgb(135, 135, 135);
+
+  /* router links in <bc-list /> */
+  --router-link-transition: background-color .2s ease-in;
+
+  --router-link-exact-active-light: rgba(0, 0, 0, .07);
+  --router-link\:hover-light: rgba(0, 0, 0, .1);
+  --router-link\:active-light: rgba(0, 0, 0, .15);
+
+  --router-link-exact-active-dark: rgba(255, 255, 255, .08);
+  --router-link\:hover-dark: rgba(255, 255, 255, .1);
+  --router-link\:active-dark: rgba(0, 0, 0, .5);
+
+  /* <bc-dropdown /> */
+  --dropdown-color-light: rgb(0, 0, 0);
+  --dropdown-color-dark: rgb(255, 255, 255);
+  --dropdown-color-error: rgb(224, 46, 42);
+
+  --dropdown-item-selected-light: rgba(0, 0, 0, .07);
+  --dropdown-item\:hover-light: rgba(0, 0, 0, .1);
+
+  --dropdown-item-selected-dark: rgba(255, 255, 255, .08);
+  --dropdown-item\:hover-dark: rgba(255, 255, 255, .1);
+
+  /* <bc-lazy-image /> */
+  --lazy-image-light: rgb(249, 249,	249);
+  --lazy-image-dark: rgb(13, 13, 13);
+  --lazy-image-error: rgb(224, 46, 42);
+
+  /* <bc-btn-group /> */
+  --bc-btn-group-btn-selected: rgba(0, 0, 0, .3);
+
+  /* v-default-btn */
+  --v-default-btn: solid 2px rgba(255, 255, 255, .25);
+  --v-default-btn-outline-offset: -4px;
+
+  /* icon cell width for certain components */
+  --icon-cell-width: 32px;
+
+  /* zebra rows in <data-table /> */
+  --data-table-zebra-rows-even: rgba(0, 0, 0, .07);
+  --data-table-row-\:hover: rgba(0, 0, 0, .1);
+
+  /* @todo: css scrollbars */
+}

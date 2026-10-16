@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "pageTitle": "Text Field for Vue3",
+    "keywords": [
+      "text field",
+      "input text",
+      "password",
+      "textarea",
+      "auto resize",
+      "date input",
+      "datetime",
+      "tel",
+      "month",
+      "number"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/text-field.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "type": [
+      "text"
+    ],
+    "icons": [
+      "icon-left",
+      "icon-right",
+      "none"
+    ],
+    "icon": [
+      "icon-left"
+    ],
+    "disabledOptionsDropdownSelection": [
+      "not disabled"
+    ],
+    "disabledOptionsDropdown": [
+      "not disabled",
+      "disabled",
+      "inert"
+    ],
+    "labelsUppercase": false,
+    "multiline": false,
+    "autoResize": false,
+    "clearable": false,
+    "error": false,
+    "label": false,
+    "hint": false,
+    "types": {
+      "text": {
+        "value": "",
+        "icon": "text-box-outline"
+      },
+      "date": {
+        "value": "",
+        "icon": "calendar-blank-outline"
+      },
+      "datetime-local": {
+        "value": "",
+        "icon": "calendar-blank-outline"
+      },
+      "email": {
+        "value": "",
+        "icon": "email"
+      },
+      "month": {
+        "value": "",
+        "icon": "calendar-month"
+      },
+      "number": {
+        "value": "",
+        "icon": "counter"
+      },
+      "password": {
+        "value": "",
+        "icon": "lock"
+      },
+      "search": {
+        "value": "",
+        "icon": "magnify"
+      },
+      "tel": {
+        "value": "",
+        "icon": "phone"
+      },
+      "time": {
+        "value": "",
+        "icon": "clock-time-three"
+      },
+      "url": {
+        "value": "",
+        "icon": "link"
+      },
+      "week": {
+        "value": "",
+        "icon": "calendar-week-begin-outline"
+      }
+    }
+  },
+  "documentation": {
+    "bc-text-field": {
+      "props": {
+        "<code>v-model:</code>value": ["String, Number", false, "undefined", "Input value"],
+        "autocomplete": ["String", false, "'on'", "Enable or disable browser's inbuilt autocomplete for HTML inputs. One of <code>'on'</code>, <code>'off'</code> or custom value"],
+        "autofocus": ["Boolean", false, false, "Move the focus into the input when mounted"],
+        "auto-resize": ["Boolean", false, false, "Auto resize input when <code>multiline</code> prop is set to <code>true</code>"],
+        "block": ["Boolean", false, true, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "border-width": ["Number", false, 1, "Input border thickness"],
+        "clearable": ["Boolean", false, false, "Show \"x\" icon (configurable via the <code>icon-clear</code> prop) that when clicked clears the input"],
+        "cols": ["Number", false, "undefined", "HTML <code>cols</code> attribute when <code>multiline</code> prop is set to <code>true</code>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "error": ["Boolean", false, false, "Apply the CSS class set as <code>error-css-class</code> prop"],
+        "hint": ["String", false, "undefined", "Optional component hint, rendered at the bottom"],
+        "icon-align": ["String", false, "'middle'", "Icons alignment (one of <code>'top'</code>, <code>'middle'</code>, <code>'bottom'</code> or <code>'baseline'</code>)"],
+        "icon-clear": ["String", false, "'close'", "Clearable <a href='/ui/icon' v-link>icon</a> (check the <code>clearable</code> prop)"],
+        "icon-cursor": ["String", false, "'default'", "Left and right icons cursor style (<code>'default'</code>, <code>'pointer'</code>, etc.)"],
+        "icon-left": ["String", false, "undefined", "Optional left icon"],
+        "icon-provider": ["String", false, "'mdi'", "Component <a href='/ui/icon' v-link>icon</a> <code>provider</code>. One of <code>'mdi'</code>, <code>'fa'</code>, <code>'google'</code>, etc."],
+        "icon-reveal": ["String", false, "'eye'", "Icon for the <code>reveal</code> prop it <code>type</code> is <code>'password'</code>"],
+        "icon-right": ["String", false, "undefined", "Optional right icon"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "label": ["String", false, "undefined", "Optional component label, rendered at the top"],
+        "labels-uppercase": ["Boolean", false, true, "Sets the <code>label</code> and <code>hint</code> prop values to uppercase"],
+        "max-length": ["Number", false, "undefined", "HTML <code>max-length</code> attribute for input types that support it"],
+        "min-height": ["String", false, "undefined", "Optional height of the component of <code>multiline</code> is set to <code>true</code>"],
+        "min-length": ["Number", false, "undefined", "HTML <code>min-length</code> attribute for input types that support it"],
+        "multiline": ["Boolean", false, false, "Render the component as <code>textarea</code>"],
+        "name": ["String", false, "undefined", "Optional input <code>name</code> attribute"],
+        "pattern": ["String", false, "undefined", "Optional <code>pattern</code> attribute for input types that support it"],
+        "readonly": ["Boolean", false, false, "Optional input <code>readonly</code> attribute"],
+        "resize": ["String", false, "'none'", "Make the <code>multiline</code> input resizable. One of <code>'none'</code>, <code>'both'</code>, <code>'horizontal'</code> or <code>'vertical'</code>"],
+        "reveal": ["Boolean", false, false, "Show a configurable \"eye\" icon for <code>type='password'</code> that unmasks the current value when pressed (check the <code>icon-reveal</code>) prop"],
+        "roundness": ["String", false, "'sm'", "One of the <code>border-radius</code> CSS classes, available in the <a href='/content/utility-css-classes' v-link>utility CSS classes</a>"],
+        "rows": ["Number", false, "undefined", "HTML <code>rows</code> attribute when <code>multiline</code> prop is set to <code>true</code>"],
+        "size": ["String", false, "'sm'", "Component size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "spellcheck": ["Boolean", false, false, "Enable or disable browser's inbuilt spellcheck for HTML inputs. One of <code>'on'</code>, <code>'off'</code> or custom value"],
+        "touched-css-class": ["String", false, "'bc-text-field-touched'", "Default or user-defined touched CSS class"],
+        "type": ["String", false, "'text'", "Input type, one of <code>'text'</code>, <code>'date'</code>, <code>'datetime-local'</code>, <code>'email'</code>, <code>'month'</code>, <code>'number'</code>, <code>'password'</code>, <code>'search'</code>, <code>'tel'</code>, <code>'time'</code>, <code>'url'</code> or <code>'week'</code>"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any supported value"]
+      },
+      "slots": {
+        "top": ["Top slot"],
+        "right": ["Right slot"],
+        "bottom": ["Bottom slot"],
+        "left": ["Left slot"]
+      },
+      "events": {
+        "update:value": ["String" ,"Triggered on <code>v-model:value</code> update"],
+        "default": ["Default" ,"Default JavaScript events"],
+        "focusin": ["User defined" ,"Triggered on input focus-in"],
+        "focusout": ["User defined" ,"Triggered on input focus-out"],
+        "icon-left-click": ["User defined" ,"Triggered on left icon click"],
+        "icon-right-click": ["User defined" ,"Triggered on right icon click"],
+        "keyup": ["User defined" ,"Triggered on input key-up"],
+        "keydown": ["User defined" ,"Triggered on input key-down"]
+      }
+    }
+  }
+}

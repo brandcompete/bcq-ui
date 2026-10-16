@@ -1,0 +1,185 @@
+/* translates */
+
+.translate-x-0
+{
+  transform: translateX(0%);
+}
+
+.translate-x-100
+{
+  transform: translateX(100%);
+}
+
+.-translate-x-100
+{
+  transform: translateX(-100%);
+}
+
+.-translate-x-50
+{
+  transform: translateX(-50%);
+}
+
+.translate-y-0
+{
+  transform: translateY(0%);
+}
+
+.translate-y-25
+{
+  transform: translateY(25%);
+}
+
+.translate-y-50
+{
+  transform: translateY(50%);
+}
+
+.translate-y-100
+{
+  transform: translateY(100%);
+}
+
+.-translate-y-100
+{
+  transform: translateY(-100%);
+}
+
+.-translate-y-50
+{
+  transform: translateY(-50%);
+}
+
+.translate-0
+{
+  transform: translate(0, 0);
+}
+
+.translate-25
+{
+  transform: translate(25%, 25%);
+}
+
+.translate-50
+{
+  transform: translate(50%, 50%);
+}
+
+.translate-75
+{
+  transform: translate(75%, 75%);
+}
+
+.translate-100
+{
+  transform: translate(100%, 100%);
+}
+
+.-translate-25
+{
+  transform: translate(-25%, -25%);
+}
+
+.-translate-50
+{
+  transform: translate(-50%, -50%);
+}
+
+.-translate-75
+{
+  transform: translate(-75%, -75%);
+}
+
+.-translate-100
+{
+  transform: translate(-100%, -100%);
+}
+
+/* translate origins */
+
+.origin-center
+{
+  transform-origin: center;
+}
+
+.origin-top
+{
+  transform-origin: top;
+}
+
+.origin-top-right
+{
+  transform-origin: top right;
+}
+
+.origin-right
+{
+  transform-origin: right;
+}
+
+.origin-bottom-right
+{
+  transform-origin: bottom right;
+}
+
+.origin-bottom
+{
+  transform-origin: bottom;
+}
+
+.origin-bottom-left
+{
+  transform-origin: bottom left;
+}
+
+.origin-left
+{
+  transform-origin: left;
+}
+
+.origin-top-left
+{
+  transform-origin: top left;
+}
+
+/* rotates */
+
+.rotate-45
+{
+  transform: rotate(45deg);
+}
+
+.-rotate-45
+{
+  transform: rotate(-45deg);
+}
+
+.rotate-90
+{
+  transform: rotate(90deg);
+}
+
+.-rotate-90
+{
+  transform: rotate(-90deg);
+}
+
+.rotate-180
+{
+  transform: rotate(180deg);
+}
+
+.-rotate-180
+{
+  transform: rotate(-180deg);
+}
+
+.scale-0
+{
+  transform: scale(0);
+}
+
+.scale-1
+{
+  transform: scale(1);
+}

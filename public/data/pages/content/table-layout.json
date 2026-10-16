@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "pageTitle": "Table Layout for Vue3",
+    "keywords": [
+      "html table",
+      "table layout",
+      "css table"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/table-layout.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "rows": 7,
+    "cells": 4,
+    "cellCssClasses": [
+      "border-solid",
+      "border-black",
+      "border-4",
+      "p-3"
+    ]
+  },
+  "documentation": {
+    "bc-table-layout": {
+      "props": {
+        "border-collapse": ["Boolean", false, true, "Applies CSS <code>border-collapse: collapse | separate</code>"],
+        "equal-cells": ["Boolean", false, false, "Applies CSS <code>table-layout: fixed | auto</code>"],
+        "height": ["String", false, "undefined", "Applies CSS <code>height</code> in any suitable unit"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any suitable unit"],
+        "x-align": ["String", false, "undefined", "Horizontal alignment for the entire table, one of <code>'left'</code>, <code>'center'</code>, <code>'right'</code>, <code>'auto'</code> or <code>'justify'</code>"],
+        "y-align": ["String", false, "undefined", "Vertical alignment for the entire table, one of <code>'top'</code>, <code>'middle'</code>, <code>'baseline'</code> or <code>'auto'</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-table-layout-row": {
+      "props": {},
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    },
+    "bc-table-layout-cell": {
+      "props": {
+        "full-width": ["Boolean", false, false, "Applies the <code>w-full</code> <a href='/content/utility-css-classes' v-link>utility CSS class</a> and expands the cell to <code>100%</code>"],
+        "width": ["String", false, "undefined", "Component CSS <code>width</code> in any suitable unit"],
+        "x-align": ["String", false, "undefined", "Horizontal alignment for a particular cell, one of <code>'left'</code>, <code>'center'</code>, <code>'right'</code>, <code>'auto'</code> or <code>'justify'</code>"],
+        "y-align": ["String", false, "undefined", "Vertical alignment for a particular cell, one of <code>'top'</code>, <code>'middle'</code>, <code>'baseline'</code> or <code>'auto'</code>"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

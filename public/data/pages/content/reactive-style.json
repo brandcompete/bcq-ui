@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "pageTitle": "Reactive Style for Vue3",
+    "keywords": [
+      "reactive style",
+      "css",
+      "observable style",
+      "observable css",
+      "styles"
+    ],
+    "links": [
+      "documentation",
+      "content"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/reactive-style.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }]
+  },
+  "documentation": null
+}

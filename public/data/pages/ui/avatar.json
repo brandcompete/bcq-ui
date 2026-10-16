@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "pageTitle": "Avatar for Vue3",
+    "keywords": [
+      "avatar",
+      "icon",
+      "image",
+      "tile"
+    ],
+    "links": [
+      "documentation",
+      "ui"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/avatar.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-4"]
+    }],
+    "tile": false,
+    "color": [
+      "secondary"
+    ],
+    "variant": [
+      "outline"
+    ],
+    "avatars": [{
+      "text": "AB",
+      "size": "48px",
+      "fontSize": "xs"
+    }, {
+      "text": "CD",
+      "size": "48px",
+      "fontSize": "xs"
+    }, {
+      "text": "EF",
+      "size": "48px",
+      "fontSize": "xs"
+    }, {
+      "text": "GH",
+      "size": "48px"
+    }, {
+      "text": "IJ",
+      "size": "48px"
+    }, {
+      "text": "KL",
+      "size": "48px"
+    }, {
+      "icon": "vuejs",
+      "size": "64px",
+      "fontSize": "2xl"
+    }, {
+      "icon": "vuejs",
+      "size": "64px",
+      "fontSize": "2xl"
+    }, {
+      "icon": "vuejs",
+      "size": "64px",
+      "fontSize": "2xl"
+    }, {
+      "icon": "vuejs",
+      "size": "80px",
+      "fontSize": "3xl"
+    }, {
+      "icon": "vuejs",
+      "size": "80px",
+      "fontSize": "3xl"
+    }, {
+      "icon": "vuejs",
+      "size": "80px",
+      "fontSize": "3xl"
+    }, {
+      "src": "/images/guitars/strandberg-boden-prog-7/image-01.jpg",
+      "size": "96px"
+    }, {
+      "src": "/images/guitars/aurellia-egotalker-iv/image-01.jpg",
+      "size": "96px"
+    }, {
+      "src": "/images/guitars/aurellia-egotalker-iii/image-01.jpg",
+      "size": "96px"
+    }, {
+      "src": "/images/guitars/aurellia-egotalker-ii/image-01.jpg",
+      "size": "128px"
+    }, {
+      "src": "/images/guitars/bc-rich-stealth/image-01.jpg",
+      "size": "128px"
+    }, {
+      "src": "/images/guitars/epiphone-les-paul-mkh/image-01.jpg",
+      "size": "128px"
+    }, {
+      "src": "/images/guitars/jackson-chris-broderick-pro-7/image-01.jpg",
+      "size": "256px"
+    }, {
+      "src": "/images/guitars/etherial-egotalker/image-01.jpg",
+      "size": "256px"
+    }, {
+      "src": "/images/guitars/esp-sv-acid-martin/image-01.jpg",
+      "size": "256px"
+    }]
+  },
+  "documentation": {
+    "bc-avatar": {
+      "props": {
+        "block": ["Boolean", false, false, "Render as <code>block</code> or <code>inline-block</code> level element"],
+        "border-width": ["Number", false, 2, "Avatar <code>outline-width</code> if <code>variant</code> is <code>'outline'</code>"],
+        "color": ["String", false, "'secondary'", "One of the <a href='/content/colors' v-link>UI colors</a>"],
+        "elevation": ["String", false, "'md'", "One of the <a href='/content/elevation' v-link>shadow</a> utility CSS classes"],
+        "font-size": ["String", false, "'md'", "Component font size. One of the <a href='/content/typography' v-link>typography</a> font-size treatments"],
+        "font-weight": ["String", false, "'bold'", "One of the CSS <code>font-weight</code> <a href='/content/typography' v-link>typography</a> classes"],
+        "icon": ["String", false, "undefined", "<a href='/ui/icon' v-link>Icon</a>, if it an icon avatar"],
+        "icon-provider": ["String", false, "'mdi'", "<a href='/ui/icon' v-link>Icon</a> <code>provider</code> if it is an icon avatar"],
+        "size": ["String", false, "'48px'", "Component <code>width</code> and <code>height</code>"],
+        "src": ["String", false, "undefined", "Image <code>src</code> if it is an image avatar"],
+        "tile": ["Boolean", false, false, "Renders a square or as circle"],
+        "variant": ["String", false, "'outline'", "One of the <a href='/content/colors' v-link>UI color</a> variants"]
+      },
+      "slots": {
+        "default": ["The default Vue slot"]
+      },
+      "events": {
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}
+

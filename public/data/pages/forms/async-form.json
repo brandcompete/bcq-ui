@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "pageTitle": "Async Form for Vue3",
+    "keywords": [
+      "async form submission",
+      "form validation"
+    ],
+    "links": [
+      "documentation",
+      "forms"
+    ]
+  },
+  "config": {
+    "codeFiles": [{
+      "uri": "/code/async-form.md",
+      "title": "component-tags",
+      "language": "xml",
+      "margin": ["mb-0"]
+    }],
+    "formData": {
+      "firstName": {
+        "input": "text",
+        "type": "text",
+        "model:value": "",
+        "span": 6,
+        "multiline": false,
+        "icon": "account"
+      },
+      "lastName": {
+        "input": "text",
+        "type": "text",
+        "model:value": "",
+        "span": 6,
+        "multiline": false,
+        "icon": "account"
+      },
+      "email": {
+        "input": "text",
+        "type": "text",
+        "model:value": "",
+        "span": 4,
+        "multiline": false,
+        "icon": "email"
+      },
+      "phoneNumber": {
+        "input": "text",
+        "type": "number",
+        "model:value": "",
+        "span": 4,
+        "multiline": false,
+        "icon": "phone-hangup"
+      },
+      "month": {
+        "input": "dropdown",
+        "multiple": false,
+        "label": "Month",
+        "model:value": [],
+        "items": [{
+          "label": "January",
+          "value": "jan"
+        }, {
+          "label": "February",
+          "value": "feb"
+        }, {
+          "label": "March",
+          "value": "mar"
+        }, {
+          "label": "April",
+          "value": "apr"
+        }, {
+          "label": "May",
+          "value": "may"
+        }, {
+          "label": "June",
+          "value": "jun"
+        }, {
+          "label": "July",
+          "value": "jul"
+        }, {
+          "label": "August",
+          "value": "aug"
+        }, {
+          "label": "September",
+          "value": "sep"
+        }, {
+          "label": "October",
+          "value": "oct"
+        }, {
+          "label": "November",
+          "value": "nov"
+        }, {
+          "label": "December",
+          "value": "dev"
+        }],
+        "span": 4,
+        "icon": "calendar"
+      },
+      "age": {
+        "span": 12,
+        "model:value": 50,
+        "input": "slider",
+        "step": 1,
+        "min": 18,
+        "max": 137,
+        "minMaxLabels": true
+      },
+      "workExperience": {
+        "span": 12,
+        "model:value": [5, 10],
+        "input": "range-slider",
+        "step": 1,
+        "min": 0,
+        "max": 25,
+        "minMaxLabels": true
+      },
+      "photo": {
+        "span": 12,
+        "input": "upload",
+        "label": "Choose Photo",
+        "fileListImageThumbnailSize": "128px",
+        "multiple": false,
+        "color": "discovery",
+        "mimeTypes": [
+          "image/jpg",
+          "image/png",
+          "image/gif",
+          "image/jpeg",
+          "image/bmp",
+          "image/svg+xml"
+        ],
+        "maxFileSize": 300000
+      },
+      "languages": {
+        "input": "dropdown",
+        "multiple": true,
+        "label": "Languages",
+        "model:value": [],
+        "items": [{
+          "label": "EcmaScript",
+          "value": "es"
+        }, {
+          "label": "TypeScript",
+          "value": "ts"
+        }, {
+          "label": "JavaScript",
+          "value": "js"
+        }],
+        "span": 12,
+        "icon": "semantic-web"
+      },
+      "message": {
+        "input": "text",
+        "type": "text",
+        "model:value": "",
+        "span": 12,
+        "multiline": true,
+        "minHeight": "64px",
+        "icon": "message"
+      },
+      "subscribeToMailingList": {
+        "input": "switcher",
+        "model:checked": false,
+        "span": 12
+      },
+      "frameworks": {
+        "input": "radio-group",
+        "name": "frameworks",
+        "model:value": "",
+        "radios": [
+          "Vue",
+          "React",
+          "Angular",
+          "Svelte"
+        ]
+      },
+      "agreeToTos": {
+        "input": "checkbox",
+        "model:checked": false,
+        "span": 12
+      }
+    },
+    "buttons": [{
+      "type": "reset",
+      "label": "Reset",
+      "color": "danger"
+    }, {
+      "type": "submit",
+      "label": "Submit",
+      "color": "discovery"
+    }]
+  },
+  "documentation": {
+    "bc-async-form": {
+      "props": {
+        "accept-charset": ["String", false, "undefined", "Specifies the character encodings that are to be used for the form submission"],
+        "action": ["String", false, "undefined", "URL to which the form will be submitted"],
+        "auto-complete": ["String", false, "'on'", "Enable or disable the form auto completion, one of <code>on</code> or <code>off</code>"],
+        "disabled": ["Boolean", false, false, "Sets the component to disabled"],
+        "enctype": ["String", false, "application/x-www-form-urlencoded", "Form data enctype, one of <code>text/plain</code>, <code>multipart/form-data</code> or <code>application/x-www-form-urlencoded</code>"],
+        "form-data": ["Object", false, "{}", "Input field models"],
+        "inert": ["Boolean", false, false, "Disables the component without a visual clue"],
+        "name": ["String", false, true, "Optional form <code>name</code> attribute"],
+        "method": ["String", false, "GET", "Form method, one of <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, etc."]
+      },
+      "slots": {
+        "default": ["The default Vue slot"],
+        "top": ["Top slot"],
+        "bottom": ["Bottom slot"]
+      },
+      "events": {
+        "submit": ["Object - the form-data prop" ,"Triggered on model update"],
+        "reset": ["Object - the form-data prop" ,"Triggered on model update"],
+        "default": ["Default" ,"Default JavaScript events"]
+      }
+    }
+  }
+}

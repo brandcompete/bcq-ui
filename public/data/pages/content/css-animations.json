@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "pageTitle": "CSS Animations",
+    "keywords": [
+      "css animations",
+      "spin",
+      "fade",
+      "rotate",
+      "bounce",
+      "pulse",
+      "wave",
+      "ping"
+    ],
+    "links": [
+      "content"
+    ]
+  },
+  "config": {
+    "classes": {
+      "animation": {
+        "span": 12,
+        "items": [
+          "animate-none",
+          "animate-spin",
+          "animate-fade",
+          "animate-ping",
+          "animate-pulse",
+          "animate-pulse-x",
+          "animate-pulse-y",
+          "animate-bounce",
+          "animate-wave"
+        ]
+      }
+    }
+  },
+  "documentation": null
+}

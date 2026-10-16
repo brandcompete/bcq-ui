@@ -1,0 +1,15 @@
+<bc-rating
+  :block="Boolean"
+  :color-selected="String"
+  :disabled="Boolean"
+  :hint="String"
+  :icon="String"
+  :icon-no-rating="String"
+  :icons-provider="String"
+  :icons-size="String"
+  :inert="Boolean"
+  :items="Number"
+  :label="String"
+  :labels-uppercase="Boolean"
+  :no-rating="Boolean"
+  :value="Number" />

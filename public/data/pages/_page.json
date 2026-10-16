@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "pageTitle": "ComponentName",
+    "keywords": [],
+    "links": []
+  },
+  "config": {},
+  "documentation": {
+    "bc-component-name": {
+      "props": {},
+      "slots": {},
+      "events": {}
+    }
+  }
+}

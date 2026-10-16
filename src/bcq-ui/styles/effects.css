@@ -1,0 +1,227 @@
+/* @todo: use the shadows from BCQ1 */
+/* opacity */
+
+.opacity-0
+{
+  opacity: 0;
+}
+
+.opacity-05
+{
+  opacity: .05;
+}
+
+.opacity-10
+{
+  opacity: .1;
+}
+
+.opacity-15
+{
+  opacity: .15;
+}
+
+.opacity-20
+{
+  opacity: .2;
+}
+
+.opacity-25
+{
+  opacity: .25;
+}
+
+.opacity-30
+{
+  opacity: .3;
+}
+
+.opacity-35
+{
+  opacity: .35;
+}
+
+.opacity-40
+{
+  opacity: .4;
+}
+
+.opacity-45
+{
+  opacity: .45;
+}
+
+.opacity-50
+{
+  opacity: .5;
+}
+
+.opacity-55
+{
+  opacity: .55;
+}
+
+.opacity-60
+{
+  opacity: .6;
+}
+
+.opacity-65
+{
+  opacity: .65;
+}
+
+.opacity-70
+{
+  opacity: .7;
+}
+
+.opacity-75
+{
+  opacity: .75;
+}
+
+.opacity-80
+{
+  opacity: .8;
+}
+
+.opacity-85
+{
+  opacity: .8;
+}
+
+.opacity-90
+{
+  opacity: .9;
+}
+
+.opacity-95
+{
+  opacity: .95;
+}
+
+.opacity-100
+{
+  opacity: 1;
+}
+
+.hover\:opacity-0:hover
+{
+  opacity: 0;
+}
+
+.hover\:opacity-05:hover
+{
+  opacity: .05;
+}
+
+.hover\:opacity-10:hover
+{
+  opacity: .1;
+}
+
+.hover\:opacity-15:hover
+{
+  opacity: .15;
+}
+
+.hover\:opacity-20:hover
+{
+  opacity: .2;
+}
+
+.hover\:opacity-25:hover
+{
+  opacity: .25;
+}
+
+.hover\:opacity-30:hover
+{
+  opacity: .3;
+}
+
+.hover\:opacity-35:hover
+{
+  opacity: .35;
+}
+
+.hover\:opacity-40:hover
+{
+  opacity: .4;
+}
+
+.hover\:opacity-45:hover
+{
+  opacity: .45;
+}
+
+.hover\:opacity-50:hover
+{
+  opacity: .5;
+}
+
+.hover\:opacity-55:hover
+{
+  opacity: .55;
+}
+
+.hover\:opacity-60:hover
+{
+  opacity: .6;
+}
+
+.hover\:opacity-65:hover
+{
+  opacity: .65;
+}
+
+.hover\:opacity-70:hover
+{
+  opacity: .7;
+}
+
+.hover\:opacity-75:hover
+{
+  opacity: .75;
+}
+
+.hover\:opacity-80:hover
+{
+  opacity: .8;
+}
+
+.hover\:opacity-85:hover
+{
+  opacity: .85;
+}
+
+.hover\:opacity-90:hover
+{
+  opacity: .9;
+}
+
+.hover\:opacity-95:hover
+{
+  opacity: .95;
+}
+
+.hover\:opacity-100:hover
+{
+  opacity: 1;
+}
+
+.animate-height
+{
+  height: calc-size(auto, size);
+}
+
+.clip-0
+{
+  clip: rect(0 0 0 0);
+}
+
+.grayscale
+{
+  filter: grayscale(100%)
+}
