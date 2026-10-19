@@ -1,6 +1,8 @@
+# This is a work in progress yet, so bear with us for a while
+
 # brandcompete-becquerel-3
 
-This template should help get you started developing with Vue 3 in Vite.
+The Vue3 UI library developed by us at brandcompete GmbH provides a comprehensive and growing set of tools for building modern, consistent user interfaces. It includes a continuously expanding collection of ready-to-use UI components, flexible form controls, and versatile layout elements. In addition, the library offers practical directives, along with a wide range of carefully designed typography styles and utility CSS classes to help streamline development and maintain visual consistency.
 
 ## Recommended IDE Setup
 

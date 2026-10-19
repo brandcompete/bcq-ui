@@ -1,5 +1,20 @@
 {
-  "name": "brandcompete-becquerel-3",
+  "name": "@martin.ivanov.brandcompete/bcq-ui",
+  "version": "3.0.0",
+  "type": "module",
+  "private": false,
+  "files": ["src"],
+  "main": "src/lib.js",
+  "module": "./src/lib.js",
+  "exports": {
+    ".": "./src/lib.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.26"
+  },
   "appName": "Becquerel UI for Vue3",
   "description": "The Vue3 UI library developed by us at brandcompete GmbH provides a comprehensive and growing set of tools for building modern, consistent user interfaces",
   "vendor": "brandcompete GmbH",
@@ -11,13 +26,9 @@
   "_website": "https://bcq.wemakesites.net/",
   "changefreq": "weekly",
   "priority": "1.0",
-  "version": "3.0.0",
-  "private": true,
-  "type": "module",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
-  "main": "src/lib.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/brandcompete/bcq-ui.git"
