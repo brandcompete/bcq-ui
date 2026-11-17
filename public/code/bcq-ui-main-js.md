@@ -10,10 +10,6 @@ import mitt from 'mitt'
 // Import Material Design Icon font, required by <bc-icon />
 import '@mdi/font/css/materialdesignicons.css'
 
-// Import Quill Rich Text Editor stylesheet(s), required by <bc-editor />
-import 'quill/dist/quill.bubble.css'
-import 'quill/dist/quill.snow.css'
-
 // Add mitt event emitter to the global properties
 app.config.globalProperties.$emitter = mitt() // Use as this.$emitter.on(event, data), this.$emitter.emit(event, data), etc.
 
