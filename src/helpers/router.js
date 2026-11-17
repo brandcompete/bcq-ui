@@ -54,7 +54,7 @@ import PageBcContextMenu from '../pages/ui/context-menu.vue'
 import PageBcDataTable from '../pages/ui/data-table.vue'
 import PageBcDialogBox from '../pages/ui/dialog-box.vue'
 import PageBcDivider from '../pages/ui/divider.vue'
-import PageBcEditor from '../pages/ui/editor.vue'
+// import PageBcEditor from '../pages/ui/editor.vue'
 import PageBcEmpty from '../pages/ui/empty.vue'
 import PageBcFlag from '../pages/ui/flag.vue'
 import PageBcIcon from '../pages/ui/icon.vue'
@@ -507,14 +507,6 @@ const routes = [{
   icon: 'format-line-style',
   name: 'PageBcDivider',
   meta: meta.divider
-}, {
-  path: '/ui/editor',
-  component: PageBcEditor,
-  render: true,
-  category: 'ui',
-  icon: 'note-edit',
-  name: 'PageBcEditor',
-  meta: meta.editor
 }, {
   path: '/ui/empty',
   component: PageBcEmpty,

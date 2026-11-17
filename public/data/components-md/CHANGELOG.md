@@ -1,4 +1,10 @@
+## [3.0.1] - 2026-17-11
+
+* Removed Quill and bc-editor
+* Toolchain updates
+
 ## [3.0.0] - 2026-03-13
+
 Version 3.0.0 is a major update of Becquerel UI introducing support for Vue3 
 
 [//]: # (### Added)

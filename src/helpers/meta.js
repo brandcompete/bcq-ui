@@ -44,7 +44,7 @@ export { meta as contextMenu } from '../../public/data/pages/ui/context-menu.jso
 export { meta as dataTable } from '../../public/data/pages/ui/data-table.json'
 export { meta as dialogBox } from '../../public/data/pages/ui/dialog-box.json'
 export { meta as divider } from '../../public/data/pages/ui/divider.json'
-export { meta as editor } from '../../public/data/pages/ui/editor.json'
+// export { meta as editor } from '../../public/data/pages/ui/editor.json'
 export { meta as empty } from '../../public/data/pages/ui/empty.json'
 export { meta as flag } from '../../public/data/pages/ui/flag.json'
 export { meta as icon } from '../../public/data/pages/ui/icon.json'

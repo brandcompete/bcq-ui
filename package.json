@@ -1,9 +1,11 @@
 {
   "name": "@martin.ivanov.brandcompete/bcq-ui",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "type": "module",
   "private": false,
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "main": "src/lib.js",
   "module": "./src/lib.js",
   "exports": {
@@ -55,7 +57,6 @@
     "marked": "^17.0.1",
     "mitt": "^3.0.1",
     "pinia": "^3.0.4",
-    "quill": "^2.0.3",
     "vue": "^3.5.26",
     "vue-axios": "^3.5.2",
     "vue-router": "^4.6.4",
