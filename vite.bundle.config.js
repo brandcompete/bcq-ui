@@ -9,6 +9,7 @@ import pkg from './package.json'
 //   default mode -> bcq-ui.js     + bcq-ui.css      (readable, not minified; empties lib/ first)
 //   --mode min   -> bcq-ui.min.js + bcq-ui.min.css  (minified; keeps the files from the first pass)
 //   both         -> variables.css                   (copied as-is, see below)
+//   each pass    -> bcq-ui.d.ts / bcq-ui.min.d.ts   (copied from src/lib.d.ts)
 // Every package in `dependencies` / `peerDependencies` stays external (imported, not bundled),
 // so the consumer's package manager installs them (e.g. `vue`, `mitt`).
 // The unbundled entry (src/lib.js) is left untouched for the docs site / development.
@@ -29,6 +30,19 @@ function copyVariablesCss () {
   }
 }
 
+// Type declarations: src/lib.d.ts is copied next to each bundle file (bcq-ui.d.ts, bcq-ui.min.d.ts),
+// so TypeScript users get types for both the package entry and the direct lib/* imports.
+function copyTypes (name) {
+  const source = fileURLToPath(new URL('./src/lib.d.ts', import.meta.url))
+
+  return {
+    name: 'bcq-copy-types',
+    generateBundle () {
+      this.emitFile({ type: 'asset', fileName: `${name}.d.ts`, source: readFileSync(source, 'utf8') })
+    }
+  }
+}
+
 export default defineConfig(({ mode }) => {
   const min = mode === 'min'
   const name = min ? 'bcq-ui.min' : 'bcq-ui'
@@ -36,7 +50,8 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       vue(),
-      copyVariablesCss()
+      copyVariablesCss(),
+      copyTypes(name)
     ],
     publicDir: false,
     build: {

@@ -10,11 +10,13 @@
   "main": "./lib/bcq-ui.min.js",
   "module": "./lib/bcq-ui.min.js",
   "style": "./lib/bcq-ui.min.css",
+  "types": "./lib/bcq-ui.min.d.ts",
   "sideEffects": [
     "**/*.css"
   ],
   "exports": {
     ".": {
+      "types": "./lib/bcq-ui.min.d.ts",
       "import": "./lib/bcq-ui.min.js",
       "default": "./lib/bcq-ui.min.js"
     },

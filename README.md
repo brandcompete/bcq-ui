@@ -99,6 +99,7 @@ Builds only the library bundle that is published to npm into `lib/`:
 - `bcq-ui.js` / `bcq-ui.min.js` - the library as an ES module (readable and minified)
 - `bcq-ui.css` / `bcq-ui.min.css` - the library styles (readable and minified)
 - `variables.css` - the CSS variables (colors, fonts, etc.), not minified, to be copied and customized by the users
+- `bcq-ui.d.ts` / `bcq-ui.min.d.ts` - TypeScript type declarations, copied from `src/lib.d.ts`
 
 `lib/` is emptied before each build. Run this after changing anything in `src/bcq-ui/`, so the bundle stays up to date.
 
