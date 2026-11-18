@@ -8,7 +8,7 @@ The Vue3 UI library developed by us at brandcompete GmbH provides a comprehensiv
 
 ```bash
 # BCQ UI
-$ npm install --save bcq-ui
+$ npm install --save @martin.ivanov.brandcompete/bcq-ui
 # Virtual scroller, required by <bc-dropdown />: https://www.npmjs.com/package/vue-virtual-scroller
 $ npm install --save vue-virtual-scroller
 # Event bus: https://www.npmjs.com/package/mitt
@@ -20,11 +20,11 @@ $ npm install --save @mdi/font
 // main.js
 ```javascript
 // Import BCQ UI
-// Copy variables.css from 'bcq-ui/lib/variables.css' to your 'src' folder, modify colors, etc. if needed,
+// Copy variables.css from 'node_modules/@martin.ivanov.brandcompete/bcq-ui/lib/variables.css' to your 'src' folder, modify colors, etc. if needed,
 // and import it BEFORE the BCQ UI styles
 import '/your/path/to/variables.css'
-import 'bcq-ui/style.css'
-import BcqUi from 'bcq-ui'
+import '@martin.ivanov.brandcompete/bcq-ui/style.css'
+import BcqUi from '@martin.ivanov.brandcompete/bcq-ui'
 // Import RecycleScroller, required by <bc-dropdown />
 import { RecycleScroller } from 'vue-virtual-scroller'
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'

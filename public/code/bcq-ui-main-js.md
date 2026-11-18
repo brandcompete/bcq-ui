@@ -1,9 +1,9 @@
 // Import BCQ UI
-// Copy variables.css from 'bcq-ui/lib/variables.css' to your 'src' folder, modify colors, etc. if needed,
+// Copy variables.css from 'node_modules/@martin.ivanov.brandcompete/bcq-ui/lib/variables.css' to your 'src' folder, modify colors, etc. if needed,
 // and import it BEFORE the BCQ UI styles
 import '/your/path/to/variables.css'
-import 'bcq-ui/style.css'
-import BcqUi from 'bcq-ui'
+import '@martin.ivanov.brandcompete/bcq-ui/style.css'
+import BcqUi from '@martin.ivanov.brandcompete/bcq-ui'
 // Import RecycleScroller, required by <bc-dropdown />
 import { RecycleScroller } from 'vue-virtual-scroller'
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'

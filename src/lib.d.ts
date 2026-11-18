@@ -10,7 +10,7 @@ import './bcq-ui-components'
  * Becquerel UI Vue plugin. Registers all `Bc*` components and directives globally.
  *
  * @example
- * import BcqUi from 'bcq-ui'
+ * import BcqUi from '@martin.ivanov.brandcompete/bcq-ui'
  * app.use(BcqUi)
  */
 declare const BcqUi: Plugin

@@ -1,5 +1,5 @@
 # BCQ UI
-$ npm install --save bcq-ui
+$ npm install --save @martin.ivanov.brandcompete/bcq-ui
 # Virtual scroller, required by <bc-dropdown />: https://www.npmjs.com/package/vue-virtual-scroller
 $ npm install --save vue-virtual-scroller
 # Event bus: https://www.npmjs.com/package/mitt
