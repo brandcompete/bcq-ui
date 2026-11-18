@@ -1,3 +1,8 @@
+## [3.1.0] - 2026-18-11
+
+* Bundled distribution
+* TypeScript Declaration File
+
 ## [3.0.1] - 2026-17-11
 
 * Removed Quill and bc-editor

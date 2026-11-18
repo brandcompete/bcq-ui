@@ -88,7 +88,7 @@ Builds the npm bundle (`npm run build:bundle`), then starts the dev server with 
 npm run build
 ```
 
-Builds everything: the docs site into `dist/` (including the sitemap), generates `dist/llms.txt` and the pre-rendered static pages in `snapshots/`, then runs `npm run build:bundle` (component types + the npm bundle in `lib/`).
+Builds everything: updates the root `CHANGELOG.md` (`npm run bcq:changelog`), builds the docs site into `dist/` (including the sitemap), generates `dist/llms.txt` and the pre-rendered static pages in `snapshots/`, then runs `npm run build:bundle` (component types + the npm bundle in `lib/`).
 
 ```sh
 npm run build:bundle
@@ -123,6 +123,12 @@ npm run bcq:types
 ```
 
 Generates `src/bcq-ui-components.d.ts`, the TypeScript types for every component installed by the library, from the `name`, `props` and `emits` of each `.vue` file listed in `src/bcq-ui/components/index.js`. Gives TypeScript users prop autocomplete and type checking for `<bc-*>` components in their templates. Already part of `npm run build:bundle`; never edit the generated file by hand.
+
+```sh
+npm run bcq:changelog
+```
+
+Copies `public/data/components-md/CHANGELOG.md` (the changelog shown on the docs site) over the root `CHANGELOG.md`. Edit the changelog only in `public/data/components-md/CHANGELOG.md`. Already part of `npm run build`.
 
 ```sh
 npm run bcq:llms

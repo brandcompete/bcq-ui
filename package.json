@@ -56,7 +56,7 @@
   "homepage": "https://github.com/brandcompete/bcq-ui.git",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs && npm run build:bundle",
+    "build": "node bcq-cli/changelog.cjs && vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs && npm run build:bundle",
     "preview": "vite preview",
     "bcq:create": "node bcq-cli/create.cjs",
     "bcq:llms": "node bcq-cli/llms.cjs",
@@ -64,7 +64,8 @@
     "build:bundle": "node bcq-cli/types.cjs && vite build -c vite.bundle.config.js && vite build -c vite.bundle.config.js --mode min",
     "prepublishOnly": "npm run build:bundle",
     "dev:bundle": "npm run build:bundle && vite --mode bundle",
-    "bcq:types": "node bcq-cli/types.cjs"
+    "bcq:types": "node bcq-cli/types.cjs",
+    "bcq:changelog": "node bcq-cli/changelog.cjs"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
