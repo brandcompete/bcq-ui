@@ -1,7 +1,9 @@
 // Import BCQ UI
-// Copy variables.css from 'bcq-ui/src/bcq-ui/styles/variables.css' to your 'src' folder and include in your app's main.js
+// Copy variables.css from 'bcq-ui/lib/variables.css' to your 'src' folder, modify colors, etc. if needed,
+// and import it BEFORE the BCQ UI styles
 import '/your/path/to/variables.css'
-import BcqUi from 'bcq-ui/src/lib.js'
+import 'bcq-ui/style.css'
+import BcqUi from 'bcq-ui'
 // Import RecycleScroller, required by <bc-dropdown />
 import { RecycleScroller } from 'vue-virtual-scroller'
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
@@ -12,6 +14,9 @@ import '@mdi/font/css/materialdesignicons.css'
 
 // Add mitt event emitter to the global properties
 app.config.globalProperties.$emitter = mitt() // Use as this.$emitter.on(event, data), this.$emitter.emit(event, data), etc.
+
+// Register RecycleScroller globally, <bc-dropdown /> uses it as <recycle-scroller />
+app.component('RecycleScroller', RecycleScroller)
 
 // use BCQ UI
 app.use(BcqUi)

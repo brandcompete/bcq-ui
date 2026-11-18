@@ -1,6 +1,6 @@
 {
   "name": "@martin.ivanov.brandcompete/bcq-ui",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "type": "module",
   "private": false,
   "files": [
@@ -55,8 +55,8 @@
     "dev": "vite",
     "build": "vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs && npm run build:bundle",
     "preview": "vite preview",
-    "build:lib": "vite build -c vite.lib.config.js && npm run build:bundle",
-    "build:all": "npm run build && vite build -c vite.lib.config.js",
+    "build:lib": "npm run build:bundle",
+    "build:all": "npm run build",
     "bcq:create": "node bcq-cli/create.cjs",
     "bcq:llms": "node bcq-cli/llms.cjs",
     "bcq:ssr": "node bcq-cli/ssr.cjs",

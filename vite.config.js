@@ -14,6 +14,7 @@ import sitemap from './sitemap.json'
 // Only the library imports in src/main.js are swapped; nothing else from the sources is loaded.
 const BUNDLE_ENTRY = '\0bcq-ui-bundle-entry'
 const EMPTY_MODULE = '\0bcq-ui-bundle-empty'
+const VARIABLES_CSS = fileURLToPath(new URL('./lib/variables.css', import.meta.url))
 
 function useLibraryBundle () {
   const mainJs = fileURLToPath(new URL('./src/main.js', import.meta.url))
@@ -25,7 +26,9 @@ function useLibraryBundle () {
     resolveId (source, importer) {
       if (importer !== mainJs) return null
       if (source === './lib.js') return BUNDLE_ENTRY
-      // the bundle must be self-sufficient, so don't let the site load library CSS from the sources
+      // variables.css is shipped separately in lib/ (users import it themselves), so use that copy
+      if (source === './bcq-ui/styles/variables.css') return VARIABLES_CSS
+      // the bundle must be self-sufficient, so don't let the site load any other library CSS from the sources
       if (source.startsWith('./bcq-ui/')) return EMPTY_MODULE
       return null
     },
