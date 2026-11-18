@@ -6,10 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Two things live in the same codebase:
 
-1. **Becquerel UI** (`src/bcq-ui/`) — a standalone Vue 3 component library (prefix `Bc*` on component names, `bc-*` on rendered CSS classes/tags), published as `src/lib.js`.
-2. **The documentation/demo site** (everything else under `src/`) — a Vue Router SPA that showcases every library component, built with the library as its own dependency (it imports `BcqUi` from `./lib.js`).
+1. **Becquerel UI** (`src/bcq-ui/`) — a standalone Vue 3 component library (prefix `Bc*` on component names, `bc-*` on rendered CSS classes/tags). Its source entry is `src/lib.js`; the npm package's entry points (`main`/`module`/`exports` in `package.json`) point at the built bundle in `lib/` (see "Build outputs").
+2. **The documentation/demo site** (everything else under `src/`) — a Vue Router SPA that showcases every library component, built with the library as its own dependency (it imports `BcqUi` from `./lib.js`, the unbundled sources, plus `./bcq-ui/styles/variables.css`).
 
 Changes to `src/bcq-ui/**` affect the published library; changes elsewhere affect only the docs site.
+
+Dependency placement in `package.json`: `dependencies` holds only what the library itself needs at runtime (`mitt`, `@mdi/font`); `vue` is a `peerDependency` (and a devDependency for local work); everything used only by the docs site (axios, pinia, vue-router, marked, highlight.js, etc.) belongs in `devDependencies`. The bundle build keeps everything in `dependencies`/`peerDependencies` external, so adding a package there means it won't be bundled.
 
 ## Working conventions
 
@@ -20,10 +22,12 @@ Changes to `src/bcq-ui/**` affect the published library; changes elsewhere affec
 
 ```sh
 npm run dev          # vite dev server for the docs site
-npm run build        # build docs site (dist/), then generate llms.txt and SSR'd static pages
+npm run build        # build docs site (dist/), generate llms.txt and SSR'd static pages, then rebuild the npm bundle
 npm run preview      # preview the production build
-npm run build:lib    # build the library only -> lib/becquerel.min.js (IIFE, global `becquerel`)
-npm run build:all     # build both docs site and library
+npm run build:lib    # build the library only -> lib/becquerel.min.{js,css} (IIFE, global `becquerel`) + lib/variables.css, then runs build:bundle (so lib/ is fully refreshed)
+npm run build:all     # everything: full `build` (docs site, llms.txt, snapshots, npm bundle), then the IIFE library + lib/variables.css
+npm run build:bundle # build the npm bundle -> lib/bcq-ui[.min].js (ESM) + lib/bcq-ui[.min].css
+npm run dev:bundle   # build the bundle, then run the docs site against it instead of the sources (BCQ_BUNDLE=full for the non-minified files)
 npm run bcq:create   # interactive scaffolder for a new UI component (see below)
 npm run bcq:llms     # regenerate dist/llms.txt from public/data/pages-md
 npm run bcq:ssr      # regenerate static SSR'd HTML snapshots in snapshots/
@@ -67,4 +71,11 @@ Run `npm run bcq:create`, pick a category (`content`/`ui`/`forms`) and a `Senten
 ### Build outputs
 
 - `npm run build` produces the docs site in `dist/`, then post-processes it: `bcq-cli/llms.cjs` writes `dist/llms.txt` (an LLM-readable summary generated from `public/data/pages-md`), and `bcq-cli/ssr.cjs` writes pre-rendered static HTML snapshots (into `snapshots/`, sourced from `public/data/pages` + `public/data/pages-md` + `sitemap.json`) for crawlers/social-preview scraping.
-- `npm run build:lib` (config: `vite.lib.config.js`) produces the standalone IIFE bundle `lib/becquerel.min.js`, entry point `src/lib.js`.
+- `npm run build:lib` (config: `vite.lib.config.js`) produces the standalone IIFE bundle `lib/becquerel.min.js` (+ `.css`), entry point `src/lib.js`. `becquerel.min.css` does NOT contain the CSS variables, so the `copyVariablesCss()` plugin in `vite.lib.config.js` also copies `src/bcq-ui/styles/variables.css` unchanged (not minified) to `lib/variables.css`; IIFE users must load it before `becquerel.min.css`.
+- `lib/` is the single folder for all generated library files (IIFE build + npm bundle). Both configs set `emptyOutDir: false` so neither build deletes the other's files; keep it that way.
+- `npm run build:bundle` (config: `vite.bundle.config.js`) produces the npm-consumable bundle in `lib/` by running vite twice: the default mode writes readable `bcq-ui.js` + `bcq-ui.css`, `--mode min` writes `bcq-ui.min.js` + `bcq-ui.min.css` (terser for JS, because vite's esbuild minifier keeps whitespace in ES lib builds). The JS is an ES module whose default export is the `BcqUi` install function. Everything in `package.json` `dependencies`/`peerDependencies` is kept external (imported, not bundled). Entry point is `src/lib.js` (via the virtual entry below), which itself stays unbundled for the docs site/dev server. Don't edit files in the output folder by hand. `prepublishOnly` runs this build automatically before `npm publish`.
+- npm package entry points (`package.json`): `.` → `lib/bcq-ui.min.js` (also `main`/`module`), `./style.css` → `lib/bcq-ui.min.css` (also `style`), `./lib/*` → any file in `lib/` (e.g. the non-minified ones or the IIFE build), `./source` → `src/lib.js` (unbundled sources). `files` is `["src", "lib"]`. If you rename or move bundle files, update these too.
+- The bundle's entry is a virtual module in `vite.bundle.config.js` that imports `src/bcq-ui/styles/variables.css` and then re-exports `src/lib.js`: `lib.js` itself doesn't import the CSS variables (the docs site imports them separately in `src/main.js`), but the bundle must ship them.
+- Verifying the bundle: `npm run dev:bundle` (`vite --mode bundle`, see `useLibraryBundle()` in `vite.config.js`) swaps the `./lib.js` import in `src/main.js` for the bundle's JS + CSS and blanks out `main.js`'s own `./bcq-ui/...` CSS imports, so every demo page runs on the bundle alone. Compare against `npm run dev`; any difference is a bundling bug.
+- `lib/` is build output but is committed to git and must always be present and up to date. It is regenerated by `npm run build:bundle`, which also runs at the end of `build` and `build:all`, in `dev:bundle` and in `prepublishOnly`. After changing anything under `src/bcq-ui/`, rebuild it before committing. The docs site itself does not import it (it uses `src/lib.js`), except in `dev:bundle` mode.
+- The library components use `this.$emitter` (a `mitt` instance) but never create it; the host app must set `app.config.globalProperties.$emitter = mitt()` (the docs site does this in `src/main.js`).

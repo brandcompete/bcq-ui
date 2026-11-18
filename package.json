@@ -4,12 +4,24 @@
   "type": "module",
   "private": false,
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
-  "main": "src/lib.js",
-  "module": "./src/lib.js",
+  "main": "./lib/bcq-ui.min.js",
+  "module": "./lib/bcq-ui.min.js",
+  "style": "./lib/bcq-ui.min.css",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
-    ".": "./src/lib.js"
+    ".": {
+      "import": "./lib/bcq-ui.min.js",
+      "default": "./lib/bcq-ui.min.js"
+    },
+    "./style.css": "./lib/bcq-ui.min.css",
+    "./lib/*": "./lib/*",
+    "./source": "./src/lib.js",
+    "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public"
@@ -41,32 +53,36 @@
   "homepage": "https://github.com/brandcompete/bcq-ui.git",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs",
+    "build": "vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs && npm run build:bundle",
     "preview": "vite preview",
-    "build:lib": "vite build -c vite.lib.config.js",
-    "build:all": "vite build && vite build -c vite.lib.config.js",
+    "build:lib": "vite build -c vite.lib.config.js && npm run build:bundle",
+    "build:all": "npm run build && vite build -c vite.lib.config.js",
     "bcq:create": "node bcq-cli/create.cjs",
     "bcq:llms": "node bcq-cli/llms.cjs",
-    "bcq:ssr": "node bcq-cli/ssr.cjs"
+    "bcq:ssr": "node bcq-cli/ssr.cjs",
+    "build:bundle": "vite build -c vite.bundle.config.js && vite build -c vite.bundle.config.js --mode min",
+    "prepublishOnly": "npm run build:bundle",
+    "dev:bundle": "npm run build:bundle && vite --mode bundle"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "mitt": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
     "axios": "^1.15.0",
+    "chalk": "^4.1.2",
     "clipboard-copy": "^4.0.1",
     "highlight.js": "^11.11.1",
     "marked": "^17.0.1",
-    "mitt": "^3.0.1",
     "pinia": "^3.0.4",
+    "terser": "^5.51.2",
+    "vite": "^7.3.0",
+    "vite-plugin-sitemap": "^0.8.2",
+    "vite-plugin-vue-devtools": "^8.0.5",
     "vue": "^3.5.26",
     "vue-axios": "^3.5.2",
     "vue-router": "^4.6.4",
     "vue-virtual-scroller": "^2.0.0-beta.8"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.3",
-    "chalk": "^4.1.2",
-    "vite": "^7.3.0",
-    "vite-plugin-sitemap": "^0.8.2",
-    "vite-plugin-vue-devtools": "^8.0.5"
   }
 }
