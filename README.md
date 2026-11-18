@@ -1,8 +1,47 @@
-# This is a work in progress yet, so bear with us for a while
+# Becquerel for Vue 3
 
-# brandcompete-becquerel-3
+#### This a work in progress, so bear with us
 
 The Vue3 UI library developed by us at brandcompete GmbH provides a comprehensive and growing set of tools for building modern, consistent user interfaces. It includes a continuously expanding collection of ready-to-use UI components, flexible form controls, and versatile layout elements. In addition, the library offers practical directives, along with a wide range of carefully designed typography styles and utility CSS classes to help streamline development and maintain visual consistency.
+
+## Installing BCQ and adding it to a Vue project
+
+```bash
+# BCQ UI
+$ npm install --save bcq-ui
+# Virtual scroller, required by <bc-dropdown />: https://www.npmjs.com/package/vue-virtual-scroller
+$ npm install --save vue-virtual-scroller
+# Event bus: https://www.npmjs.com/package/mitt
+$ npm install --save mitt
+# Material Design font: https://www.npmjs.com/package/@mdi/font, required by <bc-icon />
+$ npm install --save @mdi/font
+```
+
+// main.js
+```javascript
+// Import BCQ UI
+// Copy variables.css from 'bcq-ui/lib/variables.css' to your 'src' folder, modify colors, etc. if needed,
+// and import it BEFORE the BCQ UI styles
+import '/your/path/to/variables.css'
+import 'bcq-ui/style.css'
+import BcqUi from 'bcq-ui'
+// Import RecycleScroller, required by <bc-dropdown />
+import { RecycleScroller } from 'vue-virtual-scroller'
+import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
+// Import mitt
+import mitt from 'mitt'
+// Import Material Design Icon font, required by <bc-icon />
+import '@mdi/font/css/materialdesignicons.css'
+
+// Add mitt event emitter to the global properties
+app.config.globalProperties.$emitter = mitt() // Use as this.$emitter.on(event, data), this.$emitter.emit(event, data), etc.
+
+// Register RecycleScroller globally, <bc-dropdown /> uses it as <recycle-scroller />
+app.component('RecycleScroller', RecycleScroller)
+
+// use BCQ UI
+app.use(BcqUi)
+```
 
 ## Recommended IDE Setup
 
@@ -23,18 +62,84 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
+Install the dependencies:
+
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+Starts the Vite dev server with hot reload for the documentation/demo site. The site uses the unbundled library sources (`src/lib.js`), so changes in `src/bcq-ui/` show up immediately.
+
+```sh
+npm run dev:bundle
+```
+
+Builds the npm bundle (`npm run build:bundle`), then starts the dev server with the docs site running on the bundled files from `lib/` instead of the sources. Use it to check that the bundle works exactly like the sources; any difference compared to `npm run dev` is a bundling bug. Add `BCQ_BUNDLE=full` to test the non-minified files instead of the minified ones.
+
+### Building
 
 ```sh
 npm run build
 ```
+
+Builds everything: the docs site into `dist/`, generates `dist/llms.txt` and the pre-rendered static pages in `snapshots/`, then builds the npm bundle into `lib/`.
+
+```sh
+npm run build:bundle
+```
+
+Builds only the library bundle that is published to npm into `lib/`:
+
+- `bcq-ui.js` / `bcq-ui.min.js` - the library as an ES module (readable and minified)
+- `bcq-ui.css` / `bcq-ui.min.css` - the library styles (readable and minified)
+- `variables.css` - the CSS variables (colors, fonts, etc.), not minified, to be copied and customized by the users
+
+`lib/` is emptied before each build. Run this after changing anything in `src/bcq-ui/`, so the bundle stays up to date.
+
+```sh
+npm run build:lib
+```
+
+Alias for `npm run build:bundle`.
+
+```sh
+npm run build:all
+```
+
+Alias for `npm run build`.
+
+```sh
+npm run preview
+```
+
+Serves the production build from `dist/` locally. Run `npm run build` first.
+
+### Tools
+
+```sh
+npm run bcq:create
+```
+
+Interactive scaffolder for a new UI component. Asks for a category (`content`, `ui` or `forms`) and a name, creates the component, its demo page, documentation, page metadata and code snippet from the templates in `bcq-cli/templates/`, and prints the remaining manual steps.
+
+```sh
+npm run bcq:llms
+```
+
+Regenerates `dist/llms.txt`, an LLM-readable summary of the documentation in `public/data/pages-md/`. Already part of `npm run build`.
+
+```sh
+npm run bcq:ssr
+```
+
+Regenerates the pre-rendered static HTML pages in `snapshots/` (used by crawlers and social media previews). Already part of `npm run build`.
+
+### Publishing
+
+`prepublishOnly` is not meant to be run manually: npm runs it automatically before `npm publish`, and it rebuilds the bundle (`npm run build:bundle`), so the published package always contains the latest bundle.
