@@ -1,6 +1,7 @@
 {
   "name": "@martin.ivanov.brandcompete/bcq-ui",
   "version": "3.1.0",
+  "license": "MIT",
   "type": "module",
   "private": false,
   "files": [
@@ -57,14 +58,13 @@
     "dev": "vite",
     "build": "vite build && node bcq-cli/llms.cjs && node bcq-cli/ssr.cjs && npm run build:bundle",
     "preview": "vite preview",
-    "build:lib": "npm run build:bundle",
-    "build:all": "npm run build",
     "bcq:create": "node bcq-cli/create.cjs",
     "bcq:llms": "node bcq-cli/llms.cjs",
     "bcq:ssr": "node bcq-cli/ssr.cjs",
-    "build:bundle": "vite build -c vite.bundle.config.js && vite build -c vite.bundle.config.js --mode min",
+    "build:bundle": "node bcq-cli/types.cjs && vite build -c vite.bundle.config.js && vite build -c vite.bundle.config.js --mode min",
     "prepublishOnly": "npm run build:bundle",
-    "dev:bundle": "npm run build:bundle && vite --mode bundle"
+    "dev:bundle": "npm run build:bundle && vite --mode bundle",
+    "bcq:types": "node bcq-cli/types.cjs"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
