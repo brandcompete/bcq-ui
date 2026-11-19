@@ -36,8 +36,8 @@ Before opening a feature request:
 Clone the repository:
 
 ```bash
-git clone https://github.com/brandcompete/becquerel-ui
-cd becquerel-ui
+git clone https://github.com/brandcompete/bcq-ui
+cd bcq-ui
 ```
 
 Install dependencies:
@@ -46,19 +46,26 @@ Install dependencies:
 npm install
 ```
 
-Start development mode:
+Start the docs/demo site with hot reload (it uses the library sources directly):
 
 ```bash
 npm run dev
 ```
 
-Run tests:
+There is no automated test suite. Check your change in the docs site, then check that the npm bundle
+behaves exactly like the sources (any difference is a bundling bug):
 
 ```bash
-npm run test
+npm run dev:bundle
 ```
 
-Build the library:
+Scaffold a new component (component, demo page, documentation and snippet):
+
+```bash
+npm run bcq:create
+```
+
+Build the docs site and the library:
 
 ```bash
 npm run build
@@ -71,9 +78,9 @@ Please follow these guidelines when submitting a pull request:
 1. Create a feature branch from the main branch.
 2. Keep pull requests focused on a single change.
 3. Write clear commit messages.
-4. Add or update tests when appropriate.
+4. Check the change with both `npm run dev` and `npm run dev:bundle`.
 5. Update documentation when necessary.
-6. Ensure all checks pass before submitting.
+6. Make sure `npm run build` succeeds before submitting.
 
 ## Coding Standards
 
@@ -81,7 +88,8 @@ Please follow these guidelines when submitting a pull request:
 * Prefer readability over cleverness.
 * Keep components focused and reusable.
 * Avoid introducing unnecessary dependencies.
-* Write TypeScript types for all public APIs.
+* Declare `props` and `emits` on every component: `npm run bcq:types` generates the TypeScript types
+  from them, so never edit `src/bcq-ui-components.d.ts` by hand.
 
 ## Documentation
 
