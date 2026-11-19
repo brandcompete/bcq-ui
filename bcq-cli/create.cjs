@@ -1,17 +1,7 @@
 const fs = require('node:fs/promises')
-const readline = require("readline")
+const { existsSync } = require('node:fs')
+const { select, input } = require('@inquirer/prompts')
 const chalk = require('chalk')
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-const askQuestion = function(query) {
-  return new Promise(resolve => {
-    rl.question(query, resolve)
-  })
-}
 
 const dryRun = false
 const title = 'BCQ3 CLI'
@@ -40,21 +30,29 @@ async function steps() {
       console.log(chalk.dim('*** this is a dry run, no files or folders will be created ***'))
     }
 
-    await askQuestion(`\nSTEP 1: Select category. Choose one of ${categories.join(', ')}: `).then(value => {
-      if (!categories.includes(value)) {
-        console.error(`Category does not exist. Pick one of ${categories.join(', ')}. Exiting...`, value)
-        return rl.close()
-      } else {
-        console.log(chalk.dim('[category]:'), accentColor(value))
-        category = value
-      }
+    console.log('')
+
+    category = await select({
+      message: 'STEP 1: Use the arrows to select component category',
+      choices: categories.map(value => ({ name: value, value }))
     })
 
-    await askQuestion('STEP 2: Type component name. Use SentenceCase, no spaces, hyphens, special characters or numbers: ').then(value => {
-      value = value.replace(/\s/g,'')
-      console.log(chalk.dim('[name]:    '), accentColor(value))
-      componentName = value
+    componentName = await input({
+      message: 'STEP 2: Component name (SentenceCase, letters only, e.g. DatePicker)',
+      transformer: value => value.replace(/\s/g, ''),
+      validate: value => {
+        value = value.replace(/\s/g, '')
+        if (!/^[A-Z][a-zA-Z]*$/.test(value)) {
+          return 'Use SentenceCase letters only, e.g. DatePicker'
+        }
+        const kebab = value.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+        if (existsSync(`./src/bcq-ui/components/${kebab}`)) {
+          return `A component named "${value}" already exists in src/bcq-ui/components/${kebab}`
+        }
+        return true
+      }
     })
+    componentName = componentName.replace(/\s/g, '')
 
     kebabCaseName = componentName.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
     tagName = `bc-${kebabCaseName}`
@@ -145,9 +143,12 @@ async function steps() {
 
     console.log(mainColor(`*** Thank you for using ${title}! Have fun building your ${componentName} component ***\n`))
   } catch (error) {
+    // Ctrl+C while a prompt is open
+    if (error.name === 'ExitPromptError') {
+      console.log(chalk.dim('\nCancelled, nothing was created.'))
+      return
+    }
     console.error('An error occurred:', error)
-  } finally {
-    rl.close()
   }
 }
 
