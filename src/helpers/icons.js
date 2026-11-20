@@ -56,7 +56,9 @@ const icons = {
   share: 'share-variant',
   image: 'image',
   distortion: 'movie-filter',
-  inputType: 'text-box'
+  inputType: 'text-box',
+  github: 'github',
+  npm: 'npm'
 }
 
 export default icons

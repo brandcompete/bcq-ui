@@ -8,6 +8,8 @@
               <bc-heading :divider="false" :margin="['ml-1']" font-size="base">{{ getConfig.appName }}</bc-heading>
             </bc-table-layout-cell>
             <bc-table-layout-cell x-align="right">
+              <bc-icon :name="$icons.npm" :class="['cursor-pointer', 'mr-2']" tag="a" :href="`https://www.npmjs.com/package/${getConfig.name}`" target="_blank" />
+              <bc-icon :name="$icons.github" :class="['cursor-pointer', 'mr-2']" tag="a" :href="getConfig.repository.url.replace('.git', '')" target="_blank" />
               <bc-icon :name="$icons[dark ? 'light' : 'dark']" :class="['cursor-pointer']" :title="getLang.setTheme(dark)" @click="toggleTheme" />
             </bc-table-layout-cell>
           </bc-table-layout-row>

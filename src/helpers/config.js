@@ -6,10 +6,12 @@ import methods from '../mixins/methods.js'
 // }
 
 import {
+  name,
   vendor,
   appName,
   version,
   website,
+  repository,
   description
 } from '../../package.json'
 
@@ -17,11 +19,13 @@ const theme = '__bcqui_dark__'
 const storedTheme = methods.methods.getLocalData(theme)
 
 const config = {
+  name,
   vendor,
   appName,
   website,
   version,
   description,
+  repository,
   dark: storedTheme === null || storedTheme,
   showPageData: process.env.NODE_ENV === 'development',
   siteWorkInProgress: false,
