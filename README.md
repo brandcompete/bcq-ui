@@ -90,7 +90,7 @@ Builds the npm bundle (`npm run build:bundle`), then starts the dev server with 
 npm run build
 ```
 
-Builds everything: updates the root `CHANGELOG.md` (`npm run bcq:changelog`), builds the docs site into `dist/` (including the sitemap), generates `dist/llms.txt` and the pre-rendered static pages in `snapshots/`, then runs `npm run build:bundle` (component types + the npm bundle in `lib/`).
+Builds everything: updates the root `CHANGELOG.md` (`npm run bcq:changelog`), copies the CSS variables to `public/code/variables.css` (`npm run bcq:variables`), builds the docs site into `dist/` (including the sitemap), generates `dist/llms.txt` and the pre-rendered static pages in `snapshots/`, then runs `npm run build:bundle` (component types + the npm bundle in `lib/`).
 
 ```sh
 npm run build:bundle
@@ -131,6 +131,12 @@ npm run bcq:changelog
 ```
 
 Copies `public/data/components-md/CHANGELOG.md` (the changelog shown on the docs site) over the root `CHANGELOG.md`. Edit the changelog only in `public/data/components-md/CHANGELOG.md`. Already part of `npm run build`.
+
+```sh
+npm run bcq:variables
+```
+
+Copies `src/bcq-ui/styles/variables.css` (the library's CSS variables) unchanged to `public/code/variables.css`, so the docs site always shows the current version. Edit the variables only in `src/bcq-ui/styles/variables.css`. Already part of `npm run build`.
 
 ```sh
 npm run bcq:llms
