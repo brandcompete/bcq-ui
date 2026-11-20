@@ -1,4 +1,4 @@
-# Idea: `pnpm create bcq-ui` project scaffolder
+# Idea: `npm|pnpm|yarn|bun create becquerel` project scaffolder
 
 Status: **under consideration, nothing built yet** (notes from 2026-11-20).
 
@@ -17,31 +17,31 @@ with Becquerel UI already installed and configured, with one command.
 
   | Command | Package |
   |---|---|
-  | `pnpm create bcq-ui` | `create-bcq-ui` |
+  | `pnpm create becquerel` | `create-becquerel` |
   | `pnpm create @scope` | `@scope/create` |
-  | `pnpm create @scope/bcq-ui` | `@scope/create-bcq-ui` |
+  | `pnpm create @scope/becquerel` | `@scope/create-becquerel` |
 
 - Usage the script should support:
 
   ```sh
-  pnpm create bcq-ui my-app   # creates ./my-app
-  pnpm create bcq-ui .        # scaffolds into the current (empty) folder
-  pnpm create bcq-ui          # asks for the name
+  pnpm create becquerel my-app   # creates ./my-app
+  pnpm create becquerel .        # scaffolds into the current (empty) folder
+  pnpm create becquerel          # asks for the name
   ```
 
 ## Package managers: npm, pnpm, yarn, bun
 
-The user picks the package manager, not us. The same `create-bcq-ui` package works with all four, so the docs
+The user picks the package manager, not us. The same `create-becquerel` package works with all four, so the docs
 show all four commands (like Vuetify does):
 
 ```sh
-npm create bcq-ui@latest my-app
-pnpm create bcq-ui my-app
-yarn create bcq-ui my-app
-bun create bcq-ui my-app
+npm create becquerel@latest my-app
+pnpm create becquerel my-app
+yarn create becquerel my-app
+bun create becquerel my-app
 ```
 
-(`npm create x@latest` makes npm skip a possibly outdated cached version; `npm init bcq-ui` is the same thing.)
+(`npm create x@latest` makes npm skip a possibly outdated cached version; `npm init becquerel` is the same thing.)
 
 The script detects the package manager that ran it from `process.env.npm_config_user_agent`
 (starts with `npm/`, `pnpm/`, `yarn/` or `bun/`; fall back to npm), installs with it, and prints matching next steps:
@@ -74,20 +74,24 @@ Differences that matter for us:
     ```
 - This repo itself stays on npm (`package-lock.json`, Dockerfile); switching would gain little.
 
-## Decisions to make
+## Decisions
 
-1. **Package name / scope.** `create-bcq-ui` (unscoped; check it's free: `npm view create-bcq-ui`) gives the short
-   `pnpm create bcq-ui`. The library lives under the personal scope `@martin.ivanov.brandcompete`, which would make the
-   scoped form long. If a move to a company scope (e.g. `@brandcompete`) is planned, decide that first.
-2. **Where the code lives.** A `create-bcq-ui/` folder in this repo (easy to keep in sync, must stay out of the
-   library's `files`) or its own repo.
-3. **Scope of options.** Recommendation: start with one opinionated JS template (Vite + Vue + bcq-ui, maybe vue-router),
+Decided (2026-11-20):
+1. **Package name: `create-becquerel`** (unscoped), so the command is `npm|pnpm|yarn|bun create becquerel`.
+   Check it's still free before publishing: `npm view create-becquerel` (a 404 means free).
+2. **Location: a separate `create-becquerel/` directory in this repo**, with its own `package.json` and version,
+   published on its own. Keeps the sync with the library simple (the publish script reads the root `package.json`
+   and `lib/variables.css` directly). It is not part of the library package (the library's `files` is only
+   `["src", "lib"]`) and the docs build doesn't touch it.
+
+Still open:
+1. **Scope of options.** Recommendation: start with one opinionated JS template (Vite + Vue + bcq-ui, maybe vue-router),
    add TypeScript / router / pinia options later. Every option multiplies the combinations to test.
 
 ## What needs to be built
 
 ### The package
-- `package.json`: `"name": "create-bcq-ui"`, `"bin": { "create-bcq-ui": "index.js" }`, `"engines"` (Node >= 18/20),
+- `package.json`: `"name": "create-becquerel"`, `"bin": { "create-becquerel": "index.js" }`, `"engines"` (Node >= 18/20),
   `"files": ["index.js", "template"]`. Keep dependencies minimal (fast download): Node's `util.parseArgs` + `readline`,
   or a small prompt lib (`@clack/prompts`, `prompts`).
 
@@ -114,6 +118,26 @@ Differences that matter for us:
 - `src/App.vue`: small starter page (`<bc-app>`, a card, a few `<bc-btn>`s) so it's obvious everything works.
 - `index.html`, `vite.config.js`, `_gitignore`, README. TS variant later (`main.ts`, `env.d.ts`, see `public/code/bcq-ui-main-ts.md`).
 
+### The template is a runnable Vue project (fine-tune without publishing)
+The `template/` folder must work as a normal Vite project, so it can be edited and checked like any app:
+
+```sh
+cd create-becquerel/template
+npm install
+npm run dev     # edit App.vue, main.js, variables.css... with hot reload
+```
+
+What's in `template/` is exactly what new projects get; publishing is only needed to ship changes to users.
+Rules that keep it runnable:
+- No placeholders that break it: use real values (e.g. `"name": "becquerel-app"`) that the CLI replaces when
+  scaffolding, not `{{name}}` markers.
+- Local leftovers (`node_modules`, lockfiles, `dist`) are excluded from the published package (`files` / `.npmignore`)
+  and skipped by the CLI when copying.
+- `_gitignore` is the only renamed file (npm strips `.gitignore`); it doesn't affect running the project.
+- By default the template uses the published bcq-ui from npm, like a real user. Optionally add a script that points
+  it at this repo's local `lib/` bundle, to check it against unreleased library changes.
+- The full flow can be run without publishing: `node create-becquerel/index.js /tmp/my-app` scaffolds from the current template.
+
 ## Keeping it in sync with the library (the part that silently rots)
 - bcq-ui version in the template: a prepublish script writes `^<library version>` from the root `package.json`
   (or use `"latest"`).
@@ -126,9 +150,9 @@ Differences that matter for us:
 - Local test without publishing:
 
   ```sh
-  cd create-bcq-ui && npm pack                 # -> create-bcq-ui-1.0.0.tgz
+  cd create-becquerel && npm pack                 # -> create-becquerel-1.0.0.tgz
   mkdir /tmp/test-app && cd /tmp/test-app
-  pnpm dlx /path/to/create-bcq-ui-1.0.0.tgz .   # or: npx, yarn dlx, bunx with the same path
+  pnpm dlx /path/to/create-becquerel-1.0.0.tgz .   # or: npx, yarn dlx, bunx with the same path
   pnpm i && pnpm dev && pnpm build
   ```
 

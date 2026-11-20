@@ -16,7 +16,7 @@ Dependency placement in `package.json`: `dependencies` holds only what the libra
 ## Working conventions
 
 - Whenever you make a large change to the code (new component, architectural change, new build step/script, changed conventions), update this CLAUDE.md file in the same change so it stays accurate.
-- `ideas/` holds write-ups of ideas under consideration (not implemented), e.g. `ideas/create-bcq-ui.md` (a `pnpm create bcq-ui` project scaffolder). Read the relevant one before working on such a topic and keep it updated with new decisions.
+- `ideas/` holds write-ups of ideas under consideration (not implemented), e.g. `ideas/create-becquerel.md` (a `create becquerel` project scaffolder, planned in a `create-becquerel/` directory of this repo). Read the relevant one before working on such a topic and keep it updated with new decisions.
 - When committing code, do not add any Claude/Anthropic authorship line (e.g. no `Co-Authored-By: Claude`) to commit messages.
 
 ## Commands

@@ -1,2 +1,2 @@
 Ideas under consideration:
-  - `pnpm create bcq-ui` project scaffolder: see ideas/create-bcq-ui.md
+  - `npm|pnpm|yarn|bun create becquerel` project scaffolder (create-becquerel/): see ideas/create-becquerel.md
