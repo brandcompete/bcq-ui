@@ -66,7 +66,8 @@
     "dev:bundle": "npm run build:bundle && vite --mode bundle",
     "bcq:types": "node bcq-cli/types.cjs",
     "bcq:changelog": "node bcq-cli/changelog.cjs",
-    "bcq:variables": "node bcq-cli/variables.cjs"
+    "bcq:variables": "node bcq-cli/variables.cjs",
+    "bcq:thumbnail": "node bcq-cli/thumbnail.cjs"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -74,6 +75,7 @@
   },
   "devDependencies": {
     "@inquirer/prompts": "^7.10.1",
+    "@napi-rs/canvas": "^1.1.1",
     "@vitejs/plugin-vue": "^6.0.3",
     "axios": "^1.15.0",
     "chalk": "^4.1.2",

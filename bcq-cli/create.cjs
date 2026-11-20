@@ -2,6 +2,7 @@ const fs = require('node:fs/promises')
 const { existsSync } = require('node:fs')
 const { select, input } = require('@inquirer/prompts')
 const chalk = require('chalk')
+const { createThumbnail } = require('./thumbnail.cjs')
 
 const dryRun = false
 const title = 'BCQ3 CLI'
@@ -139,6 +140,15 @@ async function steps() {
       await fs.writeFile(codeMdFileName, codeMdFileContent)
     }
     console.log(chalk.dim('[created file]:     '), accentColor(codeMdFileName))
+
+    // create /public/images/thumbnails/COMPONENT-NAME.png (random social-sharing image, see bcq-cli/thumbnail.cjs)
+    const thumbnailFileName = `./public/images/thumbnails/${kebabCaseName}.png`
+    if (existsSync(thumbnailFileName)) {
+      console.log(chalk.dim('[already exists]:   '), accentColor(thumbnailFileName))
+    } else {
+      createThumbnail(kebabCaseName, { dryRun })
+      console.log(chalk.dim('[created file]:     '), accentColor(thumbnailFileName))
+    }
 
     // register in /src/bcq-ui/components/index.js: export { default as BcComponentName } from './kebab-case-name'
     // inserted alphabetically among the other component exports (commented-out exports count too)

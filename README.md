@@ -118,13 +118,19 @@ Serves the production build from `dist/` locally. Run `npm run build` first.
 npm run bcq:create
 ```
 
-Interactive scaffolder for a new UI component. Asks for a category (`content`, `ui` or `forms`) and a name, creates the component, its demo page, documentation, page metadata and code snippet from the templates in `bcq-cli/templates/`, and prints the remaining manual steps.
+Interactive scaffolder for a new UI component. Asks for a category (`content`, `ui` or `forms`) and a name, creates the component, its demo page, documentation, page metadata and code snippet from the templates in `bcq-cli/templates/`, generates a random social-sharing thumbnail (`npm run bcq:thumbnail`), and prints the remaining manual steps.
 
 ```sh
 npm run bcq:types
 ```
 
 Generates `src/bcq-ui-components.d.ts`, the TypeScript types for every component installed by the library, from the `name`, `props` and `emits` of each `.vue` file listed in `src/bcq-ui/components/index.js`. Gives TypeScript users prop autocomplete and type checking for `<bc-*>` components in their templates. Already part of `npm run build:bundle`; never edit the generated file by hand.
+
+```sh
+npm run bcq:thumbnail -- <kebab-name> [--force]
+```
+
+Generates a random 1200x630 PNG (the social-sharing / `og:image` size) of geometric shapes in the brand colors on a `#212121` background and saves it as `public/images/thumbnails/<kebab-name>.png`. Refuses to overwrite an existing thumbnail unless `--force` is given, so run it again with `--force` until you like the result. Already part of `npm run bcq:create`.
 
 ```sh
 npm run bcq:changelog
