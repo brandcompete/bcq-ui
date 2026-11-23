@@ -24,4 +24,11 @@ $ bun create becquerel my-app --ts --router --axios --pinia --theme light
 
 # Available options:
 
-`--ts` / `--js`, `--theme dark|light`, `--router` / `--no-router`, `--axios` / `--no-axios`, `--pinia` / `--no-pinia`, `--install` / `--no-install`, `-f` / `--force` (empty a folder that is not empty, keeps `.git`), `-h` / `--help`.
+--ts / --js
+--theme dark|light
+--router / --no-router
+--axios / --no-axios
+--pinia / --no-pinia
+--install / --no-install
+-f / --force (empty a folder that is not empty, keeps .git)
+-h / --help
