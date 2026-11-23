@@ -1,18 +1,12 @@
 # ***************************************************************************************
 #     File:       /docker-compose.yaml
-#     Project:    brandcompete - Becquerel UI for Vue3 (bcq-ui.brandcompete.com)
+#     Project:    brandcompete - Becquerel UI for Vue3 (https://bcq-ui.brandcompete.com)
 #     Purpose:    Documentation / demo site of the bcq-ui library: the Vite build served by nginx.
-#                 Currently published on a host port (FRONTEND_HOST_PORT, default 8082). The Traefik
-#                 setup for https://bcq-ui.brandcompete.com is prepared below but commented out.
-#     History:    18.11.2026 - named per project and stage (APP_NAME_SHORT / APP_STAGE),
-#                              host port 8082, Traefik prepared
+#     History:    23.11.2026 - enabled Traefik, included basic auth, removed port
 #
 # ***************************************************************************************
 
 
-# Explicit project name: without it Compose names the project after the directory, so two
-# checkouts in folders of the same name would share one project and `down` / `--remove-orphans`
-# in one of them would remove the other's containers.
 name: ${APP_NAME_SHORT:-bc-bcq-ui}-${APP_STAGE:-dev}
 
 services:
@@ -25,37 +19,30 @@ services:
     image: brandcompete/${APP_NAME_SHORT}-frontend-image
     container_name: ${APP_NAME_SHORT}-${APP_STAGE}-frontend
     hostname: ${APP_NAME_SHORT}-${APP_STAGE}-frontend
-    # nginx listens on 9085 inside the container (nginx.conf). Remove this block once Traefik routes
-    # to the container (labels below), so the site is reachable only through Traefik.
-    ports:
-      - "${FRONTEND_HOST_PORT:-8082}:9085"
     restart: unless-stopped
     healthcheck:
       # 127.0.0.1, not localhost: busybox resolves localhost to ::1 first, and nginx listens on IPv4 only.
-      test: ["CMD", "wget", "--spider", "--quiet", "--tries=1", "http://127.0.0.1:9085/healthz"]
+      test: [ "CMD", "wget", "--spider", "--quiet", "--tries=1", "http://127.0.0.1:9085/healthz" ]
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 10s
-    # ── Traefik (disabled) ──────────────────────────────────────────────────────────────────────
-    # To enable: uncomment the labels and the networks block here and at the bottom of the file,
-    # set TRAEFIK_NETWORK_NAME and WEBSITE_FRONTEND_HOST in .env, and remove the ports block above.
-    # TLS ends in front of Traefik, which receives plain HTTP on the "web" entrypoint.
-    # labels:
-    #   - "traefik.enable=true"
-    #   - "traefik.docker.network=${TRAEFIK_NETWORK_NAME}"
-    #   - "traefik.http.routers.${APP_NAME_SHORT}-${APP_STAGE}-frontend.rule=Host(`${WEBSITE_FRONTEND_HOST}`)"
-    #   - "traefik.http.routers.${APP_NAME_SHORT}-${APP_STAGE}-frontend.entrypoints=web"
-    #   - "traefik.http.routers.${APP_NAME_SHORT}-${APP_STAGE}-frontend.service=${APP_NAME_SHORT}-${APP_STAGE}-frontend"
-    #   - "traefik.http.services.${APP_NAME_SHORT}-${APP_STAGE}-frontend.loadbalancer.server.port=9085"
-    # networks:
-    #   # Join the external traefik proxy network so it can be routed to
-    #   - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=${TRAEFIK_NETWORK_NAME}"
+      - "traefik.http.routers.${APP_NAME_SHORT}-${APP_STAGE}-frontend.rule=Host(`${WEBSITE_FRONTEND_HOST}`)"
+      - "traefik.http.routers.${APP_NAME_SHORT}-${APP_STAGE}-frontend.entrypoints=web"
+      - "traefik.http.routers.${APP_NAME_SHORT}-${APP_STAGE}-frontend.service=${APP_NAME_SHORT}-${APP_STAGE}-frontend"
+      - "traefik.http.services.${APP_NAME_SHORT}-${APP_STAGE}-frontend.loadbalancer.server.port=9085"
+
+      # Basic Auth (if BASIC_AUTH_USER is not set, no basic auth will be used)
+      - "traefik.http.middlewares.${APP_NAME_SHORT}-${APP_STAGE}-auth.basicauth.users=${BASIC_AUTH_USER:-none:none}"
+      - "traefik.http.routers.${APP_NAME_SHORT}-${APP_STAGE}-frontend.middlewares=${BASIC_AUTH_USER:+${APP_NAME_SHORT}-${APP_STAGE}-auth@docker}"
+    networks:
+      - traefik
 
 
-# networks:
-#
-#   # External network managed by the shared Traefik reverse-proxy stack.
-#   traefik:
-#     name: ${TRAEFIK_NETWORK_NAME}
-#     external: true
+networks:
+  traefik:
+    name: ${TRAEFIK_NETWORK_NAME}
+    external: true
