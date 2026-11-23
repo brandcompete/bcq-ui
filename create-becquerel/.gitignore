@@ -1,0 +1,10 @@
+# local leftovers from running the template as a normal project
+template/package-lock.json
+template/pnpm-lock.yaml
+template/yarn.lock
+template/bun.lock
+template/bun.lockb
+*.tgz
+
+# local test projects scaffolded with the CLI
+playground/

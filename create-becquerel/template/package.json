@@ -1,0 +1,22 @@
+{
+  "name": "becquerel-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@martin.ivanov.brandcompete/bcq-ui": "^3.1.0",
+    "@mdi/font": "^7.4.47",
+    "mitt": "^3.0.1",
+    "vue": "^3.5.26",
+    "vue-virtual-scroller": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.11",
+    "vite": "^8.3.8"
+  }
+}

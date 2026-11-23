@@ -1,0 +1,55 @@
+{
+  "name": "create-becquerel",
+  "version": "1.0.0",
+  "description": "Scaffold a new Vue 3 + Vite project with Becquerel UI preconfigured",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-becquerel": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template",
+    "overlays",
+    "!template/node_modules",
+    "!template/dist",
+    "!template/package-lock.json",
+    "!template/pnpm-lock.yaml",
+    "!template/yarn.lock",
+    "!template/bun.lock",
+    "!template/bun.lockb"
+  ],
+  "keywords": [
+    "becquerel",
+    "bcq-ui",
+    "vue",
+    "vite",
+    "create",
+    "scaffold",
+    "starter",
+    "template"
+  ],
+  "author": "brandcompete GmbH (https://brandcompete.com/)",
+  "homepage": "https://bcq-ui.brandcompete.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandcompete/bcq-ui.git",
+    "directory": "create-becquerel"
+  },
+  "bugs": {
+    "url": "https://github.com/brandcompete/bcq-ui/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "sync": "node scripts/sync.js",
+    "prepublishOnly": "node scripts/sync.js"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.9.0"
+  }
+}

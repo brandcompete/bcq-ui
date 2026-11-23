@@ -16,7 +16,7 @@
         </bc-table-layout>
       </template>
       <template v-slot:sidebar-left-controls>
-        <bc-table-layout v-if="sidebarLeft.expanded" :class="['cursor-pointer', 'categories', 'white-space-nowrap', 'transition-алл', 'transition-duration-500', 'opacity-70', 'hover:opacity-100']">
+        <bc-table-layout v-if="sidebarLeft.expanded" :class="['cursor-pointer', 'categories', 'white-space-nowrap', 'transition-all', 'transition-duration-500', 'opacity-70', 'hover:opacity-100']">
           <bc-table-layout-row>
             <bc-table-layout-cell :class="['white-space-nowrap']">
               <bc-icon :title="getLang[item.category]" tag="router-link" :to="item.path" :name="$icons[item.icon]" v-for="(item, index) in sidebarLeftControls" :key="index" :class="['mr-2']" />
