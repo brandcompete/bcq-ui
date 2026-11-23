@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // create-becquerel: scaffolds a new Vue 3 + Vite project with Becquerel UI preconfigured.
 // Usage: npm create becquerel@latest [dir] | pnpm create becquerel [dir] | yarn create becquerel [dir] | bun create becquerel [dir]
-import { existsSync, readdirSync, mkdirSync, copyFileSync, rmSync, readFileSync, writeFileSync, statSync } from 'node:fs'
+import { existsSync, readdirSync, mkdirSync, copyFileSync, rmSync, readFileSync, writeFileSync, statSync, renameSync } from 'node:fs'
 import { basename, join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawnSync } from 'node:child_process'
@@ -97,6 +97,8 @@ Use "." as dir to scaffold into the current folder.
 
 Options:
   --theme <theme>  "dark" or "light" theme, without asking (default: dark)
+  --ts             TypeScript project, without asking
+  --js             JavaScript project, without asking (default)
   --router         add vue-router without asking
   --no-router      don't add vue-router
   --axios          add axios + vue-axios without asking
@@ -117,6 +119,8 @@ function parseCliArgs () {
       install: { type: 'boolean' },
       'no-install': { type: 'boolean' },
       theme: { type: 'string' },
+      ts: { type: 'boolean' },
+      js: { type: 'boolean' },
       force: { type: 'boolean', short: 'f' },
       help: { type: 'boolean', short: 'h' },
       version: { type: 'boolean', short: 'v' }
@@ -128,6 +132,8 @@ function parseCliArgs () {
     features: Object.fromEntries(FEATURES.map(({ name }) => [name, values[`no-${name}`] ? false : values[name]])),
     install: values['no-install'] ? false : values.install,
     theme: values.theme === undefined ? undefined : values.theme.trim().toLowerCase(),
+    // true (--ts), false (--js) or undefined (ask)
+    typescript: values.js ? false : values.ts,
     force: Boolean(values.force),
     help: Boolean(values.help),
     version: Boolean(values.version)
@@ -221,6 +227,80 @@ function applyFeature (root, feature, pkg) {
   }
   Object.assign(pkg.dependencies, feature.dependencies)
   applyEdits(root, feature.edits || {}, `Feature "${feature.name}"`)
+}
+
+// TypeScript is applied last, after the features: it converts whatever the project ended up with.
+// Files renamed from .js to .ts when they exist (mentions of their paths in the project's files are updated too).
+const TS_RENAMED_FILES = ['src/main.js', 'vite.config.js', 'src/router/index.js', 'src/stores/counter.js']
+// TypeScript 7 (the native compiler) has no JS API, which vue-tsc 3 needs, so stay on 6.x until vue-tsc supports 7
+const TS_DEV_DEPENDENCIES = { typescript: '^6.0.3', 'vue-tsc': '^3.3.14' }
+// file types in which paths of renamed files are updated
+const TS_TEXT_FILES = ['.vue', '.ts', '.html', '.md', '.json']
+
+function listFiles (dir) {
+  return readdirSync(dir).flatMap((file) => {
+    const path = join(dir, file)
+    if (file === 'node_modules' || file === '.git') {
+      return []
+    }
+    return statSync(path).isDirectory() ? listFiles(path) : [path]
+  })
+}
+
+function convertToTypeScript (root, pkg) {
+  // tsconfig.json, src/env.d.ts
+  copyDir(join(OVERLAYS_DIR, 'typescript'), root)
+  // vue-axios's own types break the other packages' types for `this` (see the comment in this file),
+  // so tsconfig.json points 'vue-axios' to corrected types (types only, Vite still uses the real package)
+  if (pkg.dependencies['vue-axios']) {
+    copyDir(join(OVERLAYS_DIR, 'typescript-axios'), root)
+    const tsconfigPath = join(root, 'tsconfig.json')
+    const tsconfig = JSON.parse(readFileSync(tsconfigPath, 'utf8'))
+    tsconfig.compilerOptions.paths = { 'vue-axios': ['./src/types/vue-axios.d.ts'] }
+    writeFileSync(tsconfigPath, `${JSON.stringify(tsconfig, null, 2)}\n`)
+  }
+
+  const renamed = TS_RENAMED_FILES.filter((file) => existsSync(join(root, file)))
+  for (const file of renamed) {
+    renameSync(join(root, file), join(root, file.replace(/\.js$/, '.ts')))
+  }
+
+  for (const path of listFiles(root)) {
+    if (!TS_TEXT_FILES.some((extension) => path.endsWith(extension))) {
+      continue
+    }
+    let content = readFileSync(path, 'utf8')
+    const original = content
+    for (const file of renamed) {
+      content = content.replaceAll(file, file.replace(/\.js$/, '.ts'))
+    }
+    // <script> -> <script lang="ts"> + defineComponent(), so `this` is typed in the Options API
+    if (path.endsWith('.vue') && content.includes('<script>')) {
+      const file = relative(root, path)
+      for (const find of ['<script>\n', 'export default {\n', '}\n</script>']) {
+        if (!content.includes(find)) {
+          throw new Error(`TypeScript: "${find.trim()}" not found in ${file}`)
+        }
+      }
+      content = content
+        .replace('<script>\n', "<script lang=\"ts\">\nimport { defineComponent } from 'vue'\n")
+        .replace('export default {\n', 'export default defineComponent({\n')
+        .replace('}\n</script>', '})\n</script>')
+        .replace("from 'vue'\nexport default", "from 'vue'\n\nexport default")
+    }
+    if (content !== original) {
+      writeFileSync(path, content)
+    }
+  }
+
+  applyEdits(root, {
+    'src/pages/hello-world.vue': [
+      installedLine('<span :class="[\'font-semibold\']">TypeScript</span>: types are checked by <code>vue-tsc</code> when you build, settings in <code>tsconfig.json</code>')
+    ]
+  }, 'TypeScript')
+
+  pkg.devDependencies = sortKeys({ ...pkg.devDependencies, ...TS_DEV_DEPENDENCIES })
+  pkg.scripts.build = `vue-tsc --noEmit && ${pkg.scripts.build}`
 }
 
 function sortKeys (object) {
@@ -329,7 +409,22 @@ async function main () {
       : 'dark'
   }
 
-  // 4. optional features (non-interactive: only the ones passed as flags)
+  // 4. JavaScript or TypeScript
+  let typescript = args.typescript
+  if (typescript === undefined) {
+    typescript = interactive
+      ? cancelled(await p.select({
+        message: 'Language:',
+        initialValue: false,
+        options: [
+          { value: false, label: 'JavaScript' },
+          { value: true, label: 'TypeScript' }
+        ]
+      }))
+      : false
+  }
+
+  // 5. optional features (non-interactive: only the ones passed as flags)
   const features = []
   for (const feature of FEATURES) {
     let enabled = args.features[feature.name]
@@ -343,7 +438,7 @@ async function main () {
     }
   }
 
-  // 5. install now?
+  // 6. install now?
   let install = args.install
   if (install === undefined) {
     install = interactive
@@ -351,7 +446,7 @@ async function main () {
       : false
   }
 
-  // 6. copy the template, apply the features
+  // 7. copy the template, apply the features (and TypeScript)
   copyDir(TEMPLATE_DIR, root)
   const pkgPath = join(root, 'package.json')
   const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'))
@@ -368,12 +463,16 @@ async function main () {
   for (const feature of features) {
     applyFeature(root, feature, pkg)
   }
+  if (typescript) {
+    convertToTypeScript(root, pkg)
+  }
   removeAnchorLines(root)
   pkg.dependencies = sortKeys(pkg.dependencies)
   writeFileSync(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`)
-  p.log.success(`Project created in ${root}${features.length ? ` (with ${features.map(({ name }) => name).join(', ')})` : ''}`)
+  const extras = [typescript ? 'TypeScript' : null, ...features.map(({ name }) => name)].filter(Boolean)
+  p.log.success(`Project created in ${root}${extras.length ? ` (with ${extras.join(', ')})` : ''}`)
 
-  // 7. install
+  // 8. install
   let installed = false
   if (install) {
     p.log.step(`Running ${commands.install}...`)
@@ -389,7 +488,7 @@ async function main () {
     }
   }
 
-  // 8. next steps
+  // 9. next steps
   const steps = []
   if (!inCurrentDir) {
     const cdPath = relative(process.cwd(), root)

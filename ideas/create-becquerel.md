@@ -1,6 +1,6 @@
 # Idea: `npm|pnpm|yarn|bun create becquerel` project scaffolder
 
-Status: **v1 built in `create-becquerel/` on branch `create-becquerel`, not published yet** (notes from 2026-11-20, updated 2026-11-23).
+Status: **1.0.0 (JavaScript) published to npm; TypeScript option built for 1.1.0, not published yet** (notes from 2026-11-20, updated 2026-11-23).
 
 v1 (2026-11-23): `index.js` (`@clack/prompts`; asks for the project name, what to do with a folder that isn't empty,
 and "install now?" (default yes); flags `--install`, `--no-install`, `-f/--force`, `-h`, `-v`; non-interactive
@@ -51,6 +51,26 @@ npm warnings (2026-11-23): vue-router 5 depends on its file-based-routing toolin
 Decided: use vue-router `^4.6.5` (same router API, same as the docs site, ~35 fewer packages, no warnings). Pinia 4
 then needs its required peer `@vue/devtools-api@^8` declared explicitly (vue-router 4 depends on v6 of it, and pnpm
 would hand Pinia that one: "unmet peer"). Result: npm and pnpm install without any warning for every combination.
+
+Published (2026-11-23): `create-becquerel@1.0.0` (JavaScript only) published to npm.
+
+TypeScript (2026-11-23, for 1.1.0): "Language:" select prompt (JavaScript / TypeScript, default JavaScript) and
+`--ts`/`--js`. Decided: type check runs in `build` (`vue-tsc --noEmit && vite build`, like create-vite vue-ts).
+Implemented as a conversion step after the features (`convertToTypeScript()`), not a second template:
+`overlays/typescript/` (`tsconfig.json`, `src/env.d.ts` for `this.$emitter`), `.js` -> `.ts` renames,
+`<script lang="ts">` + `defineComponent()` (Options API kept). Findings:
+- TypeScript 7 (native compiler, npm "latest") has no JS API; vue-tsc 3 crashes on it -> `typescript@^6.0.3`.
+- vue-virtual-scroller 2.0.x ships its own types now; the docs site's `vue-virtual-scroller-d-ts.md` shim (for
+  2.0.0-beta.8) is not needed and would clash.
+- vue-axios's types augment `@vue/runtime-core`, which makes TS ignore all `declare module 'vue'` augmentations
+  (vue-router's `$route`, our `$emitter`). With axios, `tsconfig.json` `paths` maps `vue-axios` to corrected types
+  (`overlays/typescript-axios/src/types/vue-axios.d.ts`, same API, augments `vue`). Types only; Vite uses the real package.
+Tested: all 8 option combinations as TS (npm: install without warnings, type check + build); for npm and pnpm,
+deliberate misuse of `this.$emitter`, `this.$route`, `this.$http`, store state and a `<bc-heading>` prop is reported
+with the right types; TS project renders and the Pinia counter works; JS projects unchanged.
+Also for 1.1.0: LICENSE file added to the package, generated README no longer calls App.vue "a small starter page".
+Known, not fixed: vue-axios's ESM build contains CommonJS `module`, so `vite build` prints a
+`COMMONJS_VARIABLE_IN_ESM` warning in every project with axios (also 1.0.0, harmless at runtime).
 
 Goal: like `pnpm create vuetify` / `npm create vite`, let people bootstrap a new Vue 3 + Vite project
 with Becquerel UI already installed and configured, with one command.

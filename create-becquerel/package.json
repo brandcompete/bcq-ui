@@ -1,6 +1,6 @@
 {
   "name": "create-becquerel",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Scaffold a new Vue 3 + Vite project with Becquerel UI preconfigured",
   "license": "MIT",
   "type": "module",

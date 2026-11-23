@@ -18,6 +18,8 @@ The dependencies are installed with the package manager you ran the command with
 | Option | Description |
 |---|---|
 | `--theme <dark\|light>` | theme of the new app (`dark` in `App.vue`'s `data`), without asking; default `dark` |
+| `--ts` | TypeScript project (`.ts` files, `<script lang="ts">`, `tsconfig.json`, type check with `vue-tsc` in `build`) without asking |
+| `--js` | JavaScript project without asking (the default) |
 | `--router` | add vue-router (`src/router/index.js`, the hello-world page becomes the `/` route) without asking |
 | `--no-router` | don't add vue-router |
 | `--axios` | add axios + vue-axios (`app.use(VueAxios, axios)`, then `this.axios` / `this.$http` in components) without asking |
@@ -50,6 +52,11 @@ The dependencies are installed with the package manager you ran the command with
 
   When copying it, the CLI skips `node_modules`, `dist` and lockfiles, renames `_gitignore` to `.gitignore`
   (npm strips `.gitignore` from published packages) and sets the package name.
+- TypeScript (`convertToTypeScript()` in `index.js`) is applied last, to whatever the template and features produced:
+  it copies `overlays/typescript/` (`tsconfig.json`, `src/env.d.ts`), renames the `.js` files in `TS_RENAMED_FILES` to
+  `.ts` (and updates mentions of their paths), turns every `<script>` into `<script lang="ts">` with `defineComponent()`,
+  adds `typescript` + `vue-tsc` and runs `vue-tsc --noEmit` before `vite build`. With axios it also copies
+  `overlays/typescript-axios/` and maps `vue-axios` to those types in `tsconfig.json` (see the comment in that file).
 - Optional features (`FEATURES` in `index.js`) are applied on top of the base template: the files in
   `overlays/<name>/` are copied over the project, `dependencies` are added to its `package.json`, and `edits`
   (`[find, replace]` pairs) are applied to its files, e.g. the router feature replaces

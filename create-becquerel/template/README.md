@@ -18,7 +18,8 @@ npm run preview  # preview the production build
   Material Design Icons (`@mdi/font`) and `RecycleScroller` (`vue-virtual-scroller`, used by `<bc-dropdown>`).
 - `src/styles/variables.css` holds the theme variables (colors, fonts, etc.). Customize them there;
   the file is imported before the Becquerel UI styles.
-- `src/App.vue` is a small starter page. Replace it with your own.
+- `src/App.vue` is the app layout (`<bc-layout>` with header, sidebars, main area and footer).
+- `src/pages/hello-world.vue` is the starter page shown in the main area. It lists what was installed; replace it with your own.
 
 ## Documentation
 

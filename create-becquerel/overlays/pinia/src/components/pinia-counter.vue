@@ -16,7 +16,7 @@
 </template>
 <script>
 import { mapActions, mapState } from 'pinia'
-import { useCounterStore } from '../stores/counter.js'
+import { useCounterStore } from '../stores/counter'
 
 export default {
   name: 'PiniaCounter',
