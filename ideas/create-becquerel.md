@@ -1,6 +1,6 @@
 # Idea: `npm|pnpm|yarn|bun create becquerel` project scaffolder
 
-Status: **1.1.0 (with TypeScript) published to npm; vue-axios build-warning fix ready for 1.1.1, not published yet** (notes from 2026-11-20, updated 2026-11-23).
+Status: **1.2.0 published to npm (JavaScript/TypeScript, vue-router, axios, Pinia, theme; vue-axios build warning hidden)** (notes from 2026-11-20, updated 2026-11-23).
 
 v1 (2026-11-23): `index.js` (`@clack/prompts`; asks for the project name, what to do with a folder that isn't empty,
 and "install now?" (default yes); flags `--install`, `--no-install`, `-f/--force`, `-h`, `-v`; non-interactive
@@ -72,7 +72,7 @@ Also for 1.1.0: LICENSE file added to the package, generated README no longer ca
 
 Published (2026-11-23): `create-becquerel@1.1.0` (TypeScript option).
 
-vue-axios build warning (2026-11-23, for the next release, a patch: 1.1.1): vue-axios's "ES module" build ends with a
+vue-axios build warning (2026-11-23, published as 1.2.0): vue-axios's "ES module" build ends with a
 CommonJS/AMD fallback (`module.exports = plugin`) that never runs in Vite, but makes every `vite build` print
 `COMMONJS_VARIABLE_IN_ESM`. Options considered: drop vue-axios and set `app.config.globalProperties.axios`/`$http`
 directly (what vue-axios does on Vue 3; would also remove the TS `paths` workaround), report upstream, or hide the
