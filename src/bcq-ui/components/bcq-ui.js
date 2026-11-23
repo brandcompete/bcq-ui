@@ -28,7 +28,10 @@ const BcUi = {
     if (opts.components) {
       Object.keys(opts.components).forEach(key => {
         const c = opts.components[key]
-        Vue.use(c)
+        // opts.components also contains this plugin (BcqUi): installing it again makes Vue warn "Plugin has already been applied"
+        if (c !== BcUi) {
+          Vue.use(c)
+        }
       })
     }
     this.installed = true

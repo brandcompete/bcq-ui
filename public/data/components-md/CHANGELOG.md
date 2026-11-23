@@ -1,3 +1,7 @@
+## [3.1.1] - 2026-23-11
+
+* Fixed the "Plugin has already been applied to target app" warning on app.use(BcqUi)
+
 ## [3.1.0] - 2026-18-11
 
 * Bundled distribution
