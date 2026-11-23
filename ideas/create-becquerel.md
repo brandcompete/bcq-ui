@@ -1,6 +1,6 @@
 # Idea: `npm|pnpm|yarn|bun create becquerel` project scaffolder
 
-Status: **1.0.0 (JavaScript) published to npm; TypeScript option built for 1.1.0, not published yet** (notes from 2026-11-20, updated 2026-11-23).
+Status: **1.1.0 (with TypeScript) published to npm; vue-axios build-warning fix ready for 1.1.1, not published yet** (notes from 2026-11-20, updated 2026-11-23).
 
 v1 (2026-11-23): `index.js` (`@clack/prompts`; asks for the project name, what to do with a folder that isn't empty,
 and "install now?" (default yes); flags `--install`, `--no-install`, `-f/--force`, `-h`, `-v`; non-interactive
@@ -69,8 +69,18 @@ Tested: all 8 option combinations as TS (npm: install without warnings, type che
 deliberate misuse of `this.$emitter`, `this.$route`, `this.$http`, store state and a `<bc-heading>` prop is reported
 with the right types; TS project renders and the Pinia counter works; JS projects unchanged.
 Also for 1.1.0: LICENSE file added to the package, generated README no longer calls App.vue "a small starter page".
-Known, not fixed: vue-axios's ESM build contains CommonJS `module`, so `vite build` prints a
-`COMMONJS_VARIABLE_IN_ESM` warning in every project with axios (also 1.0.0, harmless at runtime).
+
+Published (2026-11-23): `create-becquerel@1.1.0` (TypeScript option).
+
+vue-axios build warning (2026-11-23, for the next release, a patch: 1.1.1): vue-axios's "ES module" build ends with a
+CommonJS/AMD fallback (`module.exports = plugin`) that never runs in Vite, but makes every `vite build` print
+`COMMONJS_VARIABLE_IN_ESM`. Options considered: drop vue-axios and set `app.config.globalProperties.axios`/`$http`
+directly (what vue-axios does on Vue 3; would also remove the TS `paths` workaround), report upstream, or hide the
+warning. Decided: hide it. The axios feature adds `build.rolldownOptions.onLog` to `vite.config` that drops only
+warnings with code `COMMONJS_VARIABLE_IN_ESM` whose `log.id` contains `vue-axios` (Rolldown's global
+`checks.commonJsVariableInEsm: false` was rejected: it would hide the warning for the user's own code too).
+Tested: JS and TS, npm and pnpm, no warning; projects without axios keep the plain `vite.config`; the same warning
+from user code still shows.
 
 Goal: like `pnpm create vuetify` / `npm create vite`, let people bootstrap a new Vue 3 + Vite project
 with Becquerel UI already installed and configured, with one command.

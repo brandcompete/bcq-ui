@@ -8,6 +8,53 @@ The Vue3 UI library developed by us at brandcompete GmbH provides a comprehensiv
 
 https://bcq-ui.brandcompete.com/
 
+## Creating a new project with BCQ
+
+The quickest way to start: [create-becquerel](https://www.npmjs.com/package/create-becquerel) scaffolds a Vue 3 + Vite project with BCQ UI already installed and configured. It asks for the project name, theme (dark/light), JavaScript or TypeScript, and whether to add vue-router, axios + vue-axios and Pinia. `my-app` is the project folder; leave it out to be asked for a name.
+
+```bash
+# npm
+$ npm create becquerel@latest my-app
+# pnpm
+$ pnpm create becquerel my-app
+# yarn
+$ yarn create becquerel my-app
+# bun
+$ bun create becquerel my-app
+```
+
+Then start the dev server (if you let the script install the dependencies):
+
+```bash
+$ cd my-app
+$ npm run dev   # npm
+$ pnpm dev      # pnpm
+$ yarn dev      # yarn
+$ bun dev       # bun
+```
+
+To skip the prompts, pass options (with npm, put `--` before them):
+
+```bash
+$ npm create becquerel@latest my-app -- --ts --router --axios --pinia --theme light
+$ pnpm create becquerel my-app --ts --router --axios --pinia --theme light
+$ yarn create becquerel my-app --ts --router --axios --pinia --theme light
+$ bun create becquerel my-app --ts --router --axios --pinia --theme light
+```
+
+Available options: `--ts` / `--js`, `--theme dark|light`, `--router` / `--no-router`, `--axios` / `--no-axios`, `--pinia` / `--no-pinia`, `--install` / `--no-install`, `-f` / `--force` (empty a folder that is not empty, keeps `.git`), `-h` / `--help`.
+
+### How the create CLI works
+
+`npm create becquerel` (and the pnpm, yarn and bun equivalents) downloads the [create-becquerel](https://www.npmjs.com/package/create-becquerel) package into the package manager's cache and runs it in the current folder. Nothing is installed globally, and you always get the latest version. Then it:
+
+1. Turns the project name into a valid npm package name (`My Café App` → `my-cafe-app`), used for the folder, `package.json`, the page header and `<title>`.
+2. Asks the remaining questions (theme, language, vue-router, axios + vue-axios, Pinia, install now?). Options passed on the command line skip their question.
+3. Copies a ready-to-run Vue 3 + Vite + BCQ UI project: `main.js` installs BCQ UI with everything it needs (`variables.css`, styles, `$emitter`, `RecycleScroller`, Material Design Icons), and `App.vue` holds a `<bc-layout>` showing a hello-world page.
+4. Adds each chosen option on top: its packages in `package.json`, its setup in `main.js`, example files (a route, a Pinia store) and a line in the hello-world page's "What's installed" list.
+5. For TypeScript, converts the result: `.js` → `.ts`, `<script lang="ts">` with `defineComponent()`, `tsconfig.json`, and a type check with `vue-tsc` before every build.
+6. Optionally installs the dependencies with the package manager you ran it with, and prints the next steps.
+
 ## Installing BCQ and adding it to a Vue project
 
 ```bash
@@ -19,6 +66,15 @@ $ npm install --save vue-virtual-scroller
 $ npm install --save mitt
 # Material Design font: https://www.npmjs.com/package/@mdi/font, required by <bc-icon />
 $ npm install --save @mdi/font
+```
+
+Or all at once, with your package manager. Install all four packages: `main.js` below imports each of them, and pnpm (and Yarn in Plug'n'Play mode) only let a project import packages it declares itself.
+
+```bash
+$ npm i @martin.ivanov.brandcompete/bcq-ui mitt @mdi/font vue-virtual-scroller
+$ pnpm add @martin.ivanov.brandcompete/bcq-ui mitt @mdi/font vue-virtual-scroller
+$ yarn add @martin.ivanov.brandcompete/bcq-ui mitt @mdi/font vue-virtual-scroller
+$ bun add @martin.ivanov.brandcompete/bcq-ui mitt @mdi/font vue-virtual-scroller
 ```
 
 // main.js

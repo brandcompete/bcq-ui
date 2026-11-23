@@ -64,6 +64,25 @@ const FEATURES = [
         ["import BcqUi from '@martin.ivanov.brandcompete/bcq-ui'\n", "import axios from 'axios'\nimport VueAxios from 'vue-axios'\nimport BcqUi from '@martin.ivanov.brandcompete/bcq-ui'\n"],
         ['app.use(BcqUi)\n', '// HTTP client, available in components as this.axios and this.$http\napp.use(VueAxios, axios)\napp.use(BcqUi)\n']
       ],
+      // vue-axios's "ES module" build ends with a CommonJS/AMD fallback (module.exports = ...) that never runs in Vite,
+      // but makes every build print a COMMONJS_VARIABLE_IN_ESM warning: hide that one warning, only for vue-axios
+      'vite.config.js': [
+        ['  plugins: [vue()]\n', [
+          '  plugins: [vue()],',
+          '  build: {',
+          '    rolldownOptions: {',
+          '      onLog (level, log, handler) {',
+          '        // vue-axios\'s ES module build contains a CommonJS fallback that never runs in Vite: hide its harmless warning',
+          '        if (log.code === \'COMMONJS_VARIABLE_IN_ESM\' && log.id?.includes(\'vue-axios\')) {',
+          '          return',
+          '        }',
+          '        handler(level, log)',
+          '      }',
+          '    }',
+          '  }',
+          ''
+        ].join('\n')]
+      ],
       'src/pages/hello-world.vue': [
         installedLine('<span :class="[\'font-semibold\']">axios</span> + <span :class="[\'font-semibold\']">vue-axios</span>: make HTTP requests with <code>this.axios</code> or <code>this.$http</code> in any component')
       ]

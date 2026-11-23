@@ -22,7 +22,7 @@ The dependencies are installed with the package manager you ran the command with
 | `--js` | JavaScript project without asking (the default) |
 | `--router` | add vue-router (`src/router/index.js`, the hello-world page becomes the `/` route) without asking |
 | `--no-router` | don't add vue-router |
-| `--axios` | add axios + vue-axios (`app.use(VueAxios, axios)`, then `this.axios` / `this.$http` in components) without asking |
+| `--axios` | add axios + vue-axios (`app.use(VueAxios, axios)`, then `this.axios` / `this.$http` in components; `vite.config` hides vue-axios's harmless CommonJS build warning) without asking |
 | `--no-axios` | don't add axios + vue-axios |
 | `--pinia` | add Pinia (`app.use(createPinia())`, an example counter store in `src/stores/` shown on the hello-world page) without asking |
 | `--no-pinia` | don't add Pinia |
