@@ -122,6 +122,8 @@ Options:
   --no-router      don't add vue-router
   --axios          add axios + vue-axios without asking
   --no-axios       don't add axios + vue-axios
+  --pinia          add Pinia without asking
+  --no-pinia       don't add Pinia
   --install        install dependencies without asking
   --no-install     skip installing dependencies
   -f, --force      empty the target folder if it is not empty (keeps .git)
