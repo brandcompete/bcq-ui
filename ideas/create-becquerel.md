@@ -251,3 +251,17 @@ Rules that keep it runnable:
 
 ## Effort
 About a day for a JS-only version with 2-3 prompts, mostly spent on the template and testing.
+
+## Planned: initialize a git repository (not built yet, 2026-11-23)
+Add an "Initialize a git repository?" question, default yes, with `--git` / `--no-git` flags; without a TTY only when
+`--git` is passed (like the other options). Release as 1.3.0 (new feature).
+
+- Skip silently when git is not installed (`git --version` fails) or when the target folder is already inside a git
+  repository (`git rev-parse --is-inside-work-tree`), e.g. a monorepo, or `create becquerel .` in a folder with `.git`
+  (the "empty the folder" option keeps `.git`). A nested repository there would be a mistake.
+- Only `git init`, no initial commit: committing fails without `user.name` / `user.email`, and many people want to make
+  the first commit themselves. (If an "Initial commit" is wanted later, it must survive that failure.)
+- Run it after the dependency install; the template's `.gitignore` already excludes `node_modules` and `dist`.
+- If `git init` fails, show a warning and continue; the project itself is fine.
+- Update `--help`, `create-becquerel/README.md`, the root README ("Creating a new project with BCQ" options and
+  "How the create CLI works") and CLAUDE.md.
