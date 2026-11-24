@@ -1,6 +1,7 @@
 export { meta as index } from '../../public/data/pages/index.json'
 
 export { meta as quickStart } from '../../public/data/pages/getting-started/quick-start.json'
+export { meta as projectConfigurator } from '../../public/data/pages/getting-started/project-configurator.json'
 export { meta as development } from '../../public/data/pages/getting-started/development.json'
 export { meta as deployment } from '../../public/data/pages/getting-started/deployment.json'
 export { meta as publishing } from '../../public/data/pages/getting-started/publishing.json'

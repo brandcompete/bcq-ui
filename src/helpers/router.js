@@ -16,6 +16,7 @@ import PageBcPublishing from '../pages/getting-started/publishing.vue'
 import PageBcReleaseNotes from '../pages/getting-started/release-notes.vue'
 import PageBcRoadmap from '../pages/getting-started/roadmap.vue'
 import PageBcBundler from '../pages/getting-started/bundler.vue'
+import PageBcProjectConfigurator from '../pages/getting-started/project-configurator.vue'
 
 // content
 import PageBcApp from '../pages/content/app.vue'
@@ -132,6 +133,14 @@ const routes = [{
   name: 'PageBcQuickStart',
   meta: meta.quickStart
 }, {
+  path: '/getting-started/project-configurator',
+  component: PageBcProjectConfigurator,
+  render: true,
+  category: 'getting-started',
+  icon: 'tune',
+  name: 'PageBcProjectConfigurator',
+  meta: meta.projectConfigurator
+}, {
   path: '/content/app',
   component: PageBcApp,
   render: true,
@@ -156,17 +165,9 @@ const routes = [{
   name: 'PageBcDeployment',
   meta: meta.deployment
 }, {
-  path: '/getting-started/release-notes',
-  component: PageBcReleaseNotes,
-  render: true,
-  category: 'getting-started',
-  icon: 'message-text',
-  name: 'PageBcReleaseNotes',
-  meta: meta.releaseNotes
-}, {
   path: '/getting-started/roadmap',
   component: PageBcRoadmap,
-  render: true,
+  render: false,
   category: 'getting-started',
   icon: 'road-variant',
   name: 'PageBcRoadmap',
@@ -180,9 +181,17 @@ const routes = [{
   name: 'PageBcDevelopment',
   meta: meta.development
 }, {
+  path: '/getting-started/release-notes',
+  component: PageBcReleaseNotes,
+  render: true,
+  category: 'getting-started',
+  icon: 'message-text',
+  name: 'PageBcReleaseNotes',
+  meta: meta.releaseNotes
+}, {
   path: '/getting-started/bundler',
   component: PageBcBundler,
-  render: true,
+  render: false,
   category: 'getting-started',
   icon: 'package-variant',
   name: 'PageBcBundler',

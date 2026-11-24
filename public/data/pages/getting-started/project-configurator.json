@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "pageTitle": "Project Configurator",
+    "keywords": [
+      "installation",
+      "cli",
+      "project configurator",
+      "vue router",
+      "axios",
+      "pinia",
+      "typescript",
+      "npm create"
+    ],
+    "links": [
+      "getting-started"
+    ]
+  },
+  "config": {},
+  "documentation": null
+}

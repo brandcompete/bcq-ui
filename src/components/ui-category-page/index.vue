@@ -1,7 +1,7 @@
 <template>
   <flat-card :title="setTitle" v-if="routes.length" :class="[baseCss]" :data-anchor="category">
     <bc-grid>
-      <bc-grid-col :xs="12" :sm="6" :md="6" :lg="4" :xl="3" v-for="(route, index) in routes" :class="['p-1', cols(index)]">
+      <bc-grid-col :xs="12" :sm="6" :md="6" :lg="4" :xl="3" v-for="(route, index) in routes" :class="['p-1', route.render ? null : 'hidden', cols(index)]">
         <bc-card elevation="none" tag="router-link" :href="`${route.path}/`" :to="route.path" :class="['text-center', route.render ? null : 'disabled']" :title="removeForVue(route.meta.pageTitle)">
           <bc-card-title font-weight="normal">{{ removeForVue(route.meta.pageTitle) }}</bc-card-title>
           <bc-divider />

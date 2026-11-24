@@ -1,12 +1,11 @@
 [
   "/getting-started",
+  "/getting-started/project-configurator",
   "/getting-started/quick-start",
   "/getting-started/development",
   "/getting-started/publishing",
-  "/getting-started/deployment",
   "/getting-started/roadmap",
   "/getting-started/release-notes",
-  "/getting-started/bundler",
 
   "/content",
   "/content/theme",

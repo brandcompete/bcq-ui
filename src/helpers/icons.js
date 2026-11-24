@@ -58,7 +58,11 @@ const icons = {
   distortion: 'movie-filter',
   inputType: 'text-box',
   github: 'github',
-  npm: 'npm'
+  npm: 'npm',
+  vuejs: 'vuejs',
+  package: 'package-variant',
+  javascript: 'language-javascript',
+  typescript: 'language-typescript'
 }
 
 export default icons
