@@ -1,3 +1,7 @@
+## [3.1.2] - 2026-26-11
+
+* Variables editor and variables.css fix
+
 ## [3.1.1] - 2026-23-11
 
 * Fixed the "Plugin has already been applied to target app" warning on app.use(BcqUi)

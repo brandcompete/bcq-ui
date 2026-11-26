@@ -81,6 +81,9 @@ const en = {
   offline: 'Offline',
   share: 'Share BCQ3',
   rightClickTableHeaders: 'Right click on table headers to hide/show columns',
+  cssVariablesEditor: 'Variables Editor',
+  download: 'Download',
+  cssVariablesEditorInfo: 'This is a visual editor for the variables.css file of Becquerel UI. You can modify the file and then download and replace the one in your project.',
   codeFiles: {
     'run-bcq-cli': 'Run BCQ CLI',
     'component-tags': 'Vue component (all slots, events and props, including optional)',

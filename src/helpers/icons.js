@@ -20,6 +20,7 @@ const icons = {
   alert: 'alert',
   sitemap: 'sitemap',
   info: 'information-outline',
+  download: 'download-box',
   chevronUp: 'chevron-up',
   chevronRight: 'chevron-right',
   chevronDown: 'chevron-down',
@@ -62,7 +63,9 @@ const icons = {
   vuejs: 'vuejs',
   package: 'package-variant',
   javascript: 'language-javascript',
-  typescript: 'language-typescript'
+  typescript: 'language-typescript',
+  css: 'language-css3',
+  cssVariable: 'variable-box'
 }
 
 export default icons

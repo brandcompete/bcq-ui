@@ -1,5 +1,5 @@
 /*!
- * Becquerel UI for Vue3 v3.1.1
+ * Becquerel UI for Vue3 v3.1.2
  * @martin.ivanov.brandcompete/bcq-ui
  * (c) 2026 brandcompete GmbH - https://brandcompete.com/
  * Docs: https://bcq-ui.brandcompete.com/
