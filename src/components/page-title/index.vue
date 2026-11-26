@@ -9,7 +9,7 @@
       <bc-table-layout y-align="middle">
         <bc-table-layout-row>
           <bc-table-layout-cell :class="['w-full']">
-            <bc-heading tag="h1" :truncate="false" v-gradient-text="{ tilt: 90, colors: getConfig.homePageGradient }" font-size="2xl" :divider="false">{{ removeForVue(page.meta.pageTitle) }}</bc-heading>
+            <bc-heading tag="h1" :truncate="false" v-gradient-text="{ tilt: 90, colors: getConfig.homePageGradient }" font-size="2xl" :divider="false">{{ removeForVue(page.meta.pageTitle) }} {{ isHomePage ? getConfig.version : null }}</bc-heading>
           </bc-table-layout-cell>
           <bc-table-layout-cell>
             <bc-icon v-if="getCurrentRoute" v-gradient-text="{ tilt: 90, colors: getConfig.homePageGradient }" :name="getCurrentRoute.icon" :size="3" />
