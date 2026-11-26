@@ -99,6 +99,11 @@ export default {
       })
       this.select('h2').forEach(item => {
         item.classList.add('text-xl', 'mb-3')
+        // changelog headings: "[3.1.2] - 2026-11-26" -> "3.1.2 - 2026-11-26"
+        const versionHeading = item.textContent.trim().match(/^\[(\d+\.\d+\.\d+[\w.-]*)\](\s*-\s*\d{4}-\d{2}-\d{2})$/)
+        if (versionHeading) {
+          item.textContent = `${versionHeading[1]}${versionHeading[2]}`
+        }
       })
       this.select('h3').forEach(item => {
         item.classList.add('text-lg', 'mb-2')

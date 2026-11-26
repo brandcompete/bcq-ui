@@ -1,19 +1,19 @@
 # Changelog
 
-## [3.1.2] - 2026-26-11
+## [3.1.2] - 2026-11-26
 
 * Variables editor and variables.css fix
 
-## [3.1.1] - 2026-23-11
+## [3.1.1] - 2026-11-23
 
 * Fixed the "Plugin has already been applied to target app" warning on app.use(BcqUi)
 
-## [3.1.0] - 2026-18-11
+## [3.1.0] - 2026-11-18
 
 * Bundled distribution
 * TypeScript Declaration File
 
-## [3.0.1] - 2026-17-11
+## [3.0.1] - 2026-11-17
 
 * Removed Quill and bc-editor
 * Toolchain updates
