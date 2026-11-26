@@ -61,13 +61,15 @@ export default defineConfig(({ mode }) => ({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  // removing this will create .css and .js files with random names, keeping it, creates /assets/index.css and /assets/index.js
+  // the entry keeps fixed names (/assets/index.js + /assets/index.css): bcq-cli/ssr/index.html links them directly.
+  // Lazy-loaded chunks (the demo pages, see src/helpers/router.js) and their CSS get a content hash, so browsers
+  // never combine a new index.js with an old cached chunk after a deploy.
   build: {
     rollupOptions: {
       output: {
         entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
+        chunkFileNames: `assets/[name]-[hash].js`,
+        assetFileNames: assetInfo => assetInfo.names?.includes('index.css') ? 'assets/[name].[ext]' : 'assets/[name]-[hash].[ext]',
       },
     },
   },

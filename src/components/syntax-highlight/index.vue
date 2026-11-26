@@ -15,8 +15,11 @@ import methods from '../../mixins/methods.js'
 import computed from '../../mixins/computed.js'
 import props from '../../mixins/props.js'
 
-import hljs from 'highlight.js'
+// core only + the languages the demo pages use (the full 'highlight.js' bundles ~190 languages)
+import hljs from 'highlight.js/lib/core'
+import bash from 'highlight.js/lib/languages/bash'
 import javascript from 'highlight.js/lib/languages/javascript'
+import typescript from 'highlight.js/lib/languages/typescript'
 import css from 'highlight.js/lib/languages/css'
 import json from 'highlight.js/lib/languages/json'
 import xml from 'highlight.js/lib/languages/xml'
@@ -25,7 +28,9 @@ import xml from 'highlight.js/lib/languages/xml'
 // import 'highlight.js/styles/stackoverflow-dark.min.css'
 // import 'highlight.js/styles/agate.min.css'
 
+hljs.registerLanguage('bash', bash)
 hljs.registerLanguage('javascript', javascript)
+hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('css', css)
 hljs.registerLanguage('json', json)
 hljs.registerLanguage('xml', xml)

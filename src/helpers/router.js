@@ -9,102 +9,102 @@ import PageIndex from '../pages/index.vue'
 import * as meta from './meta.js'
 
 // getting-started
-import PageBcQuickStart from '../pages/getting-started/quick-start.vue'
-import PageBcDevelopment from '../pages/getting-started/development.vue'
-import PageBcDeployment from '../pages/getting-started/deployment.vue'
-import PageBcPublishing from '../pages/getting-started/publishing.vue'
-import PageBcReleaseNotes from '../pages/getting-started/release-notes.vue'
-import PageBcRoadmap from '../pages/getting-started/roadmap.vue'
-import PageBcBundler from '../pages/getting-started/bundler.vue'
-import PageBcProjectConfigurator from '../pages/getting-started/project-configurator.vue'
+const PageBcQuickStart = () => import('../pages/getting-started/quick-start.vue')
+const PageBcDevelopment = () => import('../pages/getting-started/development.vue')
+const PageBcDeployment = () => import('../pages/getting-started/deployment.vue')
+const PageBcPublishing = () => import('../pages/getting-started/publishing.vue')
+const PageBcReleaseNotes = () => import('../pages/getting-started/release-notes.vue')
+const PageBcRoadmap = () => import('../pages/getting-started/roadmap.vue')
+const PageBcBundler = () => import('../pages/getting-started/bundler.vue')
+const PageBcProjectConfigurator = () => import('../pages/getting-started/project-configurator.vue')
 
 // content
-import PageBcApp from '../pages/content/app.vue'
-import PageBcBrandColor from '../pages/content/brand-color.vue'
-import PageBcContainer from '../pages/content/container.vue'
-import PageBcCssAnimations from '../pages/content/css-animations.vue'
-import PageBcCssVariables from '../pages/content/css-variables.vue'
-import PageBcElevation from '../pages/content/elevation.vue'
-import PageBcGrid from '../pages/content/grid.vue'
-import PageBcHeading from '../pages/content/heading.vue'
-import PageBcLayout from '../pages/content/layout.vue'
-import PageBcLoremIpsum from '../pages/content/lorem-ipsum.vue'
-import PageBcNavigatorOnline from '../pages/content/navigator-online.vue'
-import PageBcReactiveStyle from '../pages/content/reactive-style.vue'
-import PageBcTableLayout from '../pages/content/table-layout.vue'
-import PageBcTypography from '../pages/content/typography.vue'
-import PageBcColors from '../pages/content/colors.vue'
-import PageBcUtilityCssClasses from '../pages/content/utility-css-classes.vue'
-import PageBcTheme from '../pages/content/theme.vue'
+const PageBcApp = () => import('../pages/content/app.vue')
+const PageBcBrandColor = () => import('../pages/content/brand-color.vue')
+const PageBcContainer = () => import('../pages/content/container.vue')
+const PageBcCssAnimations = () => import('../pages/content/css-animations.vue')
+const PageBcCssVariables = () => import('../pages/content/css-variables.vue')
+const PageBcElevation = () => import('../pages/content/elevation.vue')
+const PageBcGrid = () => import('../pages/content/grid.vue')
+const PageBcHeading = () => import('../pages/content/heading.vue')
+const PageBcLayout = () => import('../pages/content/layout.vue')
+const PageBcLoremIpsum = () => import('../pages/content/lorem-ipsum.vue')
+const PageBcNavigatorOnline = () => import('../pages/content/navigator-online.vue')
+const PageBcReactiveStyle = () => import('../pages/content/reactive-style.vue')
+const PageBcTableLayout = () => import('../pages/content/table-layout.vue')
+const PageBcTypography = () => import('../pages/content/typography.vue')
+const PageBcColors = () => import('../pages/content/colors.vue')
+const PageBcUtilityCssClasses = () => import('../pages/content/utility-css-classes.vue')
+const PageBcTheme = () => import('../pages/content/theme.vue')
 
 // ui
-import PageBcAlert from '../pages/ui/alert.vue'
-import PageBcAmbientImage from '../pages/ui/ambient-image.vue'
-import PageBcAvatar from '../pages/ui/avatar.vue'
-import PageBcAvatarGroup from '../pages/ui/avatar-group.vue'
-import PageBcBadge from '../pages/ui/badge.vue'
-import PageBcBanner from '../pages/ui/banner.vue'
-import PageBcBreadcrumbs from '../pages/ui/breadcrumbs.vue'
-import PageBcBtn from '../pages/ui/btn.vue'
-import PageBcBtnGroup from '../pages/ui/btn-group.vue'
-import PageBcCard from '../pages/ui/card.vue'
-import PageBcChip from '../pages/ui/chip.vue'
-import PageBcCollapsible from '../pages/ui/collapsible.vue'
-import PageBcColorPicker from '../pages/ui/color-picker.vue'
-import PageBcContextMenu from '../pages/ui/context-menu.vue'
-import PageBcDataTable from '../pages/ui/data-table.vue'
-import PageBcDialogBox from '../pages/ui/dialog-box.vue'
-import PageBcDivider from '../pages/ui/divider.vue'
+const PageBcAlert = () => import('../pages/ui/alert.vue')
+const PageBcAmbientImage = () => import('../pages/ui/ambient-image.vue')
+const PageBcAvatar = () => import('../pages/ui/avatar.vue')
+const PageBcAvatarGroup = () => import('../pages/ui/avatar-group.vue')
+const PageBcBadge = () => import('../pages/ui/badge.vue')
+const PageBcBanner = () => import('../pages/ui/banner.vue')
+const PageBcBreadcrumbs = () => import('../pages/ui/breadcrumbs.vue')
+const PageBcBtn = () => import('../pages/ui/btn.vue')
+const PageBcBtnGroup = () => import('../pages/ui/btn-group.vue')
+const PageBcCard = () => import('../pages/ui/card.vue')
+const PageBcChip = () => import('../pages/ui/chip.vue')
+const PageBcCollapsible = () => import('../pages/ui/collapsible.vue')
+const PageBcColorPicker = () => import('../pages/ui/color-picker.vue')
+const PageBcContextMenu = () => import('../pages/ui/context-menu.vue')
+const PageBcDataTable = () => import('../pages/ui/data-table.vue')
+const PageBcDialogBox = () => import('../pages/ui/dialog-box.vue')
+const PageBcDivider = () => import('../pages/ui/divider.vue')
 // import PageBcEditor from '../pages/ui/editor.vue'
-import PageBcEmpty from '../pages/ui/empty.vue'
-import PageBcFlag from '../pages/ui/flag.vue'
-import PageBcIcon from '../pages/ui/icon.vue'
-import PageBcKbd from '../pages/ui/kbd.vue'
-import PageBcKpi from '../pages/ui/kpi.vue'
-import PageBcLazyImage from '../pages/ui/lazy-image.vue'
-import PageBcList from '../pages/ui/list.vue'
-import PageBcLoadingOverlay from '../pages/ui/loading-overlay.vue'
-import PageBcMeterGroup from '../pages/ui/meter-group.vue'
-import PageBcMultilineEllipsis from '../pages/ui/multiline-ellipsis.vue'
-import PageBcNotification from '../pages/ui/notification.vue'
-import PageBcPager from '../pages/ui/pager.vue'
-import PageBcProgressbar from '../pages/ui/progressbar.vue'
-import PageBcRating from '../pages/ui/rating.vue'
-import PageBcSkeletonLoader from '../pages/ui/skeleton-loader.vue'
-import PageBcSnackbar from '../pages/ui/snackbar.vue'
-import PageBcSparklines from '../pages/ui/sparklines.vue'
-import PageBcSpeedDial from '../pages/ui/speed-dial.vue'
-import PageBcSplitBtn from '../pages/ui/split-btn.vue'
-import PageBcSvgIcon from '../pages/ui/svg-icon.vue'
-import PageBcTabs from '../pages/ui/tabs.vue'
-import PageBcTimeline from '../pages/ui/timeline.vue'
-import PageBcToolbar from '../pages/ui/toolbar.vue'
-import PageBcTooltip from '../pages/ui/tooltip.vue'
-import PageBcTreeview from '../pages/ui/treeview.vue'
-import PageBcVid from '../pages/ui/vid.vue'
+const PageBcEmpty = () => import('../pages/ui/empty.vue')
+const PageBcFlag = () => import('../pages/ui/flag.vue')
+const PageBcIcon = () => import('../pages/ui/icon.vue')
+const PageBcKbd = () => import('../pages/ui/kbd.vue')
+const PageBcKpi = () => import('../pages/ui/kpi.vue')
+const PageBcLazyImage = () => import('../pages/ui/lazy-image.vue')
+const PageBcList = () => import('../pages/ui/list.vue')
+const PageBcLoadingOverlay = () => import('../pages/ui/loading-overlay.vue')
+const PageBcMeterGroup = () => import('../pages/ui/meter-group.vue')
+const PageBcMultilineEllipsis = () => import('../pages/ui/multiline-ellipsis.vue')
+const PageBcNotification = () => import('../pages/ui/notification.vue')
+const PageBcPager = () => import('../pages/ui/pager.vue')
+const PageBcProgressbar = () => import('../pages/ui/progressbar.vue')
+const PageBcRating = () => import('../pages/ui/rating.vue')
+const PageBcSkeletonLoader = () => import('../pages/ui/skeleton-loader.vue')
+const PageBcSnackbar = () => import('../pages/ui/snackbar.vue')
+const PageBcSparklines = () => import('../pages/ui/sparklines.vue')
+const PageBcSpeedDial = () => import('../pages/ui/speed-dial.vue')
+const PageBcSplitBtn = () => import('../pages/ui/split-btn.vue')
+const PageBcSvgIcon = () => import('../pages/ui/svg-icon.vue')
+const PageBcTabs = () => import('../pages/ui/tabs.vue')
+const PageBcTimeline = () => import('../pages/ui/timeline.vue')
+const PageBcToolbar = () => import('../pages/ui/toolbar.vue')
+const PageBcTooltip = () => import('../pages/ui/tooltip.vue')
+const PageBcTreeview = () => import('../pages/ui/treeview.vue')
+const PageBcVid = () => import('../pages/ui/vid.vue')
 
 // form components
-import PageBcAsyncForm from '../pages/forms/async-form.vue'
-import PageBcCheckbox from '../pages/forms/checkbox.vue'
-import PageBcDropdown from '../pages/forms/dropdown.vue'
-import PageBcRadioGroup from '../pages/forms/radio-group.vue'
-import PageBcRangeSlider from '../pages/forms/range-slider.vue'
-import PageBcSlider from '../pages/forms/slider.vue'
-import PageBcSwitcher from '../pages/forms/switcher.vue'
-import PageBcTextField from '../pages/forms/text-field.vue'
-import PageBcUpload from '../pages/forms/upload.vue'
+const PageBcAsyncForm = () => import('../pages/forms/async-form.vue')
+const PageBcCheckbox = () => import('../pages/forms/checkbox.vue')
+const PageBcDropdown = () => import('../pages/forms/dropdown.vue')
+const PageBcRadioGroup = () => import('../pages/forms/radio-group.vue')
+const PageBcRangeSlider = () => import('../pages/forms/range-slider.vue')
+const PageBcSlider = () => import('../pages/forms/slider.vue')
+const PageBcSwitcher = () => import('../pages/forms/switcher.vue')
+const PageBcTextField = () => import('../pages/forms/text-field.vue')
+const PageBcUpload = () => import('../pages/forms/upload.vue')
 
 // directives
-import PageBcAspectRatio from '../pages/directives/aspect-ratio.vue'
-import PageBcBlur from '../pages/directives/blur.vue'
-import PageBcDefaultBtn from '../pages/directives/default-btn.vue'
-import PageBcGradientText from '../pages/directives/gradient-text.vue'
-import PageBcIntersect from '../pages/directives/intersect.vue'
-import PageBcLiquidGlass from '../pages/directives/liquid-glass.vue'
-import PageBcResize from '../pages/directives/resize.vue'
-import PageBcRipple from '../pages/directives/ripple.vue'
-import PageBcScrollLock from '../pages/directives/scroll-lock.vue'
-import PageBcTooltipDirective from '../pages/directives/tooltip.vue'
+const PageBcAspectRatio = () => import('../pages/directives/aspect-ratio.vue')
+const PageBcBlur = () => import('../pages/directives/blur.vue')
+const PageBcDefaultBtn = () => import('../pages/directives/default-btn.vue')
+const PageBcGradientText = () => import('../pages/directives/gradient-text.vue')
+const PageBcIntersect = () => import('../pages/directives/intersect.vue')
+const PageBcLiquidGlass = () => import('../pages/directives/liquid-glass.vue')
+const PageBcResize = () => import('../pages/directives/resize.vue')
+const PageBcRipple = () => import('../pages/directives/ripple.vue')
+const PageBcScrollLock = () => import('../pages/directives/scroll-lock.vue')
+const PageBcTooltipDirective = () => import('../pages/directives/tooltip.vue')
 
 // category pages
 import PageBcCategoryPage from '../pages/category.vue'
@@ -949,6 +949,31 @@ const routes = [{
 const router = createRouter({
   history: createWebHistory(),
   routes
+})
+
+// a lazy page chunk can fail to load when the site was deployed while the tab was open (the old hashed file names
+// are gone): load the target page with a full page load instead, which gets the new index.js.
+// The sessionStorage flag prevents a reload loop if the chunk is really missing.
+const CHUNK_RELOAD_KEY = 'bcq-chunk-reload'
+const isChunkLoadError = error => /dynamically imported module|Importing a module script failed|Unable to preload CSS/i.test(error?.message || '')
+
+router.onError((error, to) => {
+  if (!isChunkLoadError(error)) {
+    return
+  }
+  try {
+    if (sessionStorage.getItem(CHUNK_RELOAD_KEY) === to.fullPath) {
+      return
+    }
+    sessionStorage.setItem(CHUNK_RELOAD_KEY, to.fullPath)
+  } catch (e) {}
+  window.location.assign(to.fullPath)
+})
+
+router.afterEach(() => {
+  try {
+    sessionStorage.removeItem(CHUNK_RELOAD_KEY)
+  } catch (e) {}
 })
 
 export default router

@@ -237,9 +237,9 @@ async function steps() {
         routeAt++
       }
 
-      // imports: among "import PageBc... from '../pages/CATEGORY/...'" (done after the routes, as it shifts line numbers)
-      const importLine = `import ${pageName} from '../pages/${category}/${kebabCaseName}.vue'`
-      const importRegex = new RegExp(`^import (PageBc\\w+) from '\\.\\./pages/${category}/[\\w-]+\\.vue'$`)
+      // lazy imports: among "const PageBc... = () => import('../pages/CATEGORY/...')" (done after the routes, as it shifts line numbers)
+      const importLine = `const ${pageName} = () => import('../pages/${category}/${kebabCaseName}.vue')`
+      const importRegex = new RegExp(`^const (PageBc\\w+) = \\(\\) => import\\('\\.\\./pages/${category}/[\\w-]+\\.vue'\\)$`)
       const categoryImports = routerLines.map((line, i) => ({ i, name: (line.match(importRegex) || [])[1] })).filter(item => item.name)
       if (!categoryImports.length) {
         throw new Error(`no page imports for category '${category}' found in ${routerFileName}`)
