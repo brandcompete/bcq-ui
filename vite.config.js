@@ -65,6 +65,7 @@ export default defineConfig(({ mode }) => ({
   // Lazy-loaded chunks (the demo pages, see src/helpers/router.js) and their CSS get a content hash, so browsers
   // never combine a new index.js with an old cached chunk after a deploy.
   build: {
+    chunkSizeWarningLimit: 666, // kB, default 500
     rollupOptions: {
       output: {
         entryFileNames: `assets/[name].js`,
