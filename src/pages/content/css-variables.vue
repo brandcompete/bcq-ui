@@ -1,8 +1,8 @@
 <template>
   <bc-grid>
     <bc-grid-col v-if="config">
-      <css-variables-editor :class="['mb-4']" />
-      <syntax-highlight :url="config.url" language="css" title="variables.css" />
+      <css-variables-editor :class="['mb-4']" data-anchor="CSS-variables-editor" />
+      <syntax-highlight :url="config.url" language="css" title="variables.css" data-anchor="CSS-variables" />
     </bc-grid-col>
   </bc-grid>
 </template>
